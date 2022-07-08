@@ -1,5 +1,7 @@
+# Fit ALFAM2 model to each individual plot
+
 # List for holding output
-mods <- list()
+modsa <- list()
 
 # Starting par estimates
 pars01 <- alfam2pars01
@@ -48,8 +50,8 @@ for (i in as.character(unique(idat$pmid))) {
   }
 
   cat('pmid ', i, '\n ')
-  mods[[i]] <- list()
-  mods[[i]][['mod']] <- m <- optim(par = pp, fn = function(par) 
+  modsa[[i]] <- list()
+  modsa[[i]][['mod']] <- m <- optim(par = pp, fn = function(par) 
                                      resCalcOptim(p = par, dat = dd, to = 'j', time.name = 'cta',
                                                   fixed = ff, app.name = 'tan.app', 
                                                   group = 'pmid', method = 'TAE', weights = dd$cta > 0.5),
@@ -58,7 +60,7 @@ for (i in as.character(unique(idat$pmid))) {
   Sys.time()
   
   # Get pars
-  mods[[i]][['coef']] <- pp <- c(m$par, ff)
+  modsa[[i]][['coef']] <- pp <- c(m$par, ff)
   
   # Echo pars and other model info
   print(pp)
@@ -68,7 +70,7 @@ for (i in as.character(unique(idat$pmid))) {
   #write.csv(pp, paste0('../output/pars_', i, '.csv'))
   
   # Run model for all observations using parameter estimates
-  mods[[i]][['pred']] <- pr <- ALFAM2mod(dd, app.name = 'tan.app', time.name = 'cta', 
+  modsa[[i]][['pred']] <- pr <- ALFAM2mod(dd, app.name = 'tan.app', time.name = 'cta', 
                   group = 'pmid', pars = pp)
   
   Sys.time()

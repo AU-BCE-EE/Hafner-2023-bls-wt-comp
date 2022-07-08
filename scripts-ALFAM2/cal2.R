@@ -8,7 +8,7 @@ idat$air.temp.bLS <- (idat$meas.tech2 == 'micro met') * idat$air.temp
 idat$wt <- idat$meas.tech == 'wt'
 
 # List for holding output
-mod2 <- list()
+modb <- list()
 
 names.pars.fixed <- c('man.dm.f0', 
                       'man.dm.r1', 
@@ -48,8 +48,8 @@ m <- list(par = pp, converge = 1)
 while (m$converge == 1) {
   pp <- m$par
   dd <- as.data.frame(idat)
-  mod2 <- list()
-  mod2[['mod']] <- m <- optim(par = pp, fn = function(par) 
+  modb <- list()
+  modb[['mod']] <- m <- optim(par = pp, fn = function(par) 
                                      resCalcOptim(p = par, dat = dd, to = 'j', time.name = 'cta',
                                                   fixed = ff, app.name = 'tan.app', 
                                                   group = 'pmid', method = 'TAE', weights = dd$cta > 1 & !grepl('i', dd$flag.int)),
@@ -59,7 +59,7 @@ while (m$converge == 1) {
   print(m)
 }
 
-mod2[['coef']] <- pp <- c(m$par, ff)
+modb[['coef']] <- pp <- c(m$par, ff)
 
 # Echo pars and other model info
 print(pp)
@@ -70,7 +70,7 @@ sink('../logs/cal2.txt')
 sink()
 
 # Run model for all observations using parameter estimates
-mod2[['pred']] <- pr <- ALFAM2mod(dd, app.name = 'tan.app', time.name = 'cta', 
+modb[['pred']] <- pr <- ALFAM2mod(dd, app.name = 'tan.app', time.name = 'cta', 
                 group = 'pmid', pars = pp)
 
 Sys.time()
