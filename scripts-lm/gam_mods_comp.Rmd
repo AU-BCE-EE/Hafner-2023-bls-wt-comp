@@ -1,0 +1,51 @@
+---
+title: 'Generalized additive model for comparing wind tunnel and bLS measurements'
+output: pdf_document
+author: Sasha D. Hafner
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+---
+
+# Data
+
+Focus on early times, exclude first 2 hours to avoid underestimation period.
+
+```{r}
+idat$j.NH3[idat$j.NH3 <= 0] <- 1E-4
+idat$trial <- factor(idat$app.date)
+ds1 <- subset(idat, cta <= 48 & cta >= 2)
+```
+
+# Fit models
+
+```{r}
+mods <- list()
+```
+
+```{r}
+i <- 1
+mods[[i]] <- gam(log10(j.NH3) ~ (wind.2m + air.temp) * meas.tech2 + 
+                 s(cta) + rain.rate + rain.cum + trial, data = ds1) 
+```
+
+```{r}
+summary(mods[[i]])
+coef(mods[[i]])
+plot(mods[[i]], terms = 's(cta)')
+```
+
+```{r}
+ds1[, paste0('j.NH3.pred', i)] <- 10^predict(mods[[i]])
+```
+
+```{r}
+ggplot(ds1, aes(cta, j.NH3, group = pmid, colour = meas.tech2)) +
+  geom_step(alpha = 0.6) +
+  geom_step(aes(cta, j.NH3.pred1), colour = 'gray55', lty = '11') +
+  facet_grid(meas.tech ~ app.date, scale = 'fixed') +
+  labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~(kg/h-ha)), colour = '') +
+  theme(legend.position = 'top')
+
+```
+
+
+

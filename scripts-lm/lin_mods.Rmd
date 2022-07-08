@@ -1,0 +1,98 @@
+
+# Data prep
+```{r}
+adat <- subset(adat, !is.na(j.NH3.bls) & adat$cta >= 1)
+adat[adat$j.NH3.bls <= 0, 'j.NH3.bls'] <- 1E-3
+adat[adat$j.NH3.wt <= 0, 'j.NH3.wt'] <- 1E-3
+adat$weights <- adat$j.NH3.wt
+```
+
+# Models for flux ratio
+
+```{r}
+mods <- list()
+```
+
+
+```{r}
+i <- 1
+mods[[i]] <- lm(log10(j.NH3.bls / j.NH3.wt) ~ wind.2m.wt + wind.2m.bls + air.temp.wt + rain.rate.bls + rain.cum.bls, 
+           data = adat, weights = weights) 
+```
+
+```{r}
+summary(mods[[i]])
+```
+
+Try some interactions
+
+
+```{r}
+i <- i + 1
+mods[[i]] <- lm(log10(j.NH3.bls / j.NH3.wt) ~ (wind.2m.wt + wind.2m.bls + air.temp.wt + rain.rate.bls + rain.cum.bls)*cta, 
+           data = adat, weights = weights) 
+```
+
+```{r}
+summary(mods[[i]])
+coef(mods[[i]])
+```
+
+```{r}
+i <- i + 1
+mods[[i]] <- lm(log10(j.NH3.bls / j.NH3.wt) ~ (poly(wind.2m.wt, 4) + poly(wind.2m.bls, 4) + poly(air.temp.wt, 4) + poly(rain.rate.bls, 4) + poly(rain.cum.bls, 4))*poly(cta, 4), 
+           data = adat, weights = weights) 
+```
+
+```{r}
+summary(mods[[i]])
+coef(mods[[i]])
+```
+
+
+```{r}
+i <- i + 1
+mods[[i]] <- gam(log10(j.NH3.bls / j.NH3.wt) ~ s(wind.2m.wt) + s(wind.2m.bls) + s(air.temp.wt) + s(rain.rate.bls) + s(rain.cum.bls) + s(cta), 
+           data = adat, weights = weights) 
+```
+
+```{r}
+summary(mods[[i]])
+coef(mods[[i]])
+```
+
+
+```{r}
+i <- i + 1
+mods[[i]] <- lm(log10(j.NH3.bls / j.NH3.wt) ~ (wind.2m.wt + wind.2m.bls + air.temp.wt + rain.rate.bls + rain.cum.bls + e.prev.wt)*cta, 
+           data = adat, weights = weights) 
+```
+
+```{r}
+summary(mods[[i]])
+coef(mods[[i]])
+```
+
+
+
+# Get predictions
+
+```{r}
+mdat <- adat
+mdat$mod <- 'Measured'
+for (i in 1:length(mods)) {
+
+  dd <- adat
+  dd[, 'j.NH3.bls'] <- 10^predict(mods[[i]], newdata = dd) * dd$j.NH3.wt
+
+  for (j in unique(dd$pmid.wt)) {
+    dd[dd$pmid.wt == j, 'e.cum.bls'] <- cumsum(dd[dd$pmid.wt == j, 'j.NH3.bls'] * dd[dd$pmid.wt == j, 'dt.bls'])
+  }
+
+  dd$mod <- paste('Model', i)
+  mdat <- rbind(mdat, dd)
+
+}
+tail(mdat)
+```
+
