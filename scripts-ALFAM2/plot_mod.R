@@ -139,12 +139,12 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   geom_abline(intercept = 0, slope = 1, lty = 1, col = 'gray45') +
   geom_point(aes(colour = wind.2m), size = 2) +
   geom_point(data = db, colour = 'red', size = 2) +
-  xlim(0, 0.75) + ylim(0, 0.75) +
+  xlim(0, 0.65) + ylim(0, 0.65) +
   theme_bw() +
   labs(x = expression('ALFAM2 par. set 2 NH'[3]~'emis.'~('frac. final')), 
        y = expression('Meas. NH'[3]~'emis.'~('frac. final')),
-       shape = 'Date', colour = 'Wind tunnel ave. velocity (m/s)') +
+       shape = 'Date', colour = 'Wind tunnel ave.\nvelocity (m/s)') +
   theme(legend.position = 'right')
-ggsave('../plots-ALFAM2/91_cum_emis_comp_ps2.pdf', height = 2.7, width = 4)
+ggsave('../plots-ALFAM2/91_cum_emis_comp_ps2.pdf', height = 2.7, width = 4.0, scale = 1.3)
 
 
