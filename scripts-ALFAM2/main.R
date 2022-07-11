@@ -13,10 +13,3 @@ source('extract_pars.R')
 source('extract_preds.R')
 source('export.R')
 source('plot_mod.R')
-source('plot.R')
-source('plot_sel.R')
-
-# 217.47
-# 215.98 w cta > 2
-
-head(d.pred)
