@@ -10,8 +10,3 @@ source('subset.R')
 source('add.R')
 source('plot_big.R')
 source('plot.R')
-
-# 217.47
-# 215.98 w cta > 2
-
-head(d.pred)
