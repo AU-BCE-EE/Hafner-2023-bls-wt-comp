@@ -1,5 +1,9 @@
 # Fit ALFAM2 model to each individual plot
 
+# Set cta cutoff for weights
+# All wt measurements start later, but first bLS measurement below 0.75 is low for all 3 plots
+cta.cut <- 0.75
+
 # List for holding output
 modsa <- list()
 
@@ -54,7 +58,7 @@ for (i in as.character(unique(idat$pmid))) {
   modsa[[i]][['mod']] <- m <- optim(par = pp, fn = function(par) 
                                      resCalcOptim(p = par, dat = dd, to = 'j', time.name = 'cta',
                                                   fixed = ff, app.name = 'tan.app', 
-                                                  group = 'pmid', method = 'TAE', weights = dd$cta > 0.5),
+                                                  group = 'pmid', method = 'TAE', weights = dd$bta >= 0),
                                    method = 'Nelder-Mead')
 
   Sys.time()

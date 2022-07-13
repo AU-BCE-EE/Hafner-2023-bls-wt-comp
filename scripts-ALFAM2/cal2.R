@@ -1,5 +1,7 @@
 # Single parameter set with wt/bLS pars
 
+# Note that cta cutoff (for weights) is set in cal1.R
+
 # Measurement method-specific weather
 idat$wind.wt <- (idat$meas.tech2 == 'wt') * sqrt(idat$wind.2m)
 idat$wind.bLS <- (idat$meas.tech2 == 'micro met') * sqrt(idat$wind.2m)
@@ -52,7 +54,7 @@ while (m$converge == 1) {
   modb[['mod']] <- m <- optim(par = pp, fn = function(par) 
                                      resCalcOptim(p = par, dat = dd, to = 'j', time.name = 'cta',
                                                   fixed = ff, app.name = 'tan.app', 
-                                                  group = 'pmid', method = 'TAE', weights = dd$cta > 1 & !grepl('i', dd$flag.int)),
+                                                  group = 'pmid', method = 'TAE', weights = dd$bta >= 0 & !grepl('i', dd$flag.int)),
                                    method = 'Nelder-Mead')
   
   # Get pars

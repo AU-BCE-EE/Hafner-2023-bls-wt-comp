@@ -3,12 +3,13 @@
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
                          labels = c('Measured', 'ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 ps 2'))
 
-dd <- subset(dfl, variable != 'j.pred2')
+dd <- subset(dfl, variable != 'j.pred2' & bta >= 0)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(cta, value, group = pmid)) +
+
+ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
@@ -17,7 +18,7 @@ ggplot(dw, aes(cta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
   theme(legend.position = 'none')
-ggsave('../plots-ALFAM2/50_flux_comp.pdf', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/50_flux_comp', height = 4, width = 7)
 
 # Flux par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dd <- subset(dfl, variable %in% c('j.NH3', 'j.pred2'))
@@ -25,7 +26,7 @@ dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(cta, value, group = pmid)) +
+ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
@@ -34,7 +35,7 @@ ggplot(dw, aes(cta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
   theme(legend.position = 'none')
-ggsave('../plots-ALFAM2/51_flux_comp_ps2.pdf', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/51_flux_comp_ps2', height = 4, width = 7)
 
 
 # Residuals ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,16 +47,16 @@ dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(cta, value, group = pmid)) +
+ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  xlim(0, 120) +
+  xlim(0, 75) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = '', lty = '') +
   theme(legend.position = 'none')
-ggsave('../plots-ALFAM2/60_error_comp.pdf', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/60_error_comp', height = 4, width = 7)
 
 # Residuals par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
@@ -66,27 +67,27 @@ dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(cta, value, group = pmid)) +
+ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  xlim(0, 120) +
+  xlim(0, 75) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = '', lty = '') +
   theme(legend.position = 'none')
-ggsave('../plots-ALFAM2/61_error_comp_ps2.pdf', height = 5, width = 7)
+ggsave2x('../plots-ALFAM2/61_error_comp_ps2', height = 5, width = 7)
 
 # Early emission contribution ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dcl$variable.nm <- factor(dcl$variable, levels = c('ecrela', 'ecrelb', 'ecrel2'),
                          labels = c('ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 par. set 2'))
 
-dd <- subset(dcl, variable != 'ecrel2' & cta <= 11.5)
+dd <- subset(dcl, variable != 'ecrel2' & bta <= 11.5)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(cta, value, group = pmid)) +
+ggplot(dw, aes(bta, value, group = pmid)) +
   geom_line(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_line(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
@@ -95,14 +96,14 @@ ggplot(dw, aes(cta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'emis.'~('frac. final')), 
        colour = '', lty = '') +
   theme(legend.position = 'none')
-ggsave('../plots-ALFAM2/70_remis_comp.pdf', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/70_remis_comp', height = 4, width = 7)
 
 # r1 par ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dd <- d.pred
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(cta, r1.predb, group = pmid)) +
+ggplot(dw, aes(bta, r1.predb, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_wrap(~ app.date) +
@@ -110,24 +111,26 @@ ggplot(dw, aes(cta, r1.predb, group = pmid)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression(italic('r')[1]~('h'^'-1'))) +
   theme(legend.position = 'none')
-ggsave('../plots-ALFAM2/80_r1.pdf', height = 3, width = 7)
+ggsave2x('../plots-ALFAM2/80_r1', height = 3, width = 7)
 
 # Final cumulative emission meas and ALFAM2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dd <- d.pred.final
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(er.predb, e.rel, group = pmid)) +
+plot(1:30, pch = 1:30)
+ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   geom_abline(intercept = 0, slope = 1, lty = 1, col = 'gray45') +
+  geom_abline(intercept = 0, slope = c(0.8, 1.2), lty = '11', col = 'gray75') +
   geom_point(aes(colour = wind.2m), size = 2) +
-  geom_point(data = db, colour = 'red', size = 2) +
-  facet_wrap(~ app.date) +
+  geom_point(data = db, aes(size = meas.tech), colour = 'red') +
+  scale_shape_manual(values = c(1, 6, 20)) +
   xlim(0, 0.75) + ylim(0, 0.75) +
+  guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
-  labs(x = expression('ALFAM2 cal. B NH'[3]~'emis.'~('frac. final')), 
-       y = expression('Meas. NH'[3]~'emis.'~('frac. final'))) +
-  theme(legend.position = 'none')
-ggsave('../plots-ALFAM2/90_cum_emis_comp.pdf', height = 2.7, width = 7)
+  theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
+  labs(x = 'ALFAM2 cal. B', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
+ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.7, width = 4.0, scale = 1.3)
 
 
 # Final cumulative emission meas and ALFAM2 par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -141,10 +144,9 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   geom_point(data = db, colour = 'red', size = 2) +
   xlim(0, 0.65) + ylim(0, 0.65) +
   theme_bw() +
-  labs(x = expression('ALFAM2 par. set 2 NH'[3]~'emis.'~('frac. final')), 
-       y = expression('Meas. NH'[3]~'emis.'~('frac. final')),
+  labs(x = 'ALFAM2 par. set 2', y = 'Measured',
        shape = 'Date', colour = 'Wind tunnel ave.\nvelocity (m/s)') +
   theme(legend.position = 'right')
-ggsave('../plots-ALFAM2/91_cum_emis_comp_ps2.pdf', height = 2.7, width = 4.0, scale = 1.3)
+ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.3)
 
 
