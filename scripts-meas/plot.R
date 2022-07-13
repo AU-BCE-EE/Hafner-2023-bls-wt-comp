@@ -36,4 +36,4 @@ mat <- matrix(c(1,
                 ncol = 1)
 
 pfw <- grid.arrange(pf1, pe1, layout_matrix = mat)
-ggsave('../plots-meas/10_remis2.pdf', pfw, height = 4, width = 3.3, scale = 1.2)
+ggsave2x('../plots-meas/10_remis2', plot = pfw, height = 4, width = 3.3, scale = 1.2)

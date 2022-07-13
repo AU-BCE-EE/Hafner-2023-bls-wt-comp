@@ -75,4 +75,4 @@ mat <- matrix(c(1,
                 5),
                 ncol = 1)
 pfw <- grid.arrange(pf1, pe1, pws, pat, prr, layout_matrix = mat)
-ggsave('../plots-meas/01_flux_wind_meas.pdf', pfw, height = 8, width = 7, scale = 1.2)
+ggsave2x('../plots-meas/01_flux_wind_meas', plot = pfw, height = 8, width = 7, scale = 1.2)
