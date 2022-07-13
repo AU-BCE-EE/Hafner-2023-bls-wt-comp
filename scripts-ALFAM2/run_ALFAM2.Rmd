@@ -1,0 +1,37 @@
+---
+title: 'Model call record'
+output: pdf_document
+classoption: landscape
+author: Sasha D. Hafner
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+---
+
+Check package version.
+
+```{r}
+packageVersion('ALFAM2')
+```
+
+Parameter values.
+
+```{r}
+ALFAM2pars02
+```
+
+# Add app.rate.ni
+
+All application was by trailing hose (or manual)
+
+```{r}
+idat$app.rate.ni <- idat$app.rate
+```
+
+Run model 
+
+With set 2 parameters
+
+```{r}
+d.pred2 <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid')
+```
+
+

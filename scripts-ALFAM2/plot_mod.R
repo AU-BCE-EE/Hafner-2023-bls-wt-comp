@@ -118,7 +118,6 @@ dd <- d.pred.final
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-plot(1:30, pch = 1:30)
 ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   geom_abline(intercept = 0, slope = 1, lty = 1, col = 'gray45') +
   geom_abline(intercept = 0, slope = c(0.8, 1.2), lty = '11', col = 'gray75') +

@@ -7,3 +7,8 @@ library(viridisLite)
 library(reshape2)
 library(knitr)
 library(gridExtra)
+
+sink('../logs/versions.txt')
+  print(sessionInfo())
+sink()
+
