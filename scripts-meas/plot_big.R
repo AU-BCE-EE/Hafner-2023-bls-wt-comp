@@ -13,7 +13,7 @@ pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
        facet_wrap(~ app.date) +
        xlim(0, 120) +
        theme_bw() +
-       labs(x = '', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       labs(x = '', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
             colour = 'Wind tunnel ave. velocity (m/s):', lty = ' ') +
        theme(legend.position = 'top')
 
@@ -24,7 +24,7 @@ pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
        xlim(0, 120) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
-       labs(x = '', y = expression('NH'[3]~'emis.'~('frac. TAN')), 
+       labs(x = '', y = expression('Emis.'~('frac. TAN')), 
             colour = 'Wind tunnel ave. velocity (m/s):', lty = ' ') +
        theme(legend.position = 'none')
 
@@ -56,23 +56,13 @@ prr <- ggplot(db, aes(cta, rain.rate, group = pmid)) +
        labs(x = 'Elapsed time (h)', y = expression('Rain'~('mm h'^'-1'))) +
        theme(legend.position = 'top')
 
-mat <- matrix(c(1, 
-                1,
-                1,
-                1,
-                1,
-                2,
-                2,
-                2,
-                3,
-                3,
-                3,
-                4,
-                4,
-                4,
-                5,
-                5,
-                5),
-                ncol = 1)
-pfw <- grid.arrange(pf1, pe1, pws, pat, prr, layout_matrix = mat)
-ggsave2x('../plots-meas/01_flux_wind_meas', plot = pfw, height = 8, width = 7, scale = 1.2)
+
+# Note that ggave (so ggsave2x) won't work
+pdf('../plots-meas/01_flux_wind_meas.pdf', height = 8, width = 7)
+  grid::grid.draw(rbind(ggplotGrob(pf1), ggplotGrob(pe1), ggplotGrob(pws), ggplotGrob(pat), ggplotGrob(prr)))
+dev.off()
+
+png('../plots-meas/01_flux_wind_meas.png', height = 8, width = 7, units = 'in', res = 600)
+  grid::grid.draw(rbind(ggplotGrob(pf1), ggplotGrob(pe1), ggplotGrob(pws), ggplotGrob(pat), ggplotGrob(prr)))
+dev.off()
+
