@@ -1,3 +1,4 @@
+# Plots 
 
 # Flux ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
@@ -129,7 +130,7 @@ ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
   labs(x = 'ALFAM2 cal. B', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
-ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.7, width = 4.0, scale = 1.3)
+ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.7, width = 4.0, scale = 1.1)
 
 
 # Final cumulative emission meas and ALFAM2 par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -139,13 +140,14 @@ db <- dd[dd$meas.tech == 'bLS', ]
 
 ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   geom_abline(intercept = 0, slope = 1, lty = 1, col = 'gray45') +
+  geom_abline(intercept = 0, slope = c(0.8, 1.2), lty = '11', col = 'gray75') +
   geom_point(aes(colour = wind.2m), size = 2) +
-  geom_point(data = db, colour = 'red', size = 2) +
+  geom_point(data = db, aes(size = meas.tech), colour = 'red') +
+  scale_shape_manual(values = c(1, 6, 20)) +
   xlim(0, 0.65) + ylim(0, 0.65) +
   theme_bw() +
-  labs(x = 'ALFAM2 par. set 2', y = 'Measured',
-       shape = 'Date', colour = 'Wind tunnel ave.\nvelocity (m/s)') +
-  theme(legend.position = 'right')
-ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.3)
-
-
+  guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
+  theme_bw() +
+  theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
+  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
+ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.1)
