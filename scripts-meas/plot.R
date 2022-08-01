@@ -58,7 +58,7 @@ ggplot(db, aes(time.of.day, wind.2m, colour = app.date, group = pmid)) +
   #geom_point() +
   facet_wrap(~ paste('Day', day)) +
   theme_bw() +
-  labs(x = 'Time of day (h)', y = expression('Air temp.'~(degree*C))) +
+  labs(x = 'Time of day (h)', y = expression('Wind'~('m s'^'-1'))) +
   theme(legend.position = 'top')
 ggsave2x('../plots-meas/11_wind_vs_time', height = 6, width = 8)
 
