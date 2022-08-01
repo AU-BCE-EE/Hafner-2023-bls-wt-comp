@@ -37,3 +37,29 @@ mat <- matrix(c(1,
 
 pfw <- grid.arrange(pf1, pe1, layout_matrix = mat)
 ggsave2x('../plots-meas/10_remis2', plot = pfw, height = 4, width = 3.3, scale = 1.2)
+
+# Weather versus time of day
+dd <- subset(idat, cta <= 120)
+dd$time.of.day <- as.numeric(as.character(as.POSIXct(dd$t.start), '%H')) + as.numeric(as.character(as.POSIXct(dd$t.start), '%M')) / 60
+dd$day <- dd$cta %/% 24
+db <- dd[dd$meas.tech == 'bLS', ]
+
+ggplot(db, aes(time.of.day, air.temp, colour = app.date, group = pmid)) +
+  geom_step() +
+  #geom_point() +
+  facet_wrap(~ paste('Day', day)) +
+  theme_bw() +
+  labs(x = 'Time of day (h)', y = expression('Air temp.'~(degree*C))) +
+  theme(legend.position = 'top')
+ggsave2x('../plots-meas/10_temp_vs_time', height = 6, width = 8)
+
+ggplot(db, aes(time.of.day, wind.2m, colour = app.date, group = pmid)) +
+  geom_step() +
+  #geom_point() +
+  facet_wrap(~ paste('Day', day)) +
+  theme_bw() +
+  labs(x = 'Time of day (h)', y = expression('Air temp.'~(degree*C))) +
+  theme(legend.position = 'top')
+ggsave2x('../plots-meas/11_wind_vs_time', height = 6, width = 8)
+
+
