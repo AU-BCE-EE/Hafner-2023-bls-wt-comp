@@ -39,10 +39,12 @@ pfw <- grid.arrange(pf1, pe1, layout_matrix = mat)
 ggsave2x('../plots-meas/10_remis2', plot = pfw, height = 4, width = 3.3, scale = 1.2)
 
 # Weather versus time of day
-dd <- subset(idat, cta <= 120)
+dd <- subset(idat)
 dd$time.of.day <- as.numeric(as.character(as.POSIXct(dd$t.start), '%H')) + as.numeric(as.character(as.POSIXct(dd$t.start), '%M')) / 60
 dd$day <- dd$cta %/% 24
+
 db <- dd[dd$meas.tech == 'bLS', ]
+dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 
 ggplot(db, aes(time.of.day, air.temp, colour = app.date, group = pmid)) +
   geom_step() +
@@ -51,7 +53,7 @@ ggplot(db, aes(time.of.day, air.temp, colour = app.date, group = pmid)) +
   theme_bw() +
   labs(x = 'Time of day (h)', y = expression('Air temp.'~(degree*C))) +
   theme(legend.position = 'top')
-ggsave2x('../plots-meas/10_temp_vs_time', height = 6, width = 8)
+ggsave('../plots-meas/10_temp_vs_time.png', height = 6, width = 8)
 
 ggplot(db, aes(time.of.day, wind.2m, colour = app.date, group = pmid)) +
   geom_step() +
@@ -60,6 +62,31 @@ ggplot(db, aes(time.of.day, wind.2m, colour = app.date, group = pmid)) +
   theme_bw() +
   labs(x = 'Time of day (h)', y = expression('Wind'~('m s'^'-1'))) +
   theme(legend.position = 'top')
-ggsave2x('../plots-meas/11_wind_vs_time', height = 6, width = 8)
+ggsave('../plots-meas/11_wind_vs_time.png', height = 6, width = 8)
 
+ggplot(db, aes(cta, rain.cum, group = pmid)) +
+       geom_line(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
+       facet_wrap(~ app.date) +
+       theme_bw() +
+       labs(x = 'Elapsed time (h)', y = 'Total rain (mm)') +
+       theme(legend.position = 'top')
+ggsave('../plots-meas/12_rain_vs_time.png', height = 6, width = 8)
 
+dd <- subset(dd, cta < 72)
+ggplot(dd, aes(wind.2m, j.NH3, colour = cta, group = pmid)) +
+  geom_path() +
+  geom_point() +
+  facet_grid(meas.tech ~ app.date) +
+  theme_bw() +
+  labs(x = expression('Wind'~('m s'^'-1')), y = expression('Flux'~('kg N h'^'-1'~ha^'-1'))) +
+  theme(legend.position = 'top')
+ggsave('../plots-meas/20_flux_vs_wind.png', height = 6, width = 8)
+
+ggplot(dd, aes(air.temp, j.NH3, colour = cta, group = pmid)) +
+  geom_path() +
+  geom_point() +
+  facet_grid(meas.tech ~ app.date) +
+  theme_bw() +
+  labs(x = expression('Air temp.'~(degree*C)), y = expression('Flux'~('kg N h'^'-1'~ha^'-1'))) +
+  theme(legend.position = 'top')
+ggsave('../plots-meas/21_flux_vs_temp.png', height = 6, width = 8)
