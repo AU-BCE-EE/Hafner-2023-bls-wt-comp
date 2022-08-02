@@ -12,7 +12,13 @@ isumm <- idat[, list(cta = max(cta),
                      j.NH3.mean = mean(j.NH3),
                      j.NH3.min = min(j.NH3),
                      j.NH3.max = max(j.NH3),
-                     e.rel = max(e.rel) 
-                     ), list(app.date, pmid, meas.tech2)]
+                     e.cum.final = max(e.cum), 
+                     e.rel.final = max(e.rel),
+                     e.cum.168 = approx(cta, e.cum, xout = 168)$y,
+                     e.rel.168 = approx(cta, e.rel, xout = 168)$y
+                     ), by = list(app.date, pmid, meas.tech, meas.tech2, aer, aer.grp)]
 
-isumm <- rounddf(as.data.frame(isumm), digits = 3, func = signif)
+
+# Mean and sd of cumulative emission
+esumm <- isumm[ , list(e.rel.final = mean(e.rel.final), e.rel.final.n = length(e.rel.final), e.rel.final.sd = sd(e.rel.final)),
+               by = list(app.date, meas.tech2, aer.grp)]

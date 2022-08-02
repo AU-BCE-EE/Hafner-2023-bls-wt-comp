@@ -92,3 +92,12 @@ ggplot(dd, aes(air.temp, j.NH3, colour = cta, group = pmid)) +
   labs(x = expression('Air temp.'~(degree*C)), y = expression('Flux'~('kg N h'^'-1'~ha^'-1'))) +
   theme(legend.position = 'top')
 ggsave('../plots-meas/21_flux_vs_temp.png', height = 6, width = 8)
+
+# Emission versus AER
+ggplot(isumm, aes(aer, e.rel.final, colour = app.date, shape = app.date)) +
+  geom_hline(data = subset(isumm, meas.tech == 'bLS'), aes(yintercept = e.rel.final, colour = app.date), lty = 2) +
+  geom_point(cex = 2) +
+  labs(x = expression('Air exchange rate'~('vol vol'^'-1'~'min'^'-1')), y = expression('168 h emission'~('frac. applied TAN')), colour = '', shape = '') +
+  theme_bw() +
+  theme(legend.position = 'top')
+ggsave2x('../plots-meas/30_emis_vs_AER', height = 4, width = 3.6, scale = 1.2)
