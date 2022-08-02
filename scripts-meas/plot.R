@@ -39,9 +39,11 @@ pfw <- grid.arrange(pf1, pe1, layout_matrix = mat)
 ggsave2x('../plots-meas/10_remis2', plot = pfw, height = 4, width = 3.3, scale = 1.2)
 
 # Weather versus time of day
-dd <- subset(idat)
+# First get time of day and day of trial for plots
+dd <- idat
 dd$time.of.day <- as.numeric(as.character(as.POSIXct(dd$t.start), '%H')) + as.numeric(as.character(as.POSIXct(dd$t.start), '%M')) / 60
-dd$day <- dd$cta %/% 24
+dd$t.start <- as.POSIXct(dd$t.start)
+dd$day <- as.Date(dd$t.start) - as.Date(dd$app.date)
 
 db <- dd[dd$meas.tech == 'bLS', ]
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
@@ -49,7 +51,7 @@ dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 ggplot(db, aes(time.of.day, air.temp, colour = app.date, group = pmid)) +
   geom_step() +
   #geom_point() +
-  facet_wrap(~ paste('Day', day)) +
+  facet_wrap(~ day) +
   theme_bw() +
   labs(x = 'Time of day (h)', y = expression('Air temp.'~(degree*C))) +
   theme(legend.position = 'top')
@@ -58,7 +60,7 @@ ggsave('../plots-meas/10_temp_vs_time.png', height = 6, width = 8)
 ggplot(db, aes(time.of.day, wind.2m, colour = app.date, group = pmid)) +
   geom_step() +
   #geom_point() +
-  facet_wrap(~ paste('Day', day)) +
+  facet_wrap(~ day) +
   theme_bw() +
   labs(x = 'Time of day (h)', y = expression('Wind'~('m s'^'-1'))) +
   theme(legend.position = 'top')
