@@ -41,6 +41,10 @@ d.pred[, ecrel2 := er.pred2 / max(er.pred2), pmid]
 d.pred[, cta.max := max(cta), pmid]
 d.pred.final <- subset(d.pred, cta == cta.max)
 
+# Get 168 hr emission
+d.pred[, cta.168 := cta[abs(cta - 168) == min(abs(cta - 168))], pmid]
+d.pred.168 <- subset(d.pred, cta == cta.168)
+
 # Reshape for plots
 # Flux
 dfl <- melt(d.pred, id.vars = c('app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int'),
