@@ -2,7 +2,7 @@
 
 # Flux ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
-                         labels = c('Measured', 'ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 ps 2'))
+                         labels = c('Measured', 'ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\nps 2'))
 
 dd <- subset(dfl, variable != 'j.pred2' & bta >= 0)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
@@ -18,7 +18,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
-  theme(legend.position = 'none')
+  theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/50_flux_comp', height = 4, width = 7)
 
 # Flux par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,8 +35,8 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
-  theme(legend.position = 'none')
-ggsave2x('../plots-ALFAM2/51_flux_comp_ps2', height = 4, width = 7)
+  theme(legend.position = 'top')
+ggsave2x('../plots-ALFAM2/51_flux_comp_ps2', height = 3, width = 7)
 
 
 # Residuals ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,8 +55,8 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   xlim(0, 75) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = '', lty = '') +
-  theme(legend.position = 'none')
+       colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
+  theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/60_error_comp', height = 4, width = 7)
 
 # Residuals par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
