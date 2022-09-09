@@ -1,6 +1,9 @@
 # bLS emission from wind tunnel data
 On estimating bLS emission from wind tunnel measurements.
 
+# Note
+This document is quite outdated!
+
 # Approach
 Simultaneous emission measurements made using a bLS method and wind tunnel were compared, and several related approaches were used to develop empirical models to try to estimate bLS results from wind tunnel measurements.
 Results are in the `plots` directory, where emission measurement methods are compared graphically, and model predictions are compared to measurements.
