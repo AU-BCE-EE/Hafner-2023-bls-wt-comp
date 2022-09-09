@@ -57,7 +57,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/60_error_comp', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/60_error_comp', height = 3.3, width = 7)
 
 # Residuals par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
@@ -77,7 +77,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = '', lty = '') +
   theme(legend.position = 'none')
-ggsave2x('../plots-ALFAM2/61_error_comp_ps2', height = 5, width = 7)
+ggsave2x('../plots-ALFAM2/61_error_comp_ps2', height = 3, width = 7)
 
 # Early emission contribution ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dcl$variable.nm <- factor(dcl$variable, levels = c('ecrela', 'ecrelb', 'ecrel2'),
