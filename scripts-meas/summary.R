@@ -28,3 +28,6 @@ esumm <- isumm[ , list(
 
 isumm <- rounddf(as.data.frame(isumm), digits = 3, func = signif)
 esumm <- rounddf(as.data.frame(esumm), 3, func = signif)
+
+# Get plot keys for checking data externally
+psumm <- pdat[, c('submitter', 'file', 'pmid', 'pid', 'meas.tech', 'app.date')]
