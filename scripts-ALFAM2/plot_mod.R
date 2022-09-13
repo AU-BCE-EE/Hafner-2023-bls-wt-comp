@@ -14,8 +14,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  xlim(-2, 120) +
-  coord_cartesian(ylim =c(0, 7.5)) +
+  coord_cartesian(xlim = c(0, 168), ylim =c(0, 7.5)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
@@ -32,7 +31,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  xlim(0, 120) +
+  coord_cartesian(xlim = c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
@@ -55,7 +54,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  coord_cartesian(xlim =c(0, 60)) +
+  coord_cartesian(xlim =c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
@@ -75,7 +74,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  xlim(0, 75) +
+  xlim(0, 168) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = '', lty = '') +
@@ -111,7 +110,7 @@ ggplot(dw, aes(bta, r1.predb, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_wrap(~ app.date) +
-  xlim(0, 120) +
+  xlim(0, 168) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression(italic('r')[1]~('h'^'-1'))) +
   theme(legend.position = 'none')
