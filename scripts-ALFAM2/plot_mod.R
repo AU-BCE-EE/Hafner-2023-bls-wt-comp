@@ -2,24 +2,25 @@
 
 # Flux ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
-                         labels = c('Measured', 'ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\nps 2'))
+                         labels = c('Measured', 'ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\npar. set 2'))
 
-dd <- subset(dfl, variable != 'j.pred2' & bta >= 0)
+#dd <- subset(dfl, variable != 'j.pred2' & bta >= 0)
+dd <- subset(dfl, bta >= -2)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
-
 
 ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  xlim(0, 120) +
+  xlim(-2, 120) +
+  coord_cartesian(ylim =c(0, 7.5)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/50_flux_comp', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/50_flux_comp', height = 5, width = 7)
 
 # Flux par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dd <- subset(dfl, variable %in% c('j.NH3', 'j.pred2'))
@@ -41,23 +42,25 @@ ggsave2x('../plots-ALFAM2/51_flux_comp_ps2', height = 3, width = 7)
 
 # Residuals ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
-                         labels = c('ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 par. set 2'))
+                         labels = c('ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\npar. set 2'))
 
-dd <- subset(drl, variable != 'aerr2')
+#dd <- subset(drl, variable != 'aerr2')
+dd <- drl
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
 ggplot(dw, aes(bta, value, group = pmid)) +
+  geom_hline(yintercept = 0, lty = 1, colour = 'gray45') +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  xlim(0, 75) +
+  coord_cartesian(xlim =c(0, 60)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/60_error_comp', height = 3.3, width = 7)
+ggsave2x('../plots-ALFAM2/60_error_comp', height = 4, width = 7)
 
 # Residuals par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),

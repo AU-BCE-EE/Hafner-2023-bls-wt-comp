@@ -4,6 +4,7 @@ rm(list = ls())
 
 source('functions.R')
 source('packages.R')
+#source('load_workspace.R')
 source('load.R')
 source('subset.R')
 knit('run_ALFAM2.Rmd', output = '../logs/rum_ALFAM2.md')
