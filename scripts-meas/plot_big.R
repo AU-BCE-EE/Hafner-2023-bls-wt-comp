@@ -1,6 +1,6 @@
 # Subsets for plotting
 # Remove interpolated values
-dd <- subset(idat, cta <= 120)
+dd <- subset(idat)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 
 # Compare measurement methods
@@ -11,7 +11,7 @@ pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
        geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
        geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
        facet_wrap(~ app.date) +
-       xlim(0, 120) +
+       coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        labs(x = '', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
             colour = 'Wind tunnel ave. velocity (m/s):', lty = ' ') +
@@ -21,7 +21,7 @@ pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
        geom_line(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
        geom_line(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
        facet_wrap(~ app.date) +
-       xlim(0, 120) +
+       coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
        labs(x = '', y = expression('Emis.'~('frac. TAN')), 
@@ -31,7 +31,7 @@ pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
 pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
        geom_line() +
        facet_wrap(~ app.date) +
-       xlim(0, 120) +
+       coord_cartesian(xlim =c(0, 168)) +
        ylim(0, 5.5) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
@@ -41,7 +41,7 @@ pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
 pat <- ggplot(db, aes(cta, air.temp, group = pmid)) +
        geom_line() +
        facet_wrap(~ app.date) +
-       xlim(0, 120) +
+       coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
        labs(x = '', y = expression('Air temp.'~(degree*C))) +
@@ -50,7 +50,7 @@ pat <- ggplot(db, aes(cta, air.temp, group = pmid)) +
 prr <- ggplot(db, aes(cta, rain.rate, group = pmid)) +
        geom_line(colour = 'gray45') +
        facet_wrap(~ app.date) +
-       xlim(0, 120) +
+       coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
        labs(x = 'Elapsed time (h)', y = expression('Rain'~('mm h'^'-1'))) +
