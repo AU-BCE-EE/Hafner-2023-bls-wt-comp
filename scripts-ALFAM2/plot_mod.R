@@ -110,7 +110,7 @@ ggplot(dw, aes(bta, r1.predb, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_wrap(~ app.date) +
-  xlim(0, 168) +
+  coord_cartesian(xlim = c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression(italic('r')[1]~('h'^'-1'))) +
   theme(legend.position = 'none')
