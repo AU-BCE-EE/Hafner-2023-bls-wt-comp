@@ -116,8 +116,8 @@ ggplot(dw, aes(bta, r1.predb, group = pmid)) +
   theme(legend.position = 'none')
 ggsave2x('../plots-ALFAM2/80_r1', height = 3, width = 7)
 
-# Final cumulative emission meas and ALFAM2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-dd <- d.pred.final
+# 168 h cumulative emission meas and ALFAM2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dd <- d.pred.168
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
@@ -135,8 +135,8 @@ ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
 ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.7, width = 4.0, scale = 1.1)
 
 
-# Final cumulative emission meas and ALFAM2 par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-dd <- d.pred.final
+# 168 h cumulative emission meas and ALFAM2 par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dd <- d.pred.168
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 

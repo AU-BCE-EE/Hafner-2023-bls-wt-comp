@@ -7,7 +7,7 @@ ggplot(ds, aes(ct, pH, colour = covered)) +
   geom_line() +
   geom_point() +
   facet_wrap(~ app.date) +
-  coord_cartesian(xlim = c(0, 125), ylim = c(7, 9.2)) +
+  coord_cartesian(xlim = c(0, 168), ylim = c(6.7, 9.2)) +
   theme_bw() +
   theme(legend.position = 'top') +
   labs(x = 'Time after application (h)', y = 'Surface pH', colour = '') +
