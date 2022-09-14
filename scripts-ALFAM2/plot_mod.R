@@ -160,7 +160,7 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = trial.nm)) +
   labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
 ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.1)
 
-#  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Check flux vs. wind/temperature ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
                          labels = c('Measured', 'ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 par. set 2'))
 
@@ -179,6 +179,17 @@ ggplot(dw, aes(air.temp, value, group = pmid)) +
   theme(legend.position = c(0.6, 0.1))
 ggsave2x('../plots-ALFAM2/100_flux_temp_wt', height = 9, width = 7)
 
+# Next plot not very good
+dw <- dd[dd$meas.tech == 'Wind tunnel' & dd$cta < 10, ]
+ggplot(dw, aes(wind.2m, value)) +
+  geom_point(aes(colour = variable.nm), alpha = 0.8) +
+  facet_wrap(~ trial.nm, scale = 'fixed') +
+  theme_bw() +
+  labs(x = expression('Air temperature'~(degree*C)), y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       colour = '') +
+  theme(legend.position = c(0.6, 0.1))
+ggsave2x('../plots-ALFAM2/101_flux_air_vel_wt', height = 9, width = 7)
+
 ggplot(db, aes(air.temp, value, group = pmid)) +
   geom_line(aes(group = ct), colour = 'black', lwd = 0.3, alpha = 0.8) +
   geom_path(aes(colour = variable.nm), alpha = 0.8) +
@@ -187,7 +198,7 @@ ggplot(db, aes(air.temp, value, group = pmid)) +
   labs(x = expression('Air temperature'~(degree*C)), y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = '') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/101_flux_temp_bLS', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/102_flux_temp_bLS', height = 4, width = 7)
 
 ggplot(db, aes(wind.2m, value, group = pmid)) +
   geom_line(aes(group = ct), colour = 'black', lwd = 0.3, alpha = 0.8) +
@@ -197,6 +208,6 @@ ggplot(db, aes(wind.2m, value, group = pmid)) +
   labs(x = expression('Wind speed'~(m~s^'-1')), y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = '') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/102_flux_wind_bLS', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/103_flux_wind_bLS', height = 4, width = 7)
 
 
