@@ -47,14 +47,14 @@ d.pred.168 <- subset(d.pred, cta == cta.168)
 
 # Reshape for plots
 # Flux
-dfl <- melt(d.pred, id.vars = c('app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int', 'wind.2m', 'air.temp'),
+dfl <- melt(d.pred, id.vars = c('trial', 'app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int', 'wind.2m', 'air.temp'),
             measure.vars = c('j.preda', 'j.predb', 'j.pred2', 'j.NH3'))
 
 # Residuals
-drl <- melt(d.pred, id.vars = c('app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int'),
+drl <- melt(d.pred, id.vars = c('trial', 'app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int'),
             measure.vars = c('aerra', 'aerrb', 'aerr2'))
 
 # Relative (of cumulative) emission
-dcl <- melt(d.pred, id.vars = c('app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int'),
+dcl <- melt(d.pred, id.vars = c('trial', 'app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int'),
             measure.vars = c('ecrela', 'ecrelb', 'ecrel2'))
 

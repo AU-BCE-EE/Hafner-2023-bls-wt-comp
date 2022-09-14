@@ -4,6 +4,10 @@ pdat$app.date <- as.character(pdat$app.start, format = '%Y-%m-%d')
 
 pdat <- subset(pdat, proj == 'eGylle' & app.date %in% c('2021-08-11', '2021-08-20', '2022-01-05'))
 
+# Trial keys
+tk <- c(`2021-08-11` = 'A', `2021-08-20` = 'B', `2022-01-05` = 'C')
+pdat$trial <- tk[pdat$app.date]
+
 # Drop non-eGylle obs from emis with merge
 idat <- merge(pdat, idat, by = c('pid', 'pmid'))
 
