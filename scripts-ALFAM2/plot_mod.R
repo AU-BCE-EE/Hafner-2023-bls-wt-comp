@@ -3,7 +3,7 @@
 # Flux ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
                          labels = c('Measured', 'ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\npar. set 2'))
-dfl$trial.nm <- paste(dfl$trial, as.character(as.POSIXct(dfl$app.date), format = '%b %d'))
+dfl$trial.nm <- paste(dfl$trial, as.character(as.POSIXct(dfl$app.date), format = '%d %b'))
 
 #dd <- subset(dfl, variable != 'j.pred2' & bta >= 0)
 dd <- subset(dfl, bta >= -2)
@@ -44,7 +44,7 @@ ggsave2x('../plots-ALFAM2/51_flux_comp_ps2', height = 3, width = 7)
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
                          labels = c('ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\npar. set 2'))
 
-drl$trial.nm <- paste(drl$trial, as.character(as.POSIXct(drl$app.date), format = '%b %d'))
+drl$trial.nm <- paste(drl$trial, as.character(as.POSIXct(drl$app.date), format = '%d %b'))
 
 #dd <- subset(drl, variable != 'aerr2')
 dd <- subset(drl, bta > -2)
@@ -87,6 +87,7 @@ ggsave2x('../plots-ALFAM2/61_error_comp_ps2', height = 3, width = 7)
 # Early emission contribution ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dcl$variable.nm <- factor(dcl$variable, levels = c('ecrela', 'ecrelb', 'ecrel2'),
                          labels = c('ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 par. set 2'))
+dcl$trial.nm <- paste(dcl$trial, as.character(as.POSIXct(dcl$app.date), format = '%d %b'))
 
 dd <- subset(dcl, variable != 'ecrel2' & bta <= 11.5)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
@@ -105,7 +106,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
 ggsave2x('../plots-ALFAM2/70_remis_comp', height = 4, width = 7)
 
 # r1 par ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-d.pred$trial.nm <- paste(d.pred$trial, as.character(as.POSIXct(d.pred$app.date), format = '%b %d'))
+d.pred$trial.nm <- paste(d.pred$trial, as.character(as.POSIXct(d.pred$app.date), format = '%d %b'))
 dd <- d.pred
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
@@ -121,7 +122,7 @@ ggplot(dw, aes(bta, r1.predb, group = pmid)) +
 ggsave2x('../plots-ALFAM2/80_r1', height = 3, width = 7)
 
 # 168 h cumulative emission meas and ALFAM2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-d.pred.168$trial.nm <- paste(d.pred.168$trial, as.character(as.POSIXct(d.pred.168$app.date), format = '%b %d'))
+d.pred.168$trial.nm <- paste(d.pred.168$trial, as.character(as.POSIXct(d.pred.168$app.date), format = '%d %b'))
 dd <- d.pred.168
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
@@ -137,7 +138,7 @@ ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = trial.nm)) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
   labs(x = 'ALFAM2 cal. B', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
-ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.7, width = 4.0, scale = 1.1)
+ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.5, width = 4.0, scale = 1.1)
 
 
 # 168 h cumulative emission meas and ALFAM2 par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
