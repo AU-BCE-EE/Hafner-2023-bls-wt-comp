@@ -153,3 +153,32 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
   labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
 ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.1)
+
+#  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
+                         labels = c('Measured', 'ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\npar. set 2'))
+
+dd <- subset(dfl, !variable %in% c('j.preda', 'j.pred2') & bta >= 0)
+dd$j.NH3[grepl('i', dd$flag.int)] <- NA
+dw <- dd[dd$meas.tech == 'Wind tunnel', ]
+db <- dd[dd$meas.tech == 'bLS', ]
+
+ggplot(dw, aes(air.temp, value, group = pmid)) +
+  geom_path(aes(colour = variable.nm), alpha = 0.8) +
+  facet_wrap(~ paste(app.date, pmid), scale = 'free') +
+  theme_bw() +
+  labs(x = expression('Air temperature'~(degree*C)), y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       colour = '') +
+  theme(legend.position = 'top')
+ggsave2x('../plots-ALFAM2/100_flux_temp_wt', height = 9, width = 7)
+
+ggplot(db, aes(wind.2m, value, group = pmid)) +
+  geom_path(aes(colour = variable.nm), alpha = 0.8) +
+  facet_wrap(~ paste(app.date, pmid), scale = 'free') +
+  theme_bw() +
+  labs(x = expression('Wind speed'~(m~s^'-1')), y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       colour = '') +
+  theme(legend.position = 'top')
+ggsave2x('../plots-ALFAM2/101_flux_temp_bLS', height = 9, width = 7)
+
+

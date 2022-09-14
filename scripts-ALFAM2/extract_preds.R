@@ -47,7 +47,7 @@ d.pred.168 <- subset(d.pred, cta == cta.168)
 
 # Reshape for plots
 # Flux
-dfl <- melt(d.pred, id.vars = c('app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int'),
+dfl <- melt(d.pred, id.vars = c('app.date', 'pmid', 'ct', 'cta', 'bta', 'meas.tech', 'wind.2m', 'flag.int', 'wind.2m', 'air.temp'),
             measure.vars = c('j.preda', 'j.predb', 'j.pred2', 'j.NH3'))
 
 # Residuals
