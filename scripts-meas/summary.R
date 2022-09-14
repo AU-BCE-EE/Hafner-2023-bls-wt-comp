@@ -16,18 +16,18 @@ isumm <- idat[, list(cta = max(cta),
                      e.rel.final = max(e.rel),
                      e.cum.168 = approx(cta, e.cum, xout = 168)$y,
                      e.rel.168 = approx(cta, e.rel, xout = 168)$y
-                     ), by = list(app.date, pmid, meas.tech, meas.tech2, aer, aer.grp)]
+                     ), by = list(trial.nm, app.date, pmid, meas.tech, meas.tech2, aer, aer.grp)]
 
 # Mean and sd of cumulative emission
 esumm <- isumm[ , list(
                        e.rel.final = mean(e.rel.final), e.rel.final.n = length(e.rel.final), e.rel.final.sd = sd(e.rel.final),
                        e.rel.168 = mean(e.rel.168), e.rel.168.n = length(e.rel.168), e.rel.168.sd = sd(e.rel.168)
                        ),
-               by = list(app.date, meas.tech2, aer.grp)]
+               by = list(trial.nm, app.date, meas.tech2, aer.grp)]
 
 
 isumm <- rounddf(as.data.frame(isumm), digits = 3, func = signif)
 esumm <- rounddf(as.data.frame(esumm), 3, func = signif)
 
 # Get plot keys for checking data externally
-psumm <- pdat[, c('submitter', 'file', 'pmid', 'pid', 'meas.tech', 'app.date')]
+psumm <- pdat[, c('submitter', 'file', 'pmid', 'pid', 'meas.tech', 'trial.nm', 'app.date')]

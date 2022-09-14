@@ -48,7 +48,7 @@ dd$day <- as.Date(dd$t.start) - as.Date(dd$app.date)
 db <- dd[dd$meas.tech == 'bLS', ]
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 
-ggplot(db, aes(time.of.day, air.temp, colour = app.date, group = pmid)) +
+ggplot(db, aes(time.of.day, air.temp, colour = trial.nm, group = pmid)) +
   geom_step() +
   #geom_point() +
   facet_wrap(~ day) +
@@ -57,7 +57,7 @@ ggplot(db, aes(time.of.day, air.temp, colour = app.date, group = pmid)) +
   theme(legend.position = 'top')
 ggsave('../plots-meas/10_temp_vs_time.png', height = 6, width = 8)
 
-ggplot(db, aes(time.of.day, wind.2m, colour = app.date, group = pmid)) +
+ggplot(db, aes(time.of.day, wind.2m, colour = trial.nm, group = pmid)) +
   geom_step() +
   #geom_point() +
   facet_wrap(~ day) +
@@ -68,7 +68,7 @@ ggsave('../plots-meas/11_wind_vs_time.png', height = 6, width = 8)
 
 ggplot(db, aes(cta, rain.cum, group = pmid)) +
        geom_line(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
-       facet_wrap(~ app.date) +
+       facet_wrap(~ trial.nm) +
        theme_bw() +
        labs(x = 'Elapsed time (h)', y = 'Total rain (mm)') +
        theme(legend.position = 'top')
@@ -78,7 +78,7 @@ dd <- subset(dd, cta < 72)
 ggplot(dd, aes(wind.2m, j.NH3, colour = cta, group = pmid)) +
   geom_path() +
   geom_point() +
-  facet_grid(meas.tech ~ app.date) +
+  facet_grid(meas.tech ~ trial.nm) +
   theme_bw() +
   labs(x = expression('Wind'~('m s'^'-1')), y = expression('Flux'~('kg N h'^'-1'~ha^'-1'))) +
   theme(legend.position = 'top')
@@ -87,17 +87,17 @@ ggsave('../plots-meas/20_flux_vs_wind.png', height = 6, width = 8)
 ggplot(dd, aes(air.temp, j.NH3, colour = cta, group = pmid)) +
   geom_path() +
   geom_point() +
-  facet_grid(meas.tech ~ app.date) +
+  facet_grid(meas.tech ~ trial.nm) +
   theme_bw() +
   labs(x = expression('Air temp.'~(degree*C)), y = expression('Flux'~('kg N h'^'-1'~ha^'-1'))) +
   theme(legend.position = 'top')
 ggsave('../plots-meas/21_flux_vs_temp.png', height = 6, width = 8)
 
 # Emission versus AER
-ggplot(isumm, aes(aer, e.rel.final, colour = app.date, shape = app.date)) +
-  geom_hline(data = subset(isumm, meas.tech == 'bLS'), aes(yintercept = e.rel.final, colour = app.date), lty = 2) +
+ggplot(isumm, aes(aer, e.rel.final, colour = trial.nm, shape = trial.nm)) +
+  geom_hline(data = subset(isumm, meas.tech == 'bLS'), aes(yintercept = e.rel.final, colour = trial.nm), lty = 2) +
   geom_point(cex = 2) +
   labs(x = expression('Air exchange rate'~('vol vol'^'-1'~'min'^'-1')), y = expression('168 h emission'~('frac. applied TAN')), colour = '', shape = '') +
   theme_bw() +
   theme(legend.position = 'top')
-ggsave2x('../plots-meas/30_emis_vs_AER', height = 4, width = 3.6, scale = 1.2)
+ggsave2x('../plots-meas/30_emis_vs_AER', height = 4, width = 3.6)
