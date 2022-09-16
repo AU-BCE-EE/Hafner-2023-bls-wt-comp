@@ -6,6 +6,8 @@ ggplot(ds, aes(ct, pH, colour = covered)) +
   geom_ribbon(aes(ymin = ymin, ymax = ymax, fill = covered), alpha = 0.2, colour = 'white') +
   geom_line() +
   geom_point() +
+  scale_color_brewer(palette = 'Set1') +
+  scale_fill_brewer(palette = 'Set1') + 
   facet_wrap(~ app.date) +
   coord_cartesian(xlim = c(0, 168), ylim = c(6.7, 9.2)) +
   theme_bw() +
