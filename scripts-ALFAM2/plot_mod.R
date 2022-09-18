@@ -14,13 +14,24 @@ db <- dd[dd$meas.tech == 'bLS', ]
 ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
-  facet_grid(variable.nm ~ trial.nm) +
+  facet_grid(variable.nm ~ app.date) +
   coord_cartesian(xlim = c(0, 168), ylim =c(0, 7.5)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/50_flux_comp', height = 5, width = 7)
+
+ggplot(dw, aes(bta, value, group = pmid)) +
+  geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
+  geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+  facet_grid(variable.nm ~ app.date) +
+  coord_cartesian(xlim = c(0, 50), ylim =c(0, 7.5)) +
+  theme_bw() +
+  labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
+  theme(legend.position = 'top')
+ggsave2x('../plots-ALFAM2/50_flux_comp_zoom', height = 5, width = 7)
 
 # Flux par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dd <- subset(dfl, variable %in% c('j.NH3', 'j.pred2'))
@@ -56,13 +67,26 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   geom_hline(yintercept = 0, lty = 1, colour = 'gray45') +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
-  facet_grid(variable.nm ~ trial.nm) +
+  facet_grid(variable.nm ~ app.date) +
   coord_cartesian(xlim =c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/60_error_comp', height = 4, width = 7)
+
+ggplot(dw, aes(bta, value, group = pmid)) +
+  geom_hline(yintercept = 0, lty = 1, colour = 'gray45') +
+  geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
+  geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+  facet_grid(variable.nm ~ app.date) +
+  coord_cartesian(xlim =c(0, 50)) +
+  theme_bw() +
+  labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
+  theme(legend.position = 'top')
+ggsave2x('../plots-ALFAM2/60_error_comp_zoom', height = 4, width = 7)
+
 
 # Residuals par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
@@ -114,7 +138,7 @@ db <- dd[dd$meas.tech == 'bLS', ]
 ggplot(dw, aes(bta, r1.predb, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
-  facet_wrap(~ trial.nm) +
+  facet_wrap(~ app.date) +
   coord_cartesian(xlim = c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression(italic('r')[1]~('h'^'-1'))) +
@@ -127,7 +151,7 @@ dd <- d.pred.168
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = trial.nm)) +
+ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   geom_abline(intercept = 0, slope = 1, lty = 1, col = 'gray45') +
   geom_abline(intercept = 0, slope = c(0.8, 1.2), lty = '11', col = 'gray75') +
   geom_point(aes(colour = wind.2m), size = 2) +
@@ -146,7 +170,7 @@ dd <- d.pred.168
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
-ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = trial.nm)) +
+ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   geom_abline(intercept = 0, slope = 1, lty = 1, col = 'gray45') +
   geom_abline(intercept = 0, slope = c(0.8, 1.2), lty = '11', col = 'gray75') +
   geom_point(aes(colour = wind.2m), size = 2) +
