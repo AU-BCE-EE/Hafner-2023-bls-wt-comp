@@ -217,8 +217,9 @@ ggsave2x('../plots-ALFAM2/101_flux_air_vel_wt', height = 9, width = 7)
 ggplot(db, aes(air.temp, value, group = pmid)) +
   geom_line(aes(group = ct), colour = 'black', lwd = 0.3, alpha = 0.8) +
   geom_path(aes(colour = variable.nm), alpha = 0.8) +
-  facet_wrap(~ paste(trial.nm, pmid), scale = 'free') +
+  facet_wrap(~ app.date, scale = 'free') +
   theme_bw() +
+  scale_color_brewer(palette = 'Set1') + 
   labs(x = expression('Air temperature'~(degree*C)), y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = '') +
   theme(legend.position = 'top')
@@ -227,8 +228,9 @@ ggsave2x('../plots-ALFAM2/102_flux_temp_bLS', height = 4, width = 7)
 ggplot(db, aes(wind.2m, value, group = pmid)) +
   geom_line(aes(group = ct), colour = 'black', lwd = 0.3, alpha = 0.8) +
   geom_path(aes(colour = variable.nm), alpha = 0.8) +
-  facet_wrap(~ paste(trial.nm, pmid), scale = 'free') +
+  facet_wrap(~ app.date, scale = 'free') +
   theme_bw() +
+  scale_color_brewer(palette = 'Set1') +
   labs(x = expression('Wind speed'~(m~s^'-1')), y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = '') +
   theme(legend.position = 'top')
