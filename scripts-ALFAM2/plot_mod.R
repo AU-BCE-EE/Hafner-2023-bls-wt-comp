@@ -15,7 +15,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  coord_cartesian(xlim = c(0, 168), ylim =c(0, 7.5)) +
+  coord_cartesian(xlim = c(0, 168), ylim =c(0, 5.5)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
@@ -26,7 +26,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
-  coord_cartesian(xlim = c(0, 50), ylim =c(0, 7.5)) +
+  coord_cartesian(xlim = c(0, 50), ylim =c(0, 5.5)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
@@ -157,7 +157,7 @@ ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   geom_point(aes(colour = wind.2m), size = 2) +
   geom_point(data = db, aes(size = meas.tech), colour = 'red') +
   scale_shape_manual(values = c(1, 6, 20)) +
-  xlim(0, 0.75) + ylim(0, 0.75) +
+  xlim(0, 0.75) + ylim(0, 0.65) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
@@ -176,7 +176,7 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   geom_point(aes(colour = wind.2m), size = 2) +
   geom_point(data = db, aes(size = meas.tech), colour = 'red') +
   scale_shape_manual(values = c(1, 6, 20)) +
-  xlim(0, 0.65) + ylim(0, 0.65) +
+  xlim(0, 0.65) + ylim(0, 0.55) +
   theme_bw() +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
