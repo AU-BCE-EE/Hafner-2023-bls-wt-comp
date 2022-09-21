@@ -1,21 +1,21 @@
-      int.f0       int.r1        wt.r1  air.temp.r1   wind.wt.r1  wind.bLS.r1       int.r2 
-  0.43502385  -1.96642732   1.07788312   0.03748587   0.76672930   0.30674341  -1.49223709 
-rain.rate.r2        wt.r3   wind.wt.r3  air.temp.r3    man.dm.f0    man.dm.r1    man.ph.r1 
-  1.29571059   0.47711843   0.34640016   0.00722246   0.39967070  -0.13988189   0.66500000 
-   man.ph.r3       int.r3 
-  0.23800000  -3.22841225 
+      int.f0       int.r1        wt.r1  air.temp.r1   wind.wt.r1  wind.bLS.r1 
+ 0.462309369 -1.978285516  1.900172807  0.038379671  0.767456449  0.238003711 
+      int.r2 rain.rate.r2        wt.r3   wind.wt.r3  air.temp.r3    man.dm.f0 
+-1.473054877  1.527246558  0.976801929  0.342087091  0.006914128  0.399670700 
+   man.dm.r1    man.ph.r1    man.ph.r3       int.r3 
+-0.139881888  0.665000000  0.238000000 -3.228412252 
 $par
-      int.f0       int.r1        wt.r1  air.temp.r1   wind.wt.r1  wind.bLS.r1       int.r2 
-  0.43502385  -1.96642732   1.07788312   0.03748587   0.76672930   0.30674341  -1.49223709 
-rain.rate.r2        wt.r3   wind.wt.r3  air.temp.r3 
-  1.29571059   0.47711843   0.34640016   0.00722246 
+      int.f0       int.r1        wt.r1  air.temp.r1   wind.wt.r1  wind.bLS.r1 
+ 0.462309369 -1.978285516  1.900172807  0.038379671  0.767456449  0.238003711 
+      int.r2 rain.rate.r2        wt.r3   wind.wt.r3  air.temp.r3 
+-1.473054877  1.527246558  0.976801929  0.342087091  0.006914128 
 
 $value
-[1] 179.6629
+[1] 180.045
 
 $counts
 function gradient 
-     486       NA 
+     494       NA 
 
 $convergence
 [1] 0
