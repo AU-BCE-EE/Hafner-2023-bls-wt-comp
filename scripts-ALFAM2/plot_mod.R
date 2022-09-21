@@ -184,6 +184,30 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
 ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.1)
 
+# 168 h cumulative emission meas and ALFAM2 (cal. B and par set 2) ~~~~~~~~~~~~~~~~~
+dd <- d.pred.168
+# Reshape
+dl <- melt(dd, id.vars = c('pmid', 'e.rel', 'app.date', 'wind.2m', 'meas.tech'), measure.vars = c('er.predb', 'er.pred2'))
+dl$parset <- factor(dl$variable, levels = c('er.predb', 'er.pred2'), labels = c('Cal. B', 'Set 2'))
+dw <- dl[dl$meas.tech == 'Wind tunnel', ]
+db <- dl[dl$meas.tech == 'bLS', ]
+
+ggplot(dw, aes(value, e.rel, group = pmid, shape = app.date)) +
+  geom_abline(intercept = 0, slope = 1, lty = 1, col = 'gray45') +
+  geom_abline(intercept = 0, slope = c(0.8, 1.2), lty = '11', col = 'gray75') +
+  geom_point(aes(colour = wind.2m), size = 2) +
+  geom_point(data = db, aes(size = meas.tech), colour = 'red') +
+  scale_shape_manual(values = c(1, 6, 20)) +
+  xlim(0, 0.65) + ylim(0, 0.55) +
+  facet_wrap(~ parset) +
+  theme_bw() +
+  guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
+  theme_bw() +
+  theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
+  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
+ggsave2x('../plots-ALFAM2/92_cum_emis_comp', height = 2.5, width = 6.0, scale = 1.1)
+
+
 # Check flux vs. wind/temperature ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
                          labels = c('Measured', 'ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 par. set 2'))
