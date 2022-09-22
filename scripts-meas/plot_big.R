@@ -14,8 +14,11 @@ pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
        coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        labs(x = '', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
-            colour = 'Wind tunnel ave. velocity (m/s):', lty = ' ') +
-       theme(legend.position = 'top')
+            colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = ' ') +
+       theme(legend.position = 'top',
+             axis.title.x=element_blank(),
+             axis.text.x=element_blank(),
+             axis.ticks.x=element_blank())
 
 pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
        geom_line(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
@@ -25,8 +28,11 @@ pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
        labs(x = '', y = expression('Emis.'~('frac. TAN')), 
-            colour = 'Wind tunnel ave. velocity (m/s):', lty = ' ') +
-       theme(legend.position = 'none')
+            colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = ' ') +
+       theme(legend.position = 'none',
+             axis.title.x=element_blank(),
+             axis.text.x=element_blank(),
+             axis.ticks.x=element_blank())
 
 pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
        geom_line() +
@@ -36,7 +42,10 @@ pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
        labs(x = '', y = expression('Wind'~('m s'^'-1'))) +
-       theme(legend.position = 'top')
+       theme(legend.position = 'top',
+             axis.title.x=element_blank(),
+             axis.text.x=element_blank(),
+             axis.ticks.x=element_blank())
 
 pat <- ggplot(db, aes(cta, air.temp, group = pmid)) +
        geom_line() +
@@ -45,7 +54,10 @@ pat <- ggplot(db, aes(cta, air.temp, group = pmid)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
        labs(x = '', y = expression('Air temp.'~(degree*C))) +
-       theme(legend.position = 'top')
+       theme(legend.position = 'top',
+             axis.title.x=element_blank(),
+             axis.text.x=element_blank(),
+             axis.ticks.x=element_blank())
 
 prr <- ggplot(db, aes(cta, rain.rate, group = pmid)) +
        geom_line(colour = 'gray45') +
@@ -80,7 +92,7 @@ pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
        xlim(0, ymax) +
        theme_bw() +
        labs(x = '', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
-            colour = 'Wind tunnel ave. velocity (m/s):', lty = ' ') +
+            colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = ' ') +
        theme(legend.position = 'top')
 
 pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
@@ -91,7 +103,7 @@ pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
        labs(x = '', y = expression('Emis.'~('frac. TAN')), 
-            colour = 'Wind tunnel ave. velocity (m/s):', lty = ' ') +
+            colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = ' ') +
        theme(legend.position = 'none')
 
 pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
