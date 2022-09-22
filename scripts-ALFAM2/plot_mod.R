@@ -18,7 +18,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   coord_cartesian(xlim = c(0, 168), ylim =c(0, 5.5)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
+       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/50_flux_comp', height = 5, width = 7)
 
@@ -29,7 +29,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   coord_cartesian(xlim = c(0, 50), ylim =c(0, 5.5)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
+       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/50_flux_comp_zoom', height = 5, width = 7)
 
@@ -46,7 +46,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   coord_cartesian(xlim = c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
+       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/51_flux_comp_ps2', height = 3, width = 7)
 
@@ -71,7 +71,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   coord_cartesian(xlim =c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
+       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/60_error_comp', height = 4, width = 7)
 
@@ -83,7 +83,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   coord_cartesian(xlim =c(0, 50)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = 'Wind tunnel ave. velocity (m/s):', lty = '') +
+       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/60_error_comp_zoom', height = 4, width = 7)
 
@@ -161,7 +161,7 @@ ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
-  labs(x = 'ALFAM2 cal. B', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
+  labs(x = 'ALFAM2 cal. B', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.5, width = 4.0, scale = 1.1)
 
 
@@ -181,7 +181,7 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
-  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
+  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.1)
 
 # 168 h cumulative emission meas and ALFAM2 (cal. B and par set 2) ~~~~~~~~~~~~~~~~~
@@ -204,7 +204,7 @@ ggplot(dw, aes(value, e.rel, group = pmid, shape = app.date)) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
-  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = 'Wind tun. (m/s)', size = '')
+  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/92_cum_emis_comp', height = 2.5, width = 6.0, scale = 1.1)
 
 

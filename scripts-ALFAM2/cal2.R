@@ -15,8 +15,7 @@ modb <- list()
 names.pars.fixed <- c('man.dm.f0', 
                       'man.dm.r1', 
                       'man.ph.r1', 
-                      'man.ph.r3',
-                      'int.r3')
+                      'man.ph.r3')
 
 # Fixed pars from set 2, effectively DM and pH
 fixed <- alfam2pars02[names.pars.fixed]
@@ -30,7 +29,7 @@ pars.cal <- c(int.f0       =  0.6,
               wind.bLS.r1  =  0.1,
               int.r2       = -1.5,
               rain.rate.r2 =  0.7,
-              #int.r3       = -3.1,
+              int.r3       = -3.1,
               wt.r3        =  0.1,
               wind.wt.r3   =  0.5,
               #wind.bLS.r3  =  0.1,
