@@ -10,7 +10,7 @@ pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
        #geom_vline(xintercept = 24 * 1:5, lty = 2) +
        geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
        geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        labs(x = '', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
@@ -20,7 +20,7 @@ pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
 pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
        geom_line(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
        geom_line(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
@@ -30,7 +30,7 @@ pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
 
 pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
        geom_line() +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        coord_cartesian(xlim =c(0, 168)) +
        ylim(0, 5.5) +
        theme_bw() +
@@ -40,7 +40,7 @@ pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
 
 pat <- ggplot(db, aes(cta, air.temp, group = pmid)) +
        geom_line() +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
@@ -49,7 +49,7 @@ pat <- ggplot(db, aes(cta, air.temp, group = pmid)) +
 
 prr <- ggplot(db, aes(cta, rain.rate, group = pmid)) +
        geom_line(colour = 'gray45') +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
@@ -76,7 +76,7 @@ pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
        #geom_vline(xintercept = 24 * 1:5, lty = 2) +
        geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
        geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        xlim(0, ymax) +
        theme_bw() +
        labs(x = '', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
@@ -86,7 +86,7 @@ pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
 pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
        geom_line(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
        geom_line(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        xlim(0, ymax) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
@@ -96,7 +96,7 @@ pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
 
 pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
        geom_line() +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        xlim(0, ymax) +
        ylim(0, 5.5) +
        theme_bw() +
@@ -106,7 +106,7 @@ pws <- ggplot(db, aes(cta, wind.2m, group = pmid)) +
 
 pat <- ggplot(db, aes(cta, air.temp, group = pmid)) +
        geom_line() +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        xlim(0, ymax) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
@@ -115,7 +115,7 @@ pat <- ggplot(db, aes(cta, air.temp, group = pmid)) +
 
 prr <- ggplot(db, aes(cta, rain.rate, group = pmid)) +
        geom_line(colour = 'gray45') +
-       facet_wrap(~ trial.nm) +
+       facet_wrap(~ app.date) +
        xlim(0, ymax) +
        theme_bw() +
        theme(strip.background = element_blank(), strip.text.x = element_blank()) +
