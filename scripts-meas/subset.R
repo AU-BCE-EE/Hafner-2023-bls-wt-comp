@@ -13,4 +13,6 @@ pdat$trial.nm <- paste(pdat$trial, as.character(as.POSIXct(pdat$app.date), forma
 idat <- merge(pdat, idat, by = c('pid', 'pmid'))
 
 # Remove pre-application measurements
+# Note that this does not remove the first interval, which may have underestiamted flux because it started before application
+# First interval is removed in plot_big.R
 idat <- subset(idat, cta >= 0)
