@@ -1,9 +1,5 @@
 # Fit ALFAM2 model to each individual plot
 
-# Set cta cutoff for weights
-# All wt measurements start later, but first bLS measurement below 0.75 is low for all 3 plots
-cta.cut <- 0.75
-
 # List for holding output
 modsa <- list()
 

@@ -1,7 +1,5 @@
 # Single parameter set with wt/bLS pars
 
-# Note that cta cutoff (for weights) is set in cal1.R
-
 # Measurement method-specific weather
 idat$wind.wt <- (idat$meas.tech2 == 'wt') * sqrt(idat$wind.2m)
 idat$wind.bLS <- (idat$meas.tech2 == 'micro met') * sqrt(idat$wind.2m)

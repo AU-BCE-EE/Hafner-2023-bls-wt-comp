@@ -12,7 +12,7 @@ pdat$trial <- tk[pdat$app.date]
 idat <- merge(pdat, idat, by = c('pid', 'pmid'))
 
 # Remove pre-application measurements
-idat <- subset(idat, cta >= 0)
+idat <- subset(idat, cta > 0.75 * dt)
 
 # Names for calibration
 idat$e <- idat$e.cum
