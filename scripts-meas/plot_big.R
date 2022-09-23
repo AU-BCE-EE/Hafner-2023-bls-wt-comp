@@ -1,6 +1,7 @@
 # Subsets for plotting
+# Drop 
+dd <- subset(idat, cta > 0.75 * dt)
 # Remove interpolated values
-dd <- subset(idat)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 
 # Compare measurement methods
@@ -8,8 +9,8 @@ dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
        #geom_vline(xintercept = 24 * 1:5, lty = 2) +
-       geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
-       geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+       geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8, direction = 'vh') +
+       geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red', direction = 'vh') +
        facet_wrap(~ app.date) +
        coord_cartesian(xlim =c(0, 168)) +
        theme_bw() +
@@ -84,16 +85,20 @@ ymax <- 10
 # Compare measurement methods
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
+
+x <- subset(db, app.date == '2021-08-20')
+
 pf1 <- ggplot(dw, aes(cta, j.NH3, group = pmid)) +
        #geom_vline(xintercept = 24 * 1:5, lty = 2) +
-       geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
-       geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+       geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8, direction = 'vh') +
+       geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red', direction = 'vh') +
        facet_wrap(~ app.date) +
        xlim(0, ymax) +
        theme_bw() +
        labs(x = '', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
             colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = ' ') +
        theme(legend.position = 'top')
+pf1
 
 pe1 <- ggplot(dw, aes(cta, e.rel, group = pmid)) +
        geom_line(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
