@@ -18,4 +18,14 @@ idat <- subset(idat, cta > 0.75 * dt)
 idat$e <- idat$e.cum
 idat$j <- idat$j.NH3
 
+# Create wind tunnel and bLS dummy variables
+idat$wt <- idat$meas.tech2 == 'wt' 
+idat$bLS <- idat$meas.tech2 == 'micro met'
+
+# Measurement method-specific weather
+idat$wind.wt <- (idat$meas.tech2 == 'wt') * sqrt(idat$wind.2m)
+idat$wind.bLS <- (idat$meas.tech2 == 'micro met') * sqrt(idat$wind.2m)
+idat$air.temp.wt <- (idat$meas.tech2 == 'wt') * idat$air.temp
+idat$air.temp.bLS <- (idat$meas.tech2 == 'micro met') * idat$air.temp
+
 
