@@ -25,10 +25,10 @@ ggsave2x('../plots-ALFAM2/50_flux_comp', height = 5, width = 7)
 
 ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
-  geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+  geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'black') +
   facet_grid(variable.nm ~ app.date) +
   coord_cartesian(xlim = c(0, 50), ylim =c(0, 5.5)) +
-  scale_colour_viridis_c(option = 'D') +
+  scale_colour_viridis_c(option = 'H') +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
