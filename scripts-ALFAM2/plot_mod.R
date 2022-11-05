@@ -11,14 +11,16 @@ dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 
+db$meas.tech <- '\nbLS'
 ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_grid(variable.nm ~ app.date) +
   coord_cartesian(xlim = c(0, 168), ylim =c(0, 5.5)) +
+  scale_colour_viridis_c(option = 'D') +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
+       colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/50_flux_comp', height = 5, width = 7)
 
@@ -31,7 +33,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/50_flux_comp_zoom', height = 5, width = 7)
+ggsave2x('../plots-ALFAM2/51_flux_comp_zoom', height = 5, width = 7)
 
 # Flux par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dd <- subset(dfl, variable %in% c('j.NH3', 'j.pred2'))
@@ -48,7 +50,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/51_flux_comp_ps2', height = 3, width = 7)
+ggsave2x('../plots-ALFAM2/52_flux_comp_ps2', height = 3, width = 7)
 
 
 # Residuals ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
