@@ -2,7 +2,7 @@
 
 # Flux ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
-                         labels = c('Measured', 'ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\npar. set 2'))
+                         labels = c('Measured', 'ALFAM2\npar. set A', 'ALFAM2\npar. set B', 'ALFAM2\npar. set 2'))
 dfl$trial.nm <- paste(dfl$trial, as.character(as.POSIXct(dfl$app.date), format = '%d %b'))
 
 #dd <- subset(dfl, variable != 'j.pred2' & bta >= 0)
@@ -53,7 +53,7 @@ ggsave2x('../plots-ALFAM2/51_flux_comp_ps2', height = 3, width = 7)
 
 # Residuals ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
-                         labels = c('ALFAM2\ncal. A', 'ALFAM2\ncal. B', 'ALFAM2\npar. set 2'))
+                         labels = c('ALFAM2\npar. set A', 'ALFAM2\npar. set B', 'ALFAM2\npar. set 2'))
 
 drl$trial.nm <- paste(drl$trial, as.character(as.POSIXct(drl$app.date), format = '%d %b'))
 
@@ -90,7 +90,7 @@ ggsave2x('../plots-ALFAM2/60_error_comp_zoom', height = 4, width = 7)
 
 # Residuals par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
-                         labels = c('ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 par. set 2'))
+                         labels = c('ALFAM2 par. set A', 'ALFAM2 par. set B', 'ALFAM2 par. set 2'))
 
 dd <- drl
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
@@ -110,7 +110,7 @@ ggsave2x('../plots-ALFAM2/61_error_comp_ps2', height = 3, width = 7)
 
 # Early emission contribution ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dcl$variable.nm <- factor(dcl$variable, levels = c('ecrela', 'ecrelb', 'ecrel2'),
-                         labels = c('ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 par. set 2'))
+                         labels = c('ALFAM2 par. set A', 'ALFAM2 par. set B', 'ALFAM2 par. set 2'))
 dcl$trial.nm <- paste(dcl$trial, as.character(as.POSIXct(dcl$app.date), format = '%d %b'))
 
 dd <- subset(dcl, variable != 'ecrel2' & bta <= 11.5)
@@ -161,7 +161,7 @@ ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
-  labs(x = 'ALFAM2 cal. B', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
+  labs(x = 'ALFAM2 par. set B', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.5, width = 4.0, scale = 1.1)
 
 
@@ -184,11 +184,11 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.1)
 
-# 168 h cumulative emission meas and ALFAM2 (cal. B and par set 2) ~~~~~~~~~~~~~~~~~
+# 168 h cumulative emission meas and ALFAM2 (par. set B and par set 2) ~~~~~~~~~~~~~~~~~
 dd <- d.pred.168
 # Reshape
 dl <- melt(dd, id.vars = c('pmid', 'e.rel', 'app.date', 'wind.2m', 'meas.tech'), measure.vars = c('er.predb', 'er.pred2'))
-dl$parset <- factor(dl$variable, levels = c('er.predb', 'er.pred2'), labels = c('Cal. B', 'Set 2'))
+dl$parset <- factor(dl$variable, levels = c('er.predb', 'er.pred2'), labels = c('Set B', 'Set 2'))
 dw <- dl[dl$meas.tech == 'Wind tunnel', ]
 db <- dl[dl$meas.tech == 'bLS', ]
 
@@ -210,7 +210,7 @@ ggsave2x('../plots-ALFAM2/92_cum_emis_comp', height = 2.5, width = 6.0, scale = 
 
 # Check flux vs. wind/temperature ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
-                         labels = c('Measured', 'ALFAM2 cal. A', 'ALFAM2 cal. B', 'ALFAM2 par. set 2'))
+                         labels = c('Measured', 'ALFAM2 par. set A', 'ALFAM2 par. set B', 'ALFAM2 par. set 2'))
 
 dd <- subset(dfl, !variable %in% c('j.preda', 'j.pred2') & bta >= 0)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
