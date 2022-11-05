@@ -13,17 +13,17 @@ fixed <- alfam2pars02[names.pars.fixed]
 
 
 # Add a couple more parameters for calibration
-pars.cal <- c(int.f0       =  0.5,
-              bLS.r1       = -2.0,
-              wt.r1        = -1.0,
-              air.temp.r1  =  0.04,
-              wind.wt.r1   =  0.9,
+pars.cal <- c(int.f0       =  2,
+              bLS.r1       = -3.0,
+              wt.r1        = -2.0,
+              air.temp.r1  =  0.06,
+              wind.wt.r1   =  0.3,
               wind.bLS.r1  =  0.3,
               int.r2       = -1.5,
               rain.rate.r2 =  1.0,
-              bLS.r3       = -3.5) #,
-#              wt.r3        = -3.0,
-#              wind.wt.r3   =  0.8)#,
+              bLS.r3       = -3.5,
+              wt.r3        = -3.0,
+              wind.wt.r3   =  0.8)#,
               #wind.bLS.r3  =  0.1,
               #air.temp.r3  =  0.01)
 
@@ -35,9 +35,9 @@ lower <- c(int.f0       =  0,
            wind.bLS.r1  =  0,
            int.r2       = -3,
            rain.rate.r2 =  0,
-           bLS.r3       = -5) #,
-           #wt.r3        = -5,
-           #wind.wt.r3   =  0)
+           bLS.r3       = -5,
+           wt.r3        = -5,
+           wind.wt.r3   =  0)
 
 idat$wind.wt
 table(idat$wt)

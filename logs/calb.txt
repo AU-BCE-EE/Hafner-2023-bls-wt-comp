@@ -1,0 +1,25 @@
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1  wind.bLS.r1 
+  1.80302524  -2.86292371  -2.05042723   0.03277391   0.58248839   0.61717934 
+      int.r2 rain.rate.r2       bLS.r3        wt.r3   wind.wt.r3    man.dm.f0 
+ -1.27355463   0.96656435  -3.67048737  -3.30806608   0.44108544   0.39967070 
+   man.dm.r1    man.ph.r1    man.ph.r3 
+ -0.13988189   0.66500000   0.23800000 
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1  wind.bLS.r1 
+  1.80302524  -2.86292371  -2.05042723   0.03277391   0.58248839   0.61717934 
+      int.r2 rain.rate.r2       bLS.r3        wt.r3   wind.wt.r3 
+ -1.27355463   0.96656435  -3.67048737  -3.30806608   0.44108544 
+
+$value
+[1] 164.8056
+
+$counts
+function gradient 
+      76       76 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
