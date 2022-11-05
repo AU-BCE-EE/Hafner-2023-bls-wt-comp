@@ -12,7 +12,8 @@ names.pars.fixed <- c('man.dm.f0',
 fixed <- alfam2pars02[names.pars.fixed]
 
 
-# Add a couple more parameters for calibration
+# List parameters for calibration
+# Note that bLS wind speed and air temperature do not affect r3 presently
 pars.cal <- c(int.f0       =  2,
               bLS.r1       = -3.0,
               wt.r1        = -2.0,
@@ -39,10 +40,6 @@ lower <- c(int.f0       =  0,
            wt.r3        = -5,
            wind.wt.r3   =  0)
 
-idat$wind.wt
-table(idat$wt)
-table(idat$meas.tech2)
-
 # Look for problem observations before calibration by running with all parameters
 pr <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid', pars = c(pars.cal, fixed))
 # Should be no NA in output
@@ -54,7 +51,7 @@ pp <- pars.cal
 ff <- fixed
 m <- list(par = pp, converge = 1)
 # Use next line to repeat
-while (m$converge == 1) {
+while (m$converge != 0) {
   pp <- m$par
   dd <- as.data.frame(idat)
   modb <- list()
@@ -83,8 +80,3 @@ modb[['pred']] <- pr <- ALFAM2mod(dd, app.name = 'tan.app', time.name = 'cta',
                 group = 'pmid', pars = pp)
 
 Sys.time()
-
-#head(pr)
-#head(d.pred2)
-#pp <- c(pp, int.r1 = 0, int.r3 = 0)
-#debug(alfam2)
