@@ -14,19 +14,19 @@ fixed <- alfam2pars02[names.pars.fixed]
 
 # List parameters for calibration
 # Note that bLS wind speed and air temperature do not affect r3 presently
-pars.cal <- c(int.f0       =  2,
-              bLS.r1       = -3.0,
-              wt.r1        = -2.0,
-              air.temp.r1  =  0.06,
-              wind.wt.r1   =  0.3,
-              wind.bLS.r1  =  0.3,
-              int.r2       = -1.5,
-              rain.rate.r2 =  1.0,
-              bLS.r3       = -3.5,
-              wt.r3        = -3.0,
-              wind.wt.r3   =  0.8)#,
-              #wind.bLS.r3  =  0.1,
-              #air.temp.r3  =  0.01)
+pars.cal <- c(int.f0       =  1.8,
+              bLS.r1       = -2.9,
+              wt.r1        = -2.1,
+              air.temp.r1  =  0.03,
+              wind.wt.r1   =  0.58,
+              wind.bLS.r1  =  0.62,
+              int.r2       = -1.3,
+              rain.rate.r2 =  0.97,
+              bLS.r3       = -3.7,
+              wt.r3        = -3.3,
+              wind.wt.r3   =  0.44,
+              wind.bLS.r3  =  0.44,
+              air.temp.r3  =  0.01)
 
 lower <- c(int.f0       =  0,
            bLS.r1       = -4,
@@ -38,7 +38,9 @@ lower <- c(int.f0       =  0,
            rain.rate.r2 =  0,
            bLS.r3       = -5,
            wt.r3        = -5,
-           wind.wt.r3   =  0)
+           wind.wt.r3   =  0,
+           wind.bLS.r3  =  0,
+           air.temp.r3  =  0)
 
 # Look for problem observations before calibration by running with all parameters
 pr <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid', pars = c(pars.cal, fixed))
