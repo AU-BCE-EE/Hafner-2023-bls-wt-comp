@@ -7,3 +7,7 @@ library(viridisLite)
 library(knitr)
 library(rmarkdown)
 library(gridExtra)
+
+sink('../logs/versions-meas.txt')
+  print(sessionInfo())
+sink()

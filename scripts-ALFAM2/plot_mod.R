@@ -190,7 +190,7 @@ ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scal
 dd <- d.pred.168
 # Reshape
 dl <- melt(dd, id.vars = c('pmid', 'e.rel', 'app.date', 'wind.2m', 'meas.tech'), measure.vars = c('er.predb', 'er.pred2'))
-dl$parset <- factor(dl$variable, levels = c('er.predb', 'er.pred2'), labels = c('Set B', 'Set 2'))
+dl$parset <- factor(dl$variable, levels = c('er.predb', 'er.pred2'), labels = c('Parameter set B', 'Parameter set 2'))
 dw <- dl[dl$meas.tech == 'Wind tunnel', ]
 db <- dl[dl$meas.tech == 'bLS', ]
 

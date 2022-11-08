@@ -55,7 +55,7 @@ for (i in as.character(unique(idat$pmid))) {
                                      resCalcOptim(p = par, dat = dd, to = 'j', time.name = 'cta',
                                                   fixed = ff, app.name = 'tan.app', 
                                                   group = 'pmid', method = 'TAE', weights = dd$bta >= 0),
-                                   method = 'Nelder-Mead')
+                                   method = 'L-BFGS-B')
 
   Sys.time()
   

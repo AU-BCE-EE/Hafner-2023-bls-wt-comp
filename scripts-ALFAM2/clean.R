@@ -1,5 +1,8 @@
 # Get eGylle experiments 
 
+idat$pmid <- as.character(idat$pmid)
+pdat$pmid <- as.character(pdat$pmid)
+
 pdat$app.date <- as.character(pdat$app.start, format = '%Y-%m-%d')
 
 pdat <- subset(pdat, proj == 'eGylle' & app.date %in% c('2021-08-11', '2021-08-20', '2022-01-05'))
