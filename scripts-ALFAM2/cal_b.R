@@ -14,19 +14,19 @@ fixed <- alfam2pars02[names.pars.fixed]
 
 # List parameters for calibration
 # Note that bLS wind speed and air temperature do not affect r3 presently
-pars.cal <- c(int.f0       =  1.8,
-              bLS.r1       = -2.9,
-              wt.r1        = -2.1,
+pars.cal <- c(int.f0       =  0.8,
+              bLS.r1       = -2.8,
+              wt.r1        = -1.9,
               air.temp.r1  =  0.03,
-              wind.wt.r1   =  0.58,
-              wind.bLS.r1  =  0.62,
-              int.r2       = -1.3,
-              rain.rate.r2 =  0.97,
-              bLS.r3       = -3.7,
-              wt.r3        = -3.3,
-              wind.wt.r3   =  0.44,
-              wind.bLS.r3  =  0.44,
-              air.temp.r3  =  0.01)
+              wind.wt.r1   =  0.59,
+              wind.bLS.r1  =  0.66,
+              int.r2       = -1.4,
+              rain.rate.r2 =  0.88,
+              bLS.r3       = -4.0,
+              wt.r3        = -3.2,
+              wind.wt.r3   =  0.31,
+              wind.bLS.r3  =  0.16,
+              air.temp.r3  =  0.03)
 
 lower <- c(int.f0       =  0,
            bLS.r1       = -4,
