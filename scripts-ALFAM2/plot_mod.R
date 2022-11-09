@@ -35,6 +35,30 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/51_flux_comp_zoom', height = 5, width = 7)
 
+dd <- subset(dfl, bta >= -2 & variable %in% c('j.predb', 'j.NH3'))
+dd$j.NH3[grepl('i', dd$flag.int)] <- NA
+dw <- dd[dd$meas.tech == 'Wind tunnel', ]
+db <- dd[dd$meas.tech == 'bLS', ]
+x <- subset(dd, app.date == '2021-08-11')
+head(x)
+tail(x)
+x <- subset(idat, app.date == '2021-08-11')
+x <- subset(dfl, app.date == '2021-08-11')
+x <- subset(dw, app.date == '2021-08-11')
+
+ggplot(dw, aes(bta, value, group = pmid)) +
+  geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
+  geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+  facet_grid(app.date ~ variable.nm) +
+  coord_cartesian(xlim = c(0, 168), ylim =c(0, 5.5)) +
+  #scale_colour_viridis_c(option = 'D') +
+  theme_bw() +
+  labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       colour = expression(atop('Wind tunnel ave. velocity'~(m~s^'-1'),' ')), lty = ' ') +
+  theme(legend.position = 'top')
+ggsave2x('../plots-ALFAM2/52_flux_comp_B', height = 5, width = 5)
+
+
 # Flux par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dd <- subset(dfl, variable %in% c('j.NH3', 'j.pred2'))
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
@@ -50,7 +74,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/52_flux_comp_ps2', height = 3, width = 7)
+ggsave2x('../plots-ALFAM2/53_flux_comp_ps2', height = 3, width = 7)
 
 
 # Residuals ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -156,15 +180,16 @@ db <- dd[dd$meas.tech == 'bLS', ]
 ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   geom_abline(intercept = 0, slope = 1, lty = 1, col = 'gray45') +
   geom_abline(intercept = 0, slope = c(0.8, 1.2), lty = '11', col = 'gray75') +
-  geom_point(aes(colour = wind.2m), size = 2) +
+  geom_point(aes(colour = wind.2m), size = 2, show.legend = FALSE) +
   geom_point(data = db, aes(size = meas.tech), colour = 'red') +
   scale_shape_manual(values = c(1, 6, 20)) +
   xlim(0, 0.75) + ylim(0, 0.65) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
-  theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
+  theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm'), legend.position = 'top') +
+  guides(size = 'none') +
   labs(x = 'ALFAM2 par. set B', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
-ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 2.5, width = 4.0, scale = 1.1)
+ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 4.2, width = 4.0, scale = 1.1)
 
 
 # 168 h cumulative emission meas and ALFAM2 par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
