@@ -261,7 +261,7 @@ ggplot(dw, aes(value, e.rel, group = pmid, shape = app.date)) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
-  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
+  labs(x = 'ALFAM2 result', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/92_cum_emis_comp', height = 2.5, width = 6.0, scale = 1.1)
 
 
