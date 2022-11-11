@@ -2,7 +2,7 @@
 
 # Flux ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.pred2', 'j.preda', 'j.predb'),
-                         labels = c('Measured', 'ALFAM2\npar. set 2', 'ALFAM2\npar. set A', 'ALFAM2\npar. set B'))
+                         labels = c('Measured', 'ALFAM2\npar. set 2', 'ALFAM2\npar. set A', 'ALFAM2\npar. set X'))
 dfl$trial.nm <- paste(dfl$trial, as.character(as.POSIXct(dfl$app.date), format = '%d %b'))
 
 #dd <- subset(dfl, variable != 'j.pred2' & bta >= 0)
@@ -58,6 +58,36 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/52_flux_comp_B', height = 5, width = 5)
 
+# Drop set A for paper
+dd <- subset(dfl, bta >= -2 & variable != 'j.preda')
+dd$j.NH3[grepl('i', dd$flag.int)] <- NA
+dw <- dd[dd$meas.tech == 'Wind tunnel', ]
+db <- dd[dd$meas.tech == 'bLS', ]
+
+ggplot(dw, aes(bta, value, group = pmid)) +
+  geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
+  geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+  facet_grid(variable.nm ~ app.date) +
+  coord_cartesian(xlim = c(0, 168), ylim =c(0, 5.5)) +
+  #scale_colour_viridis_c(option = 'D') +
+  theme_bw() +
+  labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
+  theme(legend.position = 'top')
+ggsave2x('../plots-ALFAM2/53_flux_comp_sel', height = 5, width = 7)
+
+ggplot(dw, aes(bta, value, group = pmid)) +
+  geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
+  geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+  facet_grid(variable.nm ~ app.date) +
+  coord_cartesian(xlim = c(0, 50), ylim =c(0, 5.5)) +
+  #scale_colour_viridis_c(option = 'H') +
+  theme_bw() +
+  labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
+       colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
+  theme(legend.position = 'top')
+ggsave2x('../plots-ALFAM2/54_flux_comp_sel_zoom', height = 5, width = 7)
+
 
 # Flux par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dd <- subset(dfl, variable %in% c('j.NH3', 'j.pred2'))
@@ -72,14 +102,14 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   coord_cartesian(xlim = c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
+       colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/53_flux_comp_ps2', height = 3, width = 7)
+ggsave2x('../plots-ALFAM2/55_flux_comp_ps2', height = 3, width = 7)
 
 
 # Residuals ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
-                         labels = c('ALFAM2\npar. set A', 'ALFAM2\npar. set B', 'ALFAM2\npar. set 2'))
+                         labels = c('ALFAM2\npar. set A', 'ALFAM2\npar. set X', 'ALFAM2\npar. set 2'))
 
 drl$trial.nm <- paste(drl$trial, as.character(as.POSIXct(drl$app.date), format = '%d %b'))
 
@@ -97,7 +127,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   coord_cartesian(xlim =c(0, 168)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
+       colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/60_error_comp', height = 4, width = 7)
 
@@ -109,14 +139,14 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   coord_cartesian(xlim =c(0, 50)) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = expression('Wind tunnel average velocity'~(m~s^'-1')), lty = '') +
+       colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/60_error_comp_zoom', height = 4, width = 7)
 
 
 # Residuals par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
-                         labels = c('ALFAM2 par. set A', 'ALFAM2 par. set B', 'ALFAM2 par. set 2'))
+                         labels = c('ALFAM2 par. set A', 'ALFAM2 par. set X', 'ALFAM2 par. set 2'))
 
 dd <- drl
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
@@ -136,7 +166,7 @@ ggsave2x('../plots-ALFAM2/61_error_comp_ps2', height = 3, width = 7)
 
 # Early emission contribution ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dcl$variable.nm <- factor(dcl$variable, levels = c('ecrela', 'ecrelb', 'ecrel2'),
-                         labels = c('ALFAM2 par. set A', 'ALFAM2 par. set B', 'ALFAM2 par. set 2'))
+                         labels = c('ALFAM2 par. set A', 'ALFAM2 par. set X', 'ALFAM2 par. set 2'))
 dcl$trial.nm <- paste(dcl$trial, as.character(as.POSIXct(dcl$app.date), format = '%d %b'))
 
 dd <- subset(dcl, variable != 'ecrel2' & bta <= 11.5)
@@ -188,7 +218,7 @@ ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm'), legend.position = 'top') +
   guides(size = 'none') +
-  labs(x = 'ALFAM2 par. set B', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
+  labs(x = 'ALFAM2 par. set X', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 4.2, width = 4.0, scale = 1.1)
 
 
@@ -211,11 +241,11 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.1)
 
-# 168 h cumulative emission meas and ALFAM2 (par. set B and par set 2) ~~~~~~~~~~~~~~~~~
+# 168 h cumulative emission meas and ALFAM2 (par. set X and par set 2) ~~~~~~~~~~~~~~~~~
 dd <- d.pred.168
 # Reshape
 dl <- melt(dd, id.vars = c('pmid', 'e.rel', 'app.date', 'wind.2m', 'meas.tech'), measure.vars = c('er.predb', 'er.pred2'))
-dl$parset <- factor(dl$variable, levels = c('er.predb', 'er.pred2'), labels = c('Parameter set B', 'Parameter set 2'))
+dl$parset <- factor(dl$variable, levels = c('er.pred2', 'er.predb'), labels = c('Parameter set 2', 'Parameter set X'))
 dw <- dl[dl$meas.tech == 'Wind tunnel', ]
 db <- dl[dl$meas.tech == 'bLS', ]
 
@@ -237,7 +267,7 @@ ggsave2x('../plots-ALFAM2/92_cum_emis_comp', height = 2.5, width = 6.0, scale = 
 
 # Check flux vs. wind/temperature ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
-                         labels = c('Measured', 'ALFAM2 par. set A', 'ALFAM2 par. set B', 'ALFAM2 par. set 2'))
+                         labels = c('Measured', 'ALFAM2 par. set A', 'ALFAM2 par. set X', 'ALFAM2 par. set 2'))
 
 dd <- subset(dfl, !variable %in% c('j.preda', 'j.pred2') & bta >= 0)
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
