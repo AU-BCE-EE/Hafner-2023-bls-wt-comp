@@ -185,7 +185,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   theme(legend.position = 'none')
 ggsave2x('../plots-ALFAM2/70_remis_comp', height = 4, width = 7)
 
-# r1 par ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# r1 and r3 par ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 d.pred$trial.nm <- paste(d.pred$trial, as.character(as.POSIXct(d.pred$app.date), format = '%d %b'))
 dd <- d.pred
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
@@ -200,6 +200,16 @@ ggplot(dw, aes(bta, r1.predb, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression(italic('r')[1]~('h'^'-1'))) +
   theme(legend.position = 'none')
 ggsave2x('../plots-ALFAM2/80_r1', height = 3, width = 7)
+
+ggplot(dw, aes(bta, r3.predb, group = pmid)) +
+  geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
+  geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
+  facet_wrap(~ app.date) +
+  coord_cartesian(xlim = c(0, 168)) +
+  theme_bw() +
+  labs(x = 'Elapsed time (h)', y = expression(italic('r')[3]~('h'^'-1'))) +
+  theme(legend.position = 'none')
+ggsave2x('../plots-ALFAM2/81_r3', height = 3, width = 7)
 
 # 168 h cumulative emission meas and ALFAM2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 d.pred.168$trial.nm <- paste(d.pred.168$trial, as.character(as.POSIXct(d.pred.168$app.date), format = '%d %b'))
@@ -261,7 +271,7 @@ ggplot(dw, aes(value, e.rel, group = pmid, shape = app.date)) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
-  labs(x = expression('ALFAM2'~NH[3]~'loss (frac. applied TAN)'), y = expression('Measured'~NH[3]~'loss (frac. applied TAN)'), 
+  labs(x = expression('ALFAM2'~NH[3]~'loss (frac. applied TAN)'), y = expression('Measured'~NH[3]~'loss'), 
        shape = 'Date', colour = expression('Wind tunnel'~(m~s^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/92_cum_emis_comp', height = 2.5, width = 6.0, scale = 1.1)
 
