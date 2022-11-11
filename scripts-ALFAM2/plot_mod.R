@@ -1,8 +1,8 @@
 # Plots 
 
 # Flux ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.preda', 'j.predb', 'j.pred2'),
-                         labels = c('Measured', 'ALFAM2\npar. set A', 'ALFAM2\npar. set B', 'ALFAM2\npar. set 2'))
+dfl$variable.nm <- factor(dfl$variable, levels = c('j.NH3', 'j.pred2', 'j.preda', 'j.predb'),
+                         labels = c('Measured', 'ALFAM2\npar. set 2', 'ALFAM2\npar. set A', 'ALFAM2\npar. set B'))
 dfl$trial.nm <- paste(dfl$trial, as.character(as.POSIXct(dfl$app.date), format = '%d %b'))
 
 #dd <- subset(dfl, variable != 'j.pred2' & bta >= 0)
