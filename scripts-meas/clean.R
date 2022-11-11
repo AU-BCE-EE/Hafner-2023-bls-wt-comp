@@ -14,7 +14,7 @@ idat$trial <- tk[idat$app.date]
 idat$trial.nm <- paste(idat$trial, as.character(as.POSIXct(idat$app.date), format = '%d %b'))
 
 # Add AER classes
-idat$aer <- 74 * idat$wind.2m
+idat$aer <- 75 * idat$wind.2m
 idat$aer[idat$meas.tech == 'bLS'] <- NA
 
 idat$aer.grp[idat$meas.tech == 'Wind tunnel'] <- cut(idat$wind.2m[idat$meas.tech == 'Wind tunnel'], c(0, 0.3, 0.35, 1))
