@@ -102,3 +102,25 @@ ggplot(isumm, aes(aer, e.rel.final, colour = app.date, shape = app.date)) +
   theme_bw() +
   theme(legend.position = 'top')
 ggsave2x('../plots-meas/30_emis_vs_AER', height = 4, width = 3.6)
+
+# Late time flux plot to think about r3 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dd <- subset(idat, cta > 0.75 * dt)
+# Remove interpolated values
+dd$j.NH3[grepl('i', dd$flag.int)] <- NA
+
+# Compare measurement methods
+dw <- dd[dd$meas.tech == 'Wind tunnel', ]
+db <- dd[dd$meas.tech == 'bLS', ]
+ggplot(dw, aes(cta, j.NH3, group = pmid)) +
+       geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8, direction = 'vh') +
+       geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red', direction = 'vh') +
+       facet_wrap(~ app.date, ncol = 1) +
+       coord_cartesian(xlim = c(48, 200), ylim = c(0, 0.4)) +
+       coord_cartesian(xlim = c(48, 200), ylim = c(0, 0.4)) +
+       theme_bw() +
+       labs(x = 'Elapsed time (h)', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
+            colour = expression(atop('Wind tunnel'~(m~s^'-1'),' ')), lty = ' ') +
+       theme(legend.position = 'top')
+ggsave2x('../plots-meas/40_late_flux', height = 4, width = 4.6)
+
+
