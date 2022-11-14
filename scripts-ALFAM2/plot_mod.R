@@ -329,3 +329,12 @@ ggplot(db, aes(wind.2m, value, group = pmid)) +
 ggsave2x('../plots-ALFAM2/103_flux_wind_bLS', height = 4, width = 7)
 
 
+# Bootstrap parameters ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+dd <- subset(parlbb, meas.tech != 'all' & grepl('wind', var))
+ggplot(dd, aes(ppar, value, fill = meas.tech)) +
+  geom_boxplot()
+
+dd <- subset(parlbb, meas.tech != 'all' & !grepl('wind', var))
+ggplot(dd, aes(ppar, value, fill = meas.tech)) +
+  geom_boxplot()

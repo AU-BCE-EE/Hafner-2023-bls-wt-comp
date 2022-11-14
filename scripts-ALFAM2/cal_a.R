@@ -27,6 +27,7 @@ names.pars.fixed <- c('man.dm.f0',
 ##pars.cal <- pars01[names.pars.cal]
 
 # Fixed pars from set 2, effectively DM and pH
+pars02 <- alfam2pars02
 fixed <- pars02[names.pars.fixed]
 
 ### Add a couple more parameters for calibration
@@ -90,7 +91,7 @@ for (i in as.character(unique(idat$pmid))) {
   Sys.time()
   
   # Get pars
-  modsa[[i]][['coef']] <- pp <- c(m$par, ff)
+  modsa[[i]][['coef']] <- pp <- c(m$par, fixed)
   
   # Echo pars and other model info
   print(pp)
