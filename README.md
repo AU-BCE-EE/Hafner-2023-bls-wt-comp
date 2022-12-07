@@ -38,12 +38,15 @@ Plots of surface pH, produced by scripts in `scripts-pH`.
 
 ## `scripts-ALFAM2`
 Scripts on application of ALFAM2 model to emission trials.
+The script `main.R` calls all others.
 
 ## `scripts-meas`
 Scripts for working with emission measurements and producing plots.
+The script `main.R` calls all others.
 
 ## `scripts-pH`
 Scripts for producing surface pH plots.
+The script `main.R` calls all others.
 
 ## `Workspace-ALFAM2`
 Copy of latest workspace created by running `scripts-ALFAM2/main.R`.
