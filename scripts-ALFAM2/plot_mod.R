@@ -39,12 +39,6 @@ dd <- subset(dfl, bta >= -2 & variable %in% c('j.predb', 'j.NH3'))
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
-x <- subset(dd, app.date == '2021-08-11')
-head(x)
-tail(x)
-x <- subset(idat, app.date == '2021-08-11')
-x <- subset(dfl, app.date == '2021-08-11')
-x <- subset(dw, app.date == '2021-08-11')
 
 ggplot(dw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
@@ -131,8 +125,7 @@ drl$variable.nm <- factor(drl$variable, levels = c('aerra', 'aerrb', 'aerr2'),
 
 drl$trial.nm <- paste(drl$trial, as.character(as.POSIXct(drl$app.date), format = '%d %b'))
 
-#dd <- subset(drl, variable != 'aerr2')
-dd <- subset(drl, bta > -2)
+dd <- subset(drl, bta > -2 & variable %in% c('aerrb', 'aerr2'))
 dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
