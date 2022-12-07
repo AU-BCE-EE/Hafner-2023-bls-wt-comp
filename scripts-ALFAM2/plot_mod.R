@@ -208,18 +208,20 @@ ggplot(dw, aes(bta, r1.predb, group = pmid)) +
   facet_wrap(~ app.date) +
   coord_cartesian(xlim = c(0, 168)) +
   theme_bw() +
-  labs(x = 'Elapsed time (h)', y = expression(italic('r')[1]~('h'^'-1'))) +
-  theme(legend.position = 'none')
+  labs(x = 'Elapsed time (h)', y = expression(italic('r')[1]~('h'^'-1')),
+     colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
+  theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/80_r1', height = 3, width = 7)
 
-ggplot(dw, aes(bta, r3.predb, group = pmid)) +
+ggplot(dw, aes(bta, 1E3 * r3.predb, group = pmid)) +
   geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_wrap(~ app.date) +
   coord_cartesian(xlim = c(0, 168)) +
   theme_bw() +
-  labs(x = 'Elapsed time (h)', y = expression(italic('r')[3]~('h'^'-1'))) +
-  theme(legend.position = 'none')
+  labs(x = 'Elapsed time (h)', y = expression(1000%.%italic('r')[3]~('h'^'-1')),
+     colour = expression(atop('Wind tunnel average velocity'~(m~s^'-1'),' ')), lty = ' ') +
+  theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/81_r3', height = 3, width = 7)
 
 # 168 h cumulative emission meas and ALFAM2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
