@@ -63,8 +63,8 @@ This section give the sources of tables, figures, etc. in the paper.
 |    Figure 5     | `plots-ALFAM2/54_flux_comp_sel_zoom.pdf` | `scripts-ALFAM2/plot.R`   |
 |    Figure S4    | `plots-ALFAM2/60_erro_comp_zoom.pdf`     | `scripts-ALFAM2/plot.R`   |
 |    Figure S5    | `plots-ALFAM2/53_flux_comp_sel.pdf`      | `scripts-ALFAM2/plot.R`   |
+|    Figure S6    | `plots-ALFAM2/80_r1.pdf`                 | `scripts-ALFAM2/plot.R`   |
+|    Figure S7    | `plots-ALFAM2/81_r3.pdf`                 | `scripts-ALFAM2/plot.R`   |
+|    Figure S8    | `plots-meas/40_late_flux.pdf`            | `scripts-meas/plot.R`     |
 
-
-
-
-Needs to be completed...
+Needs to be completed . . .
