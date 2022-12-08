@@ -55,9 +55,10 @@ Saved simply because it can be convenient to avoid running lengthy model optimiz
 # Links to published paper
 This section give the sources of tables, figures, etc. in the paper.
 
-| Paper component |  Repo source                       |  Repo script              |
-|-----------------|-----------------                   |---------------            |
-|    Figure 2     | `plots-meas/01_flux_wind_meas.pdf` | `scripts-meas/plot_big.R` |
-|    Figure 3     | `plots-meas/30_emis_vs_AER.pdf`    | `scripts-meas/plot.R`     |
+| Paper component |  Repo source                        |  Repo script              |
+|-----------------|-----------------                    |---------------            |
+|    Figure 2     | `plots-meas/01_flux_wind_meas.pdf`  | `scripts-meas/plot_big.R` |
+|    Figure 3     | `plots-meas/30_emis_vs_AER.pdf`     | `scripts-meas/plot.R`     |
+|    Figure 4     | `plots-ALFAM2/92_cum_emis_comp.pdf` | `scripts-ALFAM2/plot.R`   |
 
 Needs to be completed...
