@@ -31,4 +31,5 @@ idat$wind.bLS <- (idat$meas.tech2 == 'micro met') * sqrt(idat$wind.2m)
 idat$air.temp.wt <- (idat$meas.tech2 == 'wt') * idat$air.temp
 idat$air.temp.bLS <- (idat$meas.tech2 == 'micro met') * idat$air.temp
 
-
+# Add AER
+idat$aer <- 75 * idat$wind.2m

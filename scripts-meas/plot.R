@@ -112,14 +112,14 @@ dd$j.NH3[grepl('i', dd$flag.int)] <- NA
 dw <- dd[dd$meas.tech == 'Wind tunnel', ]
 db <- dd[dd$meas.tech == 'bLS', ]
 ggplot(dw, aes(cta, j.NH3, group = pmid)) +
-       geom_step(aes(colour = wind.2m), lwd = 0.5, alpha = 0.8, direction = 'vh') +
+       geom_step(aes(colour = aer), lwd = 0.5, alpha = 0.8, direction = 'vh') +
        geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red', direction = 'vh') +
        facet_wrap(~ app.date, ncol = 1) +
        coord_cartesian(xlim = c(48, 200), ylim = c(0, 0.4)) +
        coord_cartesian(xlim = c(48, 200), ylim = c(0, 0.4)) +
        theme_bw() +
        labs(x = 'Elapsed time (h)', y = expression('Flux'~('kg N h'^'-1'~ha^'-1')), 
-            colour = expression(atop('Wind tunnel'~(m~s^'-1'),' ')), lty = ' ') +
+            colour = expression(atop('AER'~(min^'-1'),' ')), lty = ' ') +
        theme(legend.position = 'top')
 ggsave2x('../plots-meas/40_late_flux', height = 4, width = 4.6)
 
