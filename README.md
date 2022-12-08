@@ -62,6 +62,9 @@ This section give the sources of tables, figures, etc. in the paper.
 |    Figure 4     | `plots-ALFAM2/92_cum_emis_comp.pdf`      | `scripts-ALFAM2/plot.R`   |
 |    Figure 5     | `plots-ALFAM2/54_flux_comp_sel_zoom.pdf` | `scripts-ALFAM2/plot.R`   |
 |    Figure S4    | `plots-ALFAM2/60_erro_comp_zoom.pdf`     | `scripts-ALFAM2/plot.R`   |
+|    Figure S5    | `plots-ALFAM2/53_flux_comp_sel.pdf`      | `scripts-ALFAM2/plot.R`   |
+
+
 
 
 Needs to be completed...
