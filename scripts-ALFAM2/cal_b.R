@@ -11,6 +11,8 @@ names.pars.fixed <- c('man.dm.f0',
 # Fixed pars from set 2, effectively DM and pH
 fixed <- alfam2pars02[names.pars.fixed]
 
+fixed <- c(fixed, air.temp.r3 = 0.05)
+
 
 # List parameters for calibration
 # Note that bLS wind speed and air temperature do not affect r3 presently
@@ -25,8 +27,7 @@ pars.cal <- c(int.f0       =  0.8,
               bLS.r3       = -4.0,
               wt.r3        = -3.2,
               wind.wt.r3   =  0.31,
-              wind.bLS.r3  =  0.16,
-              air.temp.r3  =  0.03)
+              wind.bLS.r3  =  0.16)
 
 lower <- c(int.f0       =  0,
            bLS.r1       = -4,
@@ -39,8 +40,7 @@ lower <- c(int.f0       =  0,
            bLS.r3       = -5,
            wt.r3        = -5,
            wind.wt.r3   =  0,
-           wind.bLS.r3  =  0,
-           air.temp.r3  =  0)
+           wind.bLS.r3  =  0)
 
 # Look for problem observations before calibration by running with all parameters
 pr <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid', pars = c(pars.cal, fixed))
