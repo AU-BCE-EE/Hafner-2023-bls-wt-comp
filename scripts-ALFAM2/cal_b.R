@@ -11,7 +11,7 @@ names.pars.fixed <- c('man.dm.f0',
 # Fixed pars from set 2, effectively DM and pH
 fixed <- alfam2pars02[names.pars.fixed]
 
-fixed <- c(fixed, air.temp.r3 = 0.05)
+fixed <- c(fixed, air.temp.r3 = 0.02)
 
 
 # List parameters for calibration
