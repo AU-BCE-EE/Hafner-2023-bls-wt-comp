@@ -36,23 +36,23 @@ parcompcal <- subset(parcomp, cal)
 parcomp <- rounddf(parcomp, digits = 2)
 parcomp <- parcomp[order(substr(parcomp$par, nchar(parcomp$par)-2, nchar(parcomp$par))), ]
 
-# Bootstrap results for b
-d.pars <- data.frame(row.names = names(pars.cal))
-for(i in 1:length(modbboot)) {
-    pp <- modbboot[[i]]$mod$par
-    d.pars[, i] <- pp[rownames(d.pars)]
-    names(d.pars)[i] <- i
-}
-
-dtparsbboot <- as.data.frame(t(d.pars))
-dtparsbboot$iteration <- rownames(dtparsbboot)
-
-# Reshape 
-parlbb <- melt(dtparsbboot, id.vars = 'iteration', variable.name = 'par')
-
-# Add wt/bLS column
-parlbb$meas.tech <- ifelse(grepl('bLS', parlbb$par), 'bLS', ifelse(grepl('wt', parlbb$par), 'wt', 'all'))
-
-# Get primary parameter
-parlbb$ppar <- gsub('.+\\.([fr][0-3])$', '\\1', parlbb$par)
-parlbb$var <- gsub('(.+)\\.([fr][0-3])$', '\\1', parlbb$par)
+## Bootstrap results for b
+#d.pars <- data.frame(row.names = names(pars.cal))
+#for(i in 1:length(modbboot)) {
+#    pp <- modbboot[[i]]$mod$par
+#    d.pars[, i] <- pp[rownames(d.pars)]
+#    names(d.pars)[i] <- i
+#}
+#
+#dtparsbboot <- as.data.frame(t(d.pars))
+#dtparsbboot$iteration <- rownames(dtparsbboot)
+#
+## Reshape 
+#parlbb <- melt(dtparsbboot, id.vars = 'iteration', variable.name = 'par')
+#
+## Add wt/bLS column
+#parlbb$meas.tech <- ifelse(grepl('bLS', parlbb$par), 'bLS', ifelse(grepl('wt', parlbb$par), 'wt', 'all'))
+#
+## Get primary parameter
+#parlbb$ppar <- gsub('.+\\.([fr][0-3])$', '\\1', parlbb$par)
+#parlbb$var <- gsub('(.+)\\.([fr][0-3])$', '\\1', parlbb$par)
