@@ -55,7 +55,7 @@ Saved simply because it can be convenient to avoid running lengthy model optimiz
 # Links to published paper
 This section give the sources of tables, figures, etc. in the paper.
 
-| Paper component |  Repo source                             |  Repo script              |
+| Paper component |  Repo source                             |  Repo scripts             |
 |-----------------|-----------------                         |---------------            |
 |    Figure 2     | `plots-meas/01_flux_wind_meas.pdf`       | `scripts-meas/plot_big.R` |
 |    Figure 3     | `plots-meas/30_emis_vs_AER.pdf`          | `scripts-meas/plot.R`     |
@@ -66,5 +66,16 @@ This section give the sources of tables, figures, etc. in the paper.
 |    Figure S6    | `plots-ALFAM2/80_r1.pdf`                 | `scripts-ALFAM2/plot.R`   |
 |    Figure S7    | `plots-ALFAM2/81_r3.pdf`                 | `scripts-ALFAM2/plot.R`   |
 |    Figure S8    | `plots-meas/40_late_flux.pdf`            | `scripts-meas/plot.R`     |
+|    Table S1     | ALFAM2 package v2.9 `alfam2pars02`       |                           |
+|Table S2 par. vals. | `output/parsb.csv`                    | `scripts-ALFAM2/export.R`  `scripts-ALFAM2/cal_b.R`|
+|Table S2 std. err.  | `output/bootsumm.csv`                 | `scripts-ALFAM2/export.R` `scripts-ALFAM2/cal_b_boot.R` |
 
-Needs to be completed . . .
+Note that parameter set X (in manuscript) is called set b in the scripts.
+Set a in the scripts is not mentioned in the manuscript.
+
+Section 3.1 stats "Wind tunnel air exchange rate (AER) had a clear effect on measured emission, with a similar response in the two trials where it varied widely (p = 1·10-5 for AER effect, p = 0.99 for interaction based on an F test from a regression model)." come from results from `aov(m2)` in `output/stats.pdf`, which is created by `scripts-meas/stats.Rmd`.
+
+Section 2.3.2 info on gap filling is from `output/emis_summ.csv`, which comes from scripts `scripts-meas/summary.R` and `scripts-meas/export.R`.
+
+Plot keys (pmid) in sections 2.3.1 and 2.3.2 come from `output/pmid_summ.csv`, which is just a column subset of `pdat` created in `scripts-meas/summary.R` and exported in `scripts-meas/export.R`.
+pmid info is also in `output/emis_summ.csv` and `output/int_summ.csv` from `scripts-meas/export.R`.
