@@ -25,6 +25,7 @@ isumm <- idat[, list(cta = max(cta),
 
 # Mean and sd of cumulative emission
 esumm <- isumm[ , list(
+                       pmid = paste(pmid, collapse = ', '),
                        e.rel.final = mean(e.rel.final), e.rel.final.n = length(e.rel.final), e.rel.final.sd = sd(e.rel.final),
                        e.rel.168 = mean(e.rel.168), e.rel.168.n = length(e.rel.168), e.rel.168.sd = sd(e.rel.168),
                        e.cum.final = mean(e.cum.final), e.cum.final.gaps = mean(e.cum.final.gaps), 
