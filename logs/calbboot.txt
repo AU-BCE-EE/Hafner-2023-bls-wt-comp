@@ -1,1943 +1,45 @@
-[1] "2022-11-13 21:59:40 EST"
+[1] "2022-12-19 16:43:16 EST"
 Bootstrap iteration  1 
- [1] "1938" "1938" "1938" "1917" "1906" "1913" "1921" "1925" "1914" "1908"
-[11] "1923" "1917" "1925" "1908" "1922" "1912" "1906" "1911" "1910" "1913"
-[21] "1912" "1922" "1907" "1917" "1920"
+ [1] "1938" "1938" "1938" "1917" "1906" "1913" "1921" "1925"
+ [9] "1914" "1908" "1923" "1917" "1925" "1908" "1922" "1912"
+[17] "1906" "1911" "1910" "1913" "1912" "1922" "1907" "1917"
+[25] "1920"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.46233722  -2.11070489  -1.80520746   0.03589971   0.48318655 
+ 0.882481536 -2.245971948 -1.851570776  0.037013925  0.500000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.19899842  -1.48187244   0.30000000  -4.20484602  -3.23281887 
+ 0.234480783 -1.425203160  0.300000000 -4.295524242 -3.203344312 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29956616   0.05964170   0.00951655 
+ 0.300000000  0.002395515  0.010695971 
 
 $value
-[1] 134.7472
+[1] 131.7157
 
 $counts
 function gradient 
-      90       90 
+     118      118 
 
 $convergence
-[1] 0
+[1] 52
 
 $message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
 
 Bootstrap iteration  2 
- [1] "1938" "1938" "1935" "1915" "1918" "1913" "1916" "1910" "1912" "1912"
-[11] "1913" "1924" "1910" "1924" "1909" "1905" "1908" "1911" "1915" "1916"
-[21] "1921" "1904" "1909" "1924" "1918"
+ [1] "1938" "1938" "1935" "1915" "1918" "1913" "1916" "1910"
+ [9] "1912" "1912" "1913" "1924" "1910" "1924" "1909" "1905"
+[17] "1908" "1911" "1915" "1916" "1921" "1904" "1909" "1924"
+[25] "1918"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-   0.7902351   -2.6359538   -1.8752575    0.0354853    0.4922543 
+ 0.871979868 -2.490039073 -1.809488173  0.038342414  0.431893336 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-   0.4976617   -1.3969058    0.2981918   -4.0682608   -3.2201044 
+ 0.418909341 -1.440243528  0.300000000 -4.144694030 -3.127275140 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-   0.2980791    0.1088855    0.0000000 
+ 0.217186173  0.103725523  0.005049346 
 
 $value
-[1] 145.6977
-
-$counts
-function gradient 
-      41       41 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  3 
- [1] "1935" "1938" "1936" "1919" "1923" "1909" "1914" "1911" "1925" "1925"
-[11] "1910" "1919" "1920" "1925" "1921" "1920" "1905" "1907" "1916" "1908"
-[21] "1925" "1922" "1923" "1925" "1917"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.82241820  -2.61922362  -1.85515379   0.03224386   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.45282376   0.28700943  -3.92975100  -3.20174070 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.26050256   0.12566229   0.00000000 
-
-$value
-[1] 159.4316
-
-$counts
-function gradient 
-      86       86 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  4 
- [1] "1935" "1938" "1938" "1911" "1919" "1915" "1917" "1906" "1917" "1910"
-[11] "1906" "1925" "1918" "1924" "1908" "1911" "1922" "1913" "1921" "1913"
-[21] "1915" "1905" "1913" "1925" "1915"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.548579907 -2.491172620 -1.862756354  0.036560492  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.432572732 -1.439349447  0.300000000 -4.155817750 -3.176884959 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.163573707  0.116551757  0.001970864 
-
-$value
-[1] 138.4829
-
-$counts
-function gradient 
-     146      146 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  5 
- [1] "1936" "1935" "1936" "1917" "1925" "1906" "1911" "1917" "1922" "1918"
-[11] "1920" "1914" "1910" "1918" "1909" "1917" "1910" "1913" "1908" "1909"
-[21] "1919" "1924" "1914" "1907" "1915"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.339675603 -2.389109686 -1.803508047  0.035973164  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.548930269  0.236696186 -3.990945079 -3.211819985 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.272053560  0.270660391  0.002890049 
-
-$value
-[1] 167.1975
-
-$counts
-function gradient 
-     137      137 
-
-$convergence
-[1] 1
-
-$message
-[1] "NEW_X"
-
-Bootstrap iteration  6 
- [1] "1936" "1935" "1938" "1910" "1925" "1912" "1910" "1905" "1919" "1916"
-[11] "1922" "1923" "1918" "1910" "1907" "1904" "1911" "1923" "1919" "1925"
-[21] "1914" "1919" "1923" "1911" "1906"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.81494017  -2.57622236  -1.84825862   0.03458148   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.40362555   0.28819338  -3.93938688  -3.18915203 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.27410479   0.12569532   0.00000000 
-
-$value
-[1] 169.034
-
-$counts
-function gradient 
-      64       64 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  7 
- [1] "1935" "1936" "1935" "1913" "1923" "1914" "1911" "1917" "1924" "1916"
-[11] "1905" "1914" "1916" "1917" "1909" "1911" "1915" "1907" "1916" "1917"
-[21] "1924" "1919" "1904" "1911" "1911"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.79119987  -2.61375039  -1.94960895   0.04203916   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39885604   0.28338043  -3.94057089  -3.24991540 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29572675   0.16940018   0.00000000 
-
-$value
-[1] 166.004
-
-$counts
-function gradient 
-      55       55 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  8 
- [1] "1936" "1935" "1936" "1924" "1912" "1910" "1910" "1913" "1925" "1914"
-[11] "1904" "1922" "1913" "1924" "1925" "1916" "1914" "1914" "1923" "1910"
-[21] "1923" "1912" "1912" "1908" "1917"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.75608619  -2.47815060  -1.87048435   0.03566944   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.36827357   0.27338584  -3.84656974  -3.27046864 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.21132894   0.00000000 
-
-$value
-[1] 177.8094
-
-$counts
-function gradient 
-      93       93 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  9 
- [1] "1936" "1936" "1938" "1904" "1913" "1920" "1920" "1924" "1910" "1924"
-[11] "1912" "1923" "1909" "1921" "1920" "1908" "1923" "1906" "1917" "1904"
-[21] "1905" "1907" "1913" "1904" "1908"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.769060002 -2.485301040 -1.839742175  0.035455734  0.490976232 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.400448296  0.300000000 -3.887928246 -3.162960790 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.296987655  0.174048809  0.003895358 
-
-$value
-[1] 160.4527
-
-$counts
-function gradient 
-      98       98 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  10 
- [1] "1935" "1935" "1938" "1924" "1916" "1921" "1913" "1909" "1910" "1912"
-[11] "1919" "1920" "1924" "1916" "1924" "1911" "1924" "1910" "1923" "1921"
-[21] "1920" "1904" "1905" "1920" "1905"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.80976537  -2.64114776  -1.84431921   0.03469118   0.48911730 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.41981137   0.28031804  -4.07557349  -3.16277225 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.26020725   0.12780868   0.00000000 
-
-$value
-[1] 141.3319
-
-$counts
-function gradient 
-      92       92 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  11 
- [1] "1935" "1935" "1938" "1906" "1921" "1905" "1908" "1915" "1916" "1913"
-[11] "1909" "1913" "1913" "1909" "1919" "1919" "1906" "1907" "1906" "1906"
-[21] "1919" "1905" "1918" "1906" "1912"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.81368108  -2.58132313  -1.74637472   0.03652266   0.30087988 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.46845764  -1.38320634   0.26751380  -4.10656937  -3.03202605 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.00000000   0.09430955   0.00000000 
-
-$value
-[1] 153.3951
-
-$counts
-function gradient 
-      84       84 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  12 
- [1] "1935" "1938" "1936" "1912" "1907" "1905" "1925" "1915" "1912" "1914"
-[11] "1910" "1916" "1908" "1914" "1904" "1922" "1915" "1905" "1924" "1920"
-[21] "1915" "1906" "1921" "1918" "1925"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.781406831 -2.571073760 -1.880189590  0.036253506  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.382936064  0.287006382 -3.935581375 -3.249739175 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.125917299  0.004445495 
-
-$value
-[1] 159.0166
-
-$counts
-function gradient 
-     125      125 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  13 
- [1] "1938" "1938" "1935" "1921" "1920" "1909" "1913" "1911" "1913" "1916"
-[11] "1923" "1909" "1923" "1923" "1912" "1919" "1911" "1910" "1913" "1920"
-[21] "1921" "1911" "1922" "1913" "1914"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.79060726  -2.62640699  -1.91298798   0.03300995   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39725207   0.29867606  -4.07433956  -3.24627584 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.10119509   0.00000000 
-
-$value
-[1] 151.0653
-
-$counts
-function gradient 
-      40       40 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  14 
- [1] "1935" "1936" "1938" "1916" "1916" "1922" "1925" "1913" "1919" "1908"
-[11] "1907" "1921" "1904" "1919" "1920" "1915" "1924" "1905" "1921" "1915"
-[21] "1918" "1922" "1924" "1909" "1919"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.79194879  -2.59084950  -1.87325258   0.03676429   0.48186980 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.44499109   0.30000000  -3.98589269  -3.12851612 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.14416090   0.13313720   0.00000000 
-
-$value
-[1] 149.9786
-
-$counts
-function gradient 
-     201      201 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  15 
- [1] "1936" "1938" "1938" "1906" "1917" "1904" "1904" "1919" "1914" "1907"
-[11] "1915" "1916" "1913" "1913" "1910" "1921" "1920" "1923" "1912" "1924"
-[21] "1914" "1915" "1911" "1921" "1908"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.40615973  -2.28712962  -1.82987550   0.03855103   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.43134733  -1.50611080   0.30000000  -4.00767227  -3.22651685 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.27913727   0.08977037   0.00000000 
-
-$value
-[1] 159.425
-
-$counts
-function gradient 
-     146      146 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  16 
- [1] "1935" "1936" "1936" "1913" "1912" "1914" "1909" "1915" "1922" "1907"
-[11] "1906" "1917" "1911" "1909" "1907" "1913" "1919" "1919" "1923" "1913"
-[21] "1909" "1922" "1907" "1912" "1907"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.72421374  -2.51170555  -1.87438129   0.04002324   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.41098673   0.27182123  -3.84566320  -3.21062280 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29934743   0.20714307   0.01204879 
-
-$value
-[1] 176.0856
-
-$counts
-function gradient 
-      91       91 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  17 
- [1] "1938" "1936" "1935" "1920" "1910" "1918" "1908" "1917" "1925" "1918"
-[11] "1918" "1919" "1922" "1911" "1908" "1910" "1923" "1919" "1919" "1912"
-[21] "1914" "1914" "1922" "1913" "1905"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-   0.7681068   -2.5600358   -1.8664959    0.0348672    0.5000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-   0.5000000   -1.3829065    0.2884773   -3.9410395   -3.2027299 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-   0.2758512    0.1299032    0.0000000 
-
-$value
-[1] 153.7056
-
-$counts
-function gradient 
-      50       50 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  18 
- [1] "1935" "1936" "1936" "1923" "1917" "1917" "1909" "1921" "1905" "1911"
-[11] "1914" "1924" "1910" "1922" "1911" "1913" "1908" "1920" "1909" "1911"
-[21] "1923" "1909" "1918" "1920" "1906"
-$par
-       int.f0        bLS.r1         wt.r1   air.temp.r1    wind.wt.r1 
- 0.3356409062 -2.3914872303 -1.7904572198  0.0359487488  0.5000000000 
-  wind.bLS.r1        int.r2  rain.rate.r2        bLS.r3         wt.r3 
- 0.5000000000 -1.5428693132  0.2381271539 -3.9510645005 -3.2257999929 
-   wind.wt.r3   wind.bLS.r3   air.temp.r3 
- 0.3000000000  0.2611357337  0.0009790405 
-
-$value
-[1] 167.0651
-
-$counts
-function gradient 
-     203      203 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  19 
- [1] "1938" "1935" "1935" "1914" "1918" "1923" "1905" "1919" "1922" "1913"
-[11] "1922" "1920" "1910" "1909" "1915" "1907" "1924" "1922" "1905" "1907"
-[21] "1925" "1914" "1925" "1904" "1925"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.801634096 -2.635868573 -1.849371912  0.034844478  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.394851798  0.285172819 -4.056862283 -3.216457445 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.271026448  0.132259689  0.002165788 
-
-$value
-[1] 144.0542
-
-$counts
-function gradient 
-      54       54 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  20 
- [1] "1938" "1936" "1938" "1919" "1906" "1904" "1905" "1905" "1911" "1923"
-[11] "1917" "1916" "1910" "1911" "1906" "1925" "1919" "1925" "1904" "1915"
-[21] "1921" "1924" "1917" "1911" "1908"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.54146490  -2.31122679  -1.82378965   0.03798361   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.42700138  -1.45377435   0.30000000  -3.96660415  -3.09781748 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.11541286   0.08709459   0.00000000 
-
-$value
-[1] 156.5459
-
-$counts
-function gradient 
-     114      114 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  21 
- [1] "1935" "1936" "1938" "1914" "1907" "1916" "1911" "1918" "1907" "1916"
-[11] "1906" "1910" "1904" "1909" "1916" "1920" "1924" "1909" "1913" "1916"
-[21] "1909" "1912" "1911" "1904" "1919"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.82712868  -2.58404909  -1.87942402   0.03704613   0.49711975 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39345303   0.28807333  -3.93448341  -3.21309456 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.14190521   0.01189004 
-
-$value
-[1] 171.3292
-
-$counts
-function gradient 
-      68       68 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  22 
- [1] "1936" "1936" "1936" "1915" "1911" "1912" "1911" "1912" "1923" "1904"
-[11] "1906" "1911" "1905" "1904" "1912" "1910" "1916" "1923" "1917" "1919"
-[21] "1910" "1907" "1916" "1915" "1916"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.72930698  -2.50192013  -1.90954726   0.04509636   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.49990275  -1.42039063   0.27708817  -3.84297233  -3.22713131 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29999114   0.23543187   0.01289949 
-
-$value
-[1] 184.4292
-
-$counts
-function gradient 
-      69       69 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  23 
- [1] "1936" "1936" "1938" "1912" "1915" "1911" "1910" "1918" "1922" "1920"
-[11] "1914" "1910" "1922" "1906" "1909" "1910" "1907" "1913" "1920" "1919"
-[21] "1911" "1924" "1906" "1915" "1924"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.06847575  -2.22154435  -1.73289697   0.03981472   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.46940759  -1.67112314   0.30000000  -3.91710125  -3.15356220 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.21791386   0.20164551   0.01172490 
-
-$value
-[1] 154.0355
-
-$counts
-function gradient 
-      99       99 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  24 
- [1] "1936" "1935" "1936" "1909" "1912" "1904" "1923" "1917" "1922" "1908"
-[11] "1905" "1904" "1923" "1907" "1914" "1908" "1925" "1907" "1922" "1906"
-[21] "1904" "1910" "1908" "1912" "1920"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.78638776  -2.49651337  -1.84907381   0.03601472   0.49773877 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.37188086   0.27788143  -3.87055749  -3.21677039 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.20845335   0.01068411 
-
-$value
-[1] 167.443
-
-$counts
-function gradient 
-      78       78 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  25 
- [1] "1935" "1935" "1936" "1925" "1921" "1907" "1913" "1918" "1925" "1911"
-[11] "1904" "1914" "1908" "1914" "1918" "1918" "1913" "1918" "1918" "1923"
-[21] "1915" "1912" "1907" "1906" "1910"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.78792611  -2.60220689  -1.86903876   0.03469915   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.38759264   0.28149611  -3.93216405  -3.24811655 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.16208680   0.00000000 
-
-$value
-[1] 163.2324
-
-$counts
-function gradient 
-      49       49 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  26 
- [1] "1935" "1935" "1936" "1907" "1906" "1914" "1913" "1908" "1914" "1913"
-[11] "1918" "1922" "1913" "1916" "1906" "1921" "1913" "1911" "1915" "1913"
-[21] "1910" "1910" "1909" "1920" "1923"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.794470144 -2.581720691 -1.889660377  0.037453494  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.363402843  0.270460027 -3.894322952 -3.260849055 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.161565491  0.002550194 
-
-$value
-[1] 170.6864
-
-$counts
-function gradient 
-     111      111 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  27 
- [1] "1935" "1935" "1936" "1916" "1913" "1905" "1918" "1918" "1911" "1906"
-[11] "1905" "1909" "1917" "1918" "1922" "1912" "1918" "1925" "1919" "1911"
-[21] "1912" "1924" "1919" "1912" "1905"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.61716057  -2.56024176  -1.84742909   0.03754294   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.44227950   0.22508753  -3.95401506  -3.12145125 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.12471359   0.20646921   0.00000000 
-
-$value
-[1] 151.2333
-
-$counts
-function gradient 
-     168      168 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  28 
- [1] "1935" "1938" "1938" "1907" "1910" "1921" "1914" "1925" "1904" "1914"
-[11] "1909" "1924" "1913" "1921" "1906" "1906" "1905" "1911" "1916" "1911"
-[21] "1905" "1909" "1920" "1917" "1910"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.803401261 -2.594524643 -1.845802568  0.034250449  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.480768081 -1.374073205  0.294187998 -4.090639478 -3.223477839 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.129515178  0.006834439 
-
-$value
-[1] 153.5644
-
-$counts
-function gradient 
-     197      197 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  29 
- [1] "1935" "1936" "1938" "1913" "1920" "1910" "1915" "1922" "1920" "1911"
-[11] "1918" "1917" "1917" "1920" "1904" "1921" "1921" "1923" "1913" "1913"
-[21] "1924" "1912" "1922" "1921" "1921"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.79391957  -2.56230838  -1.90648740   0.03428055   0.48717192 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.41032942   0.29158966  -3.95820017  -3.24063359 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.27503791   0.13462460   0.00000000 
-
-$value
-[1] 144.6831
-
-$counts
-function gradient 
-      53       53 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  30 
- [1] "1935" "1935" "1938" "1913" "1908" "1905" "1921" "1915" "1916" "1914"
-[11] "1922" "1909" "1921" "1913" "1912" "1906" "1925" "1922" "1911" "1916"
-[21] "1904" "1905" "1914" "1919" "1908"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.810557528 -2.630440901 -1.900856953  0.037060416  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.374721027  0.275116088 -4.074409359 -3.268672839 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.143791134  0.006330612 
-
-$value
-[1] 148.8914
-
-$counts
-function gradient 
-      93       93 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  31 
- [1] "1935" "1938" "1938" "1906" "1918" "1913" "1910" "1910" "1905" "1921"
-[11] "1921" "1906" "1911" "1917" "1912" "1918" "1920" "1910" "1911" "1904"
-[21] "1912" "1906" "1905" "1914" "1907"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.776752907 -2.593895698 -1.849734816  0.036088948  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.481917960 -1.370810817  0.292866551 -4.103980278 -3.221163596 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.126199502  0.003590282 
-
-$value
-[1] 146.0566
-
-$counts
-function gradient 
-     115      115 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  32 
- [1] "1938" "1936" "1936" "1917" "1906" "1906" "1917" "1910" "1918" "1911"
-[11] "1904" "1908" "1920" "1909" "1913" "1915" "1911" "1919" "1910" "1910"
-[21] "1904" "1914" "1906" "1925" "1920"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.27567913  -2.31235551  -1.75916316   0.03683198   0.49993585 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.48319670  -1.53284630   0.30000000  -3.87759945  -3.14126620 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.19102790   0.20253955   0.01257219 
-
-$value
-[1] 164.853
-
-$counts
-function gradient 
-     116      116 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  33 
- [1] "1938" "1936" "1935" "1921" "1911" "1923" "1913" "1925" "1921" "1920"
-[11] "1912" "1906" "1908" "1924" "1919" "1923" "1906" "1906" "1925" "1916"
-[21] "1907" "1918" "1922" "1916" "1915"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.81323111  -2.57912483  -1.87551834   0.03380914   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.42856270   0.28701261  -3.93274472  -3.19945813 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.26636075   0.11944506   0.00000000 
-
-$value
-[1] 160.8117
-
-$counts
-function gradient 
-      48       48 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  34 
- [1] "1936" "1935" "1935" "1923" "1916" "1916" "1906" "1923" "1908" "1916"
-[11] "1915" "1911" "1909" "1919" "1914" "1915" "1919" "1918" "1904" "1925"
-[21] "1915" "1913" "1925" "1913" "1907"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.85344784  -2.60042275  -1.92181951   0.03262673   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39789578   0.25676357  -3.97797221  -3.21876569 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.26825157   0.21328650   0.00000000 
-
-$value
-[1] 175.1434
-
-$counts
-function gradient 
-      97       97 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  35 
- [1] "1935" "1935" "1936" "1923" "1908" "1912" "1922" "1906" "1905" "1915"
-[11] "1918" "1920" "1906" "1910" "1916" "1917" "1905" "1912" "1918" "1924"
-[21] "1904" "1913" "1912" "1912" "1910"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.744963232 -2.581135561 -1.814511965  0.038461013  0.417480617 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.379514544  0.264062486 -3.955568516 -3.218326484 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.292030638  0.187673817  0.002844905 
-
-$value
-[1] 157.4672
-
-$counts
-function gradient 
-     191      191 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  36 
- [1] "1936" "1938" "1936" "1910" "1919" "1919" "1905" "1905" "1917" "1924"
-[11] "1910" "1909" "1907" "1906" "1917" "1922" "1917" "1919" "1913" "1915"
-[21] "1921" "1906" "1904" "1915" "1920"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.416748293 -2.367909537 -1.618072681  0.040890805  0.224559820 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.470217346 -1.526963820  0.300000000 -3.928302959 -3.080657039 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.142068286  0.195277872  0.008727526 
-
-$value
-[1] 157.2636
-
-$counts
-function gradient 
-     108      108 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  37 
- [1] "1935" "1938" "1935" "1921" "1918" "1916" "1917" "1921" "1915" "1921"
-[11] "1910" "1907" "1907" "1906" "1914" "1922" "1919" "1918" "1914" "1909"
-[21] "1908" "1905" "1925" "1920" "1908"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.80892997  -2.63688834  -1.85853876   0.03428015   0.49482820 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39885985   0.28665266  -4.05324328  -3.21526757 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.27244367   0.13045500   0.00000000 
-
-$value
-[1] 149.6839
-
-$counts
-function gradient 
-      48       48 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  38 
- [1] "1938" "1938" "1938" "1906" "1925" "1918" "1906" "1905" "1908" "1908"
-[11] "1910" "1905" "1919" "1911" "1924" "1921" "1922" "1912" "1922" "1917"
-[21] "1922" "1908" "1916" "1919" "1910"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.637352681 -1.829598410 -1.826231911  0.037018911  0.487887429 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.013525898 -1.439680662  0.300000000 -4.236347814 -3.124547044 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.123376152  0.236347677  0.006587331 
-
-$value
-[1] 128.9384
-
-$counts
-function gradient 
-     161      161 
-
-$convergence
-[1] 1
-
-$message
-[1] "NEW_X"
-
-Bootstrap iteration  39 
- [1] "1938" "1936" "1938" "1920" "1910" "1916" "1906" "1925" "1916" "1917"
-[11] "1907" "1924" "1919" "1912" "1919" "1912" "1908" "1925" "1925" "1917"
-[21] "1915" "1925" "1917" "1916" "1923"
-$par
-       int.f0        bLS.r1         wt.r1   air.temp.r1    wind.wt.r1 
- 0.7496879400 -2.4999185933 -1.7035048144  0.0369273871  0.2316466634 
-  wind.bLS.r1        int.r2  rain.rate.r2        bLS.r3         wt.r3 
- 0.4970272218 -1.4561736160  0.3000000000 -3.9694521696 -3.0444593298 
-   wind.wt.r3   wind.bLS.r3   air.temp.r3 
- 0.0113646440  0.0344507774  0.0009433847 
-
-$value
-[1] 156.1902
-
-$counts
-function gradient 
-      93       93 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  40 
- [1] "1938" "1935" "1938" "1910" "1908" "1911" "1918" "1917" "1919" "1904"
-[11] "1917" "1924" "1920" "1910" "1910" "1916" "1918" "1915" "1917" "1922"
-[21] "1922" "1920" "1912" "1916" "1917"
-$par
-       int.f0        bLS.r1         wt.r1   air.temp.r1    wind.wt.r1 
- 7.777914e-01 -2.636093e+00 -1.896986e+00  3.529926e-02  4.774260e-01 
-  wind.bLS.r1        int.r2  rain.rate.r2        bLS.r3         wt.r3 
- 4.989892e-01 -1.403089e+00  3.000000e-01 -4.070103e+00 -3.235820e+00 
-   wind.wt.r3   wind.bLS.r3   air.temp.r3 
- 2.913396e-01  9.253773e-02  2.688495e-05 
-
-$value
-[1] 135.6848
-
-$counts
-function gradient 
-      63       63 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  41 
- [1] "1938" "1938" "1936" "1904" "1919" "1911" "1908" "1913" "1912" "1908"
-[11] "1917" "1922" "1904" "1919" "1909" "1923" "1911" "1917" "1917" "1911"
-[21] "1914" "1923" "1908" "1917" "1904"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.68758049  -2.47109130  -1.87599632   0.03868984   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.49895192  -1.38801210   0.30000000  -3.89260019  -3.20817856 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29986781   0.08846729   0.01019968 
-
-$value
-[1] 153.2624
-
-$counts
-function gradient 
-      93       93 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  42 
- [1] "1935" "1935" "1938" "1907" "1906" "1917" "1921" "1913" "1915" "1919"
-[11] "1906" "1915" "1908" "1916" "1911" "1920" "1908" "1922" "1909" "1905"
-[21] "1920" "1920" "1911" "1922" "1921"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.803622244 -2.636486872 -1.892995387  0.035220076  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.385795179  0.286334679 -4.054529562 -3.231526915 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.129770911  0.002147066 
-
-$value
-[1] 141.4464
-
-$counts
-function gradient 
-      61       61 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  43 
- [1] "1936" "1936" "1938" "1908" "1917" "1915" "1904" "1919" "1921" "1923"
-[11] "1910" "1908" "1913" "1907" "1911" "1920" "1908" "1910" "1925" "1915"
-[21] "1916" "1913" "1904" "1918" "1917"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.679533318 -2.450575124 -1.844580249  0.037170445  0.461677879 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.487411686 -1.422531218  0.300000000 -3.850318292 -3.222975748 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.283437815  0.168727623  0.003928194 
-
-$value
-[1] 167.8992
-
-$counts
-function gradient 
-     121      121 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  44 
- [1] "1938" "1938" "1936" "1913" "1924" "1918" "1922" "1921" "1917" "1925"
-[11] "1921" "1922" "1906" "1914" "1923" "1908" "1917" "1921" "1912" "1904"
-[21] "1910" "1918" "1920" "1909" "1916"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.521835063 -2.371228538 -1.801241180  0.038520787  0.442009716 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.459261191 -1.487199712  0.300000000 -4.051759795 -3.258424492 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.136990902  0.001116844 
-
-$value
-[1] 147.4422
-
-$counts
-function gradient 
-     210      210 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  45 
- [1] "1935" "1936" "1936" "1905" "1924" "1921" "1908" "1906" "1909" "1925"
-[11] "1914" "1912" "1925" "1923" "1918" "1921" "1910" "1912" "1917" "1914"
-[21] "1923" "1920" "1915" "1915" "1922"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.29355960  -2.37333785  -1.78439939   0.03552253   0.49999704 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.55940058   0.23560583  -4.02795567  -3.24075828 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.28449904   0.29051948   0.00000000 
-
-$value
-[1] 167.5494
-
-$counts
-function gradient 
-     102      102 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  46 
- [1] "1935" "1935" "1936" "1906" "1915" "1915" "1914" "1922" "1914" "1907"
-[11] "1925" "1914" "1905" "1910" "1909" "1910" "1907" "1919" "1907" "1912"
-[21] "1908" "1919" "1914" "1919" "1912"
-$par
-       int.f0        bLS.r1         wt.r1   air.temp.r1    wind.wt.r1 
- 0.7971057100 -2.5919131905 -1.8839846382  0.0385659064  0.5000000000 
-  wind.bLS.r1        int.r2  rain.rate.r2        bLS.r3         wt.r3 
- 0.5000000000 -1.3650623081  0.2758686325 -3.8973507729 -3.2579471604 
-   wind.wt.r3   wind.bLS.r3   air.temp.r3 
- 0.3000000000  0.1644518650  0.0006085167 
-
-$value
-[1] 175.8398
-
-$counts
-function gradient 
-      70       70 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  47 
- [1] "1938" "1938" "1938" "1920" "1912" "1918" "1915" "1922" "1923" "1910"
-[11] "1914" "1918" "1912" "1917" "1922" "1914" "1925" "1904" "1912" "1912"
-[21] "1920" "1913" "1911" "1921" "1909"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.39200647  -1.75836471  -1.82993946   0.03696070   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.00000000  -1.51058079   0.30000000  -4.25354604  -3.27357295 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.08682689   0.00000000 
-
-$value
-[1] 128.0505
-
-$counts
-function gradient 
-     122      122 
-
-$convergence
-[1] 1
-
-$message
-[1] "NEW_X"
-
-Bootstrap iteration  48 
- [1] "1935" "1936" "1938" "1910" "1915" "1912" "1919" "1906" "1906" "1924"
-[11] "1917" "1905" "1907" "1904" "1924" "1913" "1924" "1909" "1906" "1915"
-[21] "1904" "1915" "1916" "1921" "1904"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.658294986 -2.520814298 -1.675774002  0.039992241  0.214617428 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.437417574  0.294608817 -4.006274660 -3.066678078 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.104594932  0.096688070  0.005691588 
-
-$value
-[1] 159.2516
-
-$counts
-function gradient 
-      91       91 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  49 
- [1] "1935" "1938" "1936" "1906" "1925" "1904" "1921" "1908" "1913" "1914"
-[11] "1922" "1919" "1918" "1910" "1919" "1921" "1922" "1907" "1922" "1906"
-[21] "1905" "1916" "1907" "1923" "1925"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.819528340 -2.582517801 -1.859376155  0.036454263  0.499828490 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.406674396  0.288203923 -3.935077358 -3.222357528 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.272111581  0.134829192  0.001687479 
-
-$value
-[1] 157.3297
-
-$counts
-function gradient 
-      55       55 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  50 
- [1] "1936" "1938" "1935" "1924" "1924" "1911" "1908" "1908" "1922" "1915"
-[11] "1910" "1917" "1920" "1905" "1920" "1914" "1917" "1911" "1904" "1905"
-[21] "1913" "1905" "1909" "1916" "1915"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.55875601  -2.53040246  -1.84980213   0.03717741   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.42498062   0.28849011  -3.97898158  -3.16575536 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.20079482   0.15404916   0.01006105 
-
-$value
-[1] 152.2033
-
-$counts
-function gradient 
-     117      117 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  51 
- [1] "1938" "1938" "1935" "1917" "1914" "1925" "1914" "1911" "1920" "1907"
-[11] "1915" "1918" "1917" "1922" "1914" "1920" "1909" "1915" "1922" "1924"
-[21] "1920" "1909" "1908" "1920" "1919"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.77317774  -2.62161960  -1.92423215   0.03260943   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.49995938  -1.41371688   0.29978397  -4.06929524  -3.23581696 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.27475191   0.09919776   0.00000000 
-
-$value
-[1] 133.6438
-
-$counts
-function gradient 
-      60       60 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  52 
- [1] "1935" "1938" "1935" "1917" "1908" "1914" "1916" "1923" "1907" "1907"
-[11] "1914" "1924" "1923" "1909" "1913" "1923" "1920" "1914" "1911" "1924"
-[21] "1908" "1922" "1914" "1904" "1905"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.78850276  -2.63114038  -1.89623026   0.03425484   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.37724494   0.28385318  -4.06223683  -3.27699912 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.13035553   0.00000000 
-
-$value
-[1] 158.1638
-
-$counts
-function gradient 
-      45       45 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  53 
- [1] "1936" "1938" "1936" "1907" "1907" "1904" "1920" "1924" "1907" "1920"
-[11] "1910" "1908" "1912" "1909" "1912" "1906" "1912" "1920" "1906" "1909"
-[21] "1921" "1920" "1916" "1915" "1918"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.788541037 -2.496040566 -1.843149003  0.036363315  0.475826453 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.499124532 -1.417140338  0.300000000 -3.867104464 -3.196103195 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.161894094  0.004466415 
-
-$value
-[1] 161.6578
-
-$counts
-function gradient 
-      70       70 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  54 
- [1] "1935" "1936" "1935" "1919" "1904" "1909" "1918" "1925" "1911" "1904"
-[11] "1909" "1920" "1925" "1909" "1908" "1912" "1913" "1906" "1912" "1924"
-[21] "1921" "1925" "1922" "1909" "1909"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.80319051  -2.61444816  -1.85431131   0.03403399   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.40202915   0.28220228  -3.92773719  -3.22924533 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.28362303   0.16207697   0.00000000 
-
-$value
-[1] 158.568
-
-$counts
-function gradient 
-      99       99 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  55 
- [1] "1936" "1935" "1936" "1910" "1910" "1914" "1924" "1904" "1922" "1911"
-[11] "1920" "1917" "1910" "1906" "1904" "1918" "1917" "1915" "1920" "1911"
-[21] "1904" "1925" "1905" "1908" "1916"
-$par
-       int.f0        bLS.r1         wt.r1   air.temp.r1    wind.wt.r1 
- 0.7735812399 -2.5013173087 -1.8659625539  0.0383298807  0.5000000000 
-  wind.bLS.r1        int.r2  rain.rate.r2        bLS.r3         wt.r3 
- 0.5000000000 -1.3723012892  0.2741952428 -3.8405705889 -3.2644462036 
-   wind.wt.r3   wind.bLS.r3   air.temp.r3 
- 0.3000000000  0.2029246921  0.0001380225 
-
-$value
-[1] 166.2431
-
-$counts
-function gradient 
-      62       62 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  56 
- [1] "1938" "1938" "1936" "1923" "1925" "1912" "1919" "1924" "1904" "1920"
-[11] "1921" "1913" "1912" "1914" "1904" "1905" "1914" "1920" "1917" "1921"
-[21] "1917" "1923" "1911" "1908" "1912"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.42900338  -2.26490997  -1.81634377   0.03755066   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.41507731  -1.51108806   0.30000000  -3.99174917  -3.18033634 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.21547215   0.06914088   0.00000000 
-
-$value
-[1] 151.121
-
-$counts
-function gradient 
-      83       83 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  57 
- [1] "1935" "1936" "1935" "1923" "1910" "1925" "1915" "1914" "1921" "1915"
-[11] "1910" "1906" "1917" "1921" "1919" "1920" "1909" "1909" "1907" "1924"
-[21] "1908" "1917" "1913" "1911" "1925"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-   0.4842362   -2.5182955   -1.8106003    0.0344380    0.5000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-   0.5000000   -1.4767830    0.1983486   -4.0407292   -3.1315503 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-   0.1516372    0.2448530    0.0000000 
-
-$value
-[1] 168.7268
-
-$counts
-function gradient 
-     121      121 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  58 
- [1] "1936" "1938" "1936" "1917" "1918" "1922" "1904" "1905" "1918" "1913"
-[11] "1908" "1908" "1920" "1920" "1921" "1905" "1914" "1908" "1920" "1917"
-[21] "1906" "1913" "1916" "1922" "1905"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.53887009  -2.41820475  -1.74363713   0.03720958   0.37163716 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.49273129  -1.43345684   0.30000000  -3.87478393  -3.18332376 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29944849   0.20788665   0.00922974 
-
-$value
-[1] 148.5519
-
-$counts
-function gradient 
-     115      115 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  59 
- [1] "1935" "1935" "1938" "1921" "1912" "1925" "1917" "1918" "1909" "1911"
-[11] "1923" "1905" "1904" "1921" "1910" "1910" "1907" "1908" "1914" "1913"
-[21] "1914" "1904" "1913" "1924" "1915"
-$par
-       int.f0        bLS.r1         wt.r1   air.temp.r1    wind.wt.r1 
- 0.7863178826 -2.6160493250 -1.8678523449  0.0350310082  0.5000000000 
-  wind.bLS.r1        int.r2  rain.rate.r2        bLS.r3         wt.r3 
- 0.5000000000 -1.3713911167  0.2780621802 -4.0739063283 -3.2489447171 
-   wind.wt.r3   wind.bLS.r3   air.temp.r3 
- 0.3000000000  0.1381225156  0.0003548026 
-
-$value
-[1] 154.337
-
-$counts
-function gradient 
-     134      134 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  60 
- [1] "1938" "1936" "1935" "1921" "1911" "1918" "1910" "1917" "1913" "1919"
-[11] "1906" "1925" "1914" "1906" "1911" "1920" "1925" "1916" "1918" "1915"
-[21] "1912" "1922" "1922" "1909" "1916"
-$par
-       int.f0        bLS.r1         wt.r1   air.temp.r1    wind.wt.r1 
- 0.8209338277 -2.5743288831 -1.9285266766  0.0350381724  0.5000000000 
-  wind.bLS.r1        int.r2  rain.rate.r2        bLS.r3         wt.r3 
- 0.5000000000 -1.3964828792  0.2880759121 -3.9388012730 -3.2761624312 
-   wind.wt.r3   wind.bLS.r3   air.temp.r3 
- 0.3000000000  0.1240891618  0.0002961844 
-
-$value
-[1] 156.146
-
-$counts
-function gradient 
-      48       48 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  61 
- [1] "1935" "1938" "1935" "1917" "1922" "1924" "1921" "1925" "1924" "1916"
-[11] "1915" "1922" "1915" "1924" "1923" "1907" "1919" "1920" "1915" "1905"
-[21] "1908" "1922" "1916" "1910" "1908"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.81985770  -2.63539709  -1.92200394   0.03367064   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.49995515  -1.41730544   0.28876954  -4.05037506  -3.21694572 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.26367538   0.12269307   0.00000000 
-
-$value
-[1] 139.1087
-
-$counts
-function gradient 
-      46       46 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  62 
- [1] "1938" "1938" "1938" "1909" "1915" "1916" "1909" "1913" "1911" "1913"
-[11] "1909" "1922" "1920" "1925" "1924" "1905" "1922" "1922" "1923" "1916"
-[21] "1904" "1909" "1908" "1921" "1910"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.811423048 -2.573516710 -1.870481096  0.036026148  0.499463988 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.485327703 -1.402787029  0.300000000 -4.114134673 -3.228061016 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.056951744  0.007649426 
-
-$value
-[1] 140.4392
-
-$counts
-function gradient 
-      80       80 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  63 
- [1] "1936" "1935" "1938" "1908" "1908" "1916" "1911" "1922" "1904" "1907"
-[11] "1921" "1907" "1911" "1924" "1925" "1907" "1921" "1917" "1915" "1914"
-[21] "1914" "1920" "1905" "1913" "1925"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.782373786 -2.564792706 -1.889741865  0.035120982  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.393541981  0.286462589 -3.929860246 -3.245573144 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.123638014  0.005853525 
-
-$value
-[1] 159.683
-
-$counts
-function gradient 
-      87       87 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  64 
- [1] "1936" "1936" "1938" "1909" "1912" "1919" "1916" "1912" "1910" "1922"
-[11] "1913" "1921" "1911" "1919" "1918" "1921" "1920" "1919" "1908" "1906"
-[21] "1909" "1922" "1914" "1914" "1915"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.088842785 -2.279166084 -1.750530936  0.039083606  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.499703506 -1.667497986  0.300000000 -4.070984434 -3.158770589 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.207568086  0.276990364  0.007801283 
-
-$value
-[1] 160.8771
-
-$counts
-function gradient 
-     158      158 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  65 
- [1] "1935" "1936" "1938" "1918" "1908" "1906" "1910" "1916" "1923" "1912"
-[11] "1924" "1915" "1917" "1910" "1912" "1907" "1922" "1912" "1905" "1920"
-[21] "1915" "1917" "1913" "1910" "1919"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.664733810 -2.551309653 -1.706917968  0.039512566  0.239502782 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.416524885  0.296156026 -4.039442382 -3.170005823 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.230010060  0.169628904  0.004914557 
-
-$value
-[1] 158.975
-
-$counts
-function gradient 
-     124      124 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  66 
- [1] "1936" "1936" "1938" "1905" "1924" "1911" "1904" "1904" "1918" "1921"
-[11] "1906" "1919" "1907" "1910" "1905" "1917" "1907" "1920" "1922" "1911"
-[21] "1922" "1910" "1915" "1905" "1921"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.766662817 -2.486135787 -1.863168309  0.038248521  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.492975046 -1.413155305  0.300000000 -3.888755279 -3.210230140 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.169677182  0.006136997 
-
-$value
-[1] 155.744
-
-$counts
-function gradient 
-     109      109 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  67 
- [1] "1935" "1936" "1938" "1920" "1914" "1905" "1917" "1920" "1925" "1916"
-[11] "1925" "1912" "1918" "1906" "1909" "1913" "1915" "1918" "1912" "1918"
-[21] "1907" "1912" "1908" "1917" "1920"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.78902884  -2.56599034  -1.86614265   0.03445052   0.48000790 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.40450660   0.28943329  -3.94724125  -3.24406432 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29629256   0.12785980   0.00000000 
-
-$value
-[1] 153.5553
-
-$counts
-function gradient 
-      60       60 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  68 
- [1] "1936" "1938" "1935" "1914" "1904" "1910" "1918" "1908" "1914" "1919"
-[11] "1913" "1905" "1909" "1915" "1922" "1915" "1906" "1911" "1916" "1919"
-[21] "1905" "1916" "1916" "1924" "1909"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.830469734 -2.580272321 -1.909219703  0.037604116  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.373161533  0.291486700 -3.959347755 -3.227039125 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.297957751  0.135951419  0.003720552 
-
-$value
-[1] 167.1499
-
-$counts
-function gradient 
-      45       45 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  69 
- [1] "1938" "1938" "1938" "1915" "1914" "1904" "1911" "1904" "1911" "1915"
-[11] "1911" "1919" "1913" "1918" "1913" "1911" "1911" "1905" "1917" "1921"
-[21] "1914" "1905" "1922" "1919" "1905"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.381015023 -1.835596280 -1.851633252  0.039740096  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.072418303 -1.482779994  0.300000000 -4.225634403 -3.245336122 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.119960516  0.005191308 
-
-$value
-[1] 128.0708
-
-$counts
-function gradient 
-     160      160 
-
-$convergence
-[1] 1
-
-$message
-[1] "NEW_X"
-
-Bootstrap iteration  70 
- [1] "1935" "1935" "1938" "1908" "1909" "1921" "1920" "1915" "1918" "1905"
-[11] "1917" "1905" "1919" "1918" "1913" "1924" "1906" "1905" "1914" "1911"
-[21] "1919" "1912" "1918" "1916" "1921"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.79141022  -2.63908968  -1.86683671   0.03494831   0.48097512 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39877689   0.28564792  -4.05812669  -3.19368764 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.26378165   0.12623434   0.00000000 
-
-$value
-[1] 142.7672
-
-$counts
-function gradient 
-      95       95 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  71 
- [1] "1938" "1935" "1935" "1906" "1916" "1912" "1919" "1908" "1911" "1921"
-[11] "1909" "1911" "1914" "1914" "1925" "1909" "1907" "1918" "1920" "1911"
-[21] "1925" "1914" "1925" "1921" "1917"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.82602985  -2.61257945  -1.92071014   0.03023367   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39484052   0.28318478  -4.06479335  -3.26855952 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.12697182   0.00000000 
-
-$value
-[1] 152.8968
-
-$counts
-function gradient 
-      93       93 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  72 
- [1] "1938" "1936" "1938" "1915" "1917" "1916" "1909" "1910" "1924" "1924"
-[11] "1907" "1913" "1919" "1919" "1906" "1922" "1922" "1910" "1924" "1909"
-[21] "1918" "1905" "1917" "1907" "1925"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.55537625  -2.33092066  -1.64928674   0.04230415   0.20830885 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.42295513  -1.48237219   0.30000000  -3.89235073  -3.00229943 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.00000000   0.09620386   0.01097932 
-
-$value
-[1] 148.0052
-
-$counts
-function gradient 
-     144      144 
-
-$convergence
-[1] 1
-
-$message
-[1] "NEW_X"
-
-Bootstrap iteration  73 
- [1] "1936" "1936" "1935" "1915" "1907" "1906" "1910" "1914" "1925" "1918"
-[11] "1905" "1912" "1916" "1914" "1911" "1911" "1909" "1908" "1912" "1912"
-[21] "1908" "1919" "1913" "1904" "1913"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.80563369  -2.49292734  -1.88596232   0.03702324   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.35218643   0.26771384  -3.82806609  -3.31528229 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.15515147   0.03441090 
-
-$value
-[1] 174.6749
-
-$counts
-function gradient 
-      92       92 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  74 
- [1] "1936" "1938" "1935" "1910" "1916" "1925" "1918" "1909" "1918" "1905"
-[11] "1920" "1906" "1921" "1913" "1915" "1911" "1911" "1912" "1907" "1923"
-[21] "1918" "1920" "1905" "1910" "1916"
-$par
-       int.f0        bLS.r1         wt.r1   air.temp.r1    wind.wt.r1 
- 0.8156393599 -2.5797235308 -1.8554182207  0.0352295211  0.4837509105 
-  wind.bLS.r1        int.r2  rain.rate.r2        bLS.r3         wt.r3 
- 0.5000000000 -1.4107404395  0.2892877007 -3.9618890745 -3.2028949373 
-   wind.wt.r3   wind.bLS.r3   air.temp.r3 
- 0.2747670577  0.1284791902  0.0002905579 
-
-$value
-[1] 161.1068
-
-$counts
-function gradient 
-     166      166 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  75 
- [1] "1935" "1935" "1935" "1925" "1920" "1915" "1916" "1919" "1913" "1908"
-[11] "1918" "1909" "1924" "1920" "1908" "1914" "1919" "1915" "1914" "1911"
-[21] "1904" "1906" "1917" "1913" "1923"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.77934267  -2.62403655  -1.90723704   0.03324305   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.38537149   0.28215236  -4.03867269  -3.22227949 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29843540   0.14614470   0.00000000 
-
-$value
-[1] 152.179
-
-$counts
-function gradient 
-      73       73 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  76 
- [1] "1938" "1938" "1938" "1925" "1919" "1915" "1923" "1912" "1906" "1922"
-[11] "1916" "1911" "1920" "1907" "1913" "1920" "1913" "1908" "1914" "1912"
-[21] "1915" "1908" "1907" "1905" "1904"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.461889929 -1.925064649 -1.815530720  0.035831246  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.087161071 -1.480439371  0.300000000 -4.199734528 -3.205896498 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.297350006  0.165615001  0.007802267 
-
-$value
-[1] 138.8116
-
-$counts
-function gradient 
-     156      156 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  77 
- [1] "1938" "1938" "1938" "1908" "1905" "1912" "1924" "1918" "1909" "1909"
-[11] "1907" "1925" "1918" "1909" "1906" "1924" "1913" "1908" "1909" "1904"
-[21] "1906" "1911" "1905" "1917" "1922"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.70689153  -2.35709445  -1.82757882   0.03408730   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.30368252  -1.41788740   0.30000000  -4.17801875  -3.18137384 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.25621761   0.01165663   0.00616563 
-
-$value
-[1] 133.0133
-
-$counts
-function gradient 
-     165      165 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  78 
- [1] "1936" "1935" "1938" "1906" "1908" "1916" "1912" "1920" "1918" "1917"
-[11] "1920" "1920" "1924" "1911" "1908" "1915" "1923" "1923" "1908" "1921"
-[21] "1911" "1922" "1906" "1908" "1911"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-   0.7794961   -2.5591010   -1.8842685    0.0340397    0.5000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-   0.5000000   -1.3961144    0.2883079   -3.9466130   -3.2259677 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-   0.3000000    0.1164027    0.0000000 
-
-$value
-[1] 151.8955
+[1] 139.3779
 
 $counts
 function gradient 
@@ -1949,24 +51,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  79 
- [1] "1935" "1938" "1936" "1918" "1913" "1925" "1925" "1923" "1912" "1912"
-[11] "1924" "1920" "1912" "1913" "1908" "1914" "1919" "1917" "1917" "1916"
-[21] "1918" "1917" "1910" "1913" "1912"
+Bootstrap iteration  3 
+ [1] "1935" "1938" "1936" "1919" "1923" "1909" "1914" "1911"
+ [9] "1925" "1925" "1910" "1919" "1920" "1925" "1921" "1920"
+[17] "1905" "1907" "1916" "1908" "1925" "1922" "1923" "1925"
+[25] "1917"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.57882797  -2.53811203  -1.74520782   0.03632223   0.33142742 
+  0.82886350  -2.57621197  -1.87066225   0.03423144   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.46306948   0.29581909  -3.99264373  -3.18240360 
+  0.50000000  -1.42642059   0.29387891  -3.96668337  -3.23103188 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.20006248   0.09341555   0.00000000 
+  0.25067722   0.12058798   0.00000000 
 
 $value
-[1] 155.8992
+[1] 153.0675
 
 $counts
 function gradient 
-     105      105 
+      94       94 
 
 $convergence
 [1] 0
@@ -1974,20 +77,151 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  80 
- [1] "1935" "1936" "1935" "1916" "1917" "1911" "1910" "1906" "1916" "1917"
-[11] "1916" "1924" "1916" "1917" "1921" "1923" "1923" "1914" "1911" "1918"
-[21] "1911" "1918" "1904" "1924" "1921"
+Bootstrap iteration  4 
+ [1] "1935" "1938" "1938" "1911" "1919" "1915" "1917" "1906"
+ [9] "1917" "1910" "1906" "1925" "1918" "1924" "1908" "1911"
+[17] "1922" "1913" "1921" "1913" "1915" "1905" "1913" "1925"
+[25] "1915"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.82724013  -2.62596556  -1.94034443   0.03472907   0.50000000 
+  0.58019893  -2.52204501  -1.86201111   0.03877329   0.49643834 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.42748483   0.28290052  -3.93190858  -3.21850388 
+  0.43994517  -1.44027878   0.30000000  -4.11664015  -3.18649504 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.26039252   0.16448786   0.00000000 
+  0.19796134   0.13060782   0.00606923 
 
 $value
-[1] 164.8122
+[1] 132.6532
+
+$counts
+function gradient 
+     169      169 
+
+$convergence
+[1] 52
+
+$message
+[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
+
+Bootstrap iteration  5 
+ [1] "1936" "1935" "1936" "1917" "1925" "1906" "1911" "1917"
+ [9] "1922" "1918" "1920" "1914" "1910" "1918" "1909" "1917"
+[17] "1910" "1913" "1908" "1909" "1919" "1924" "1914" "1907"
+[25] "1915"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+ 0.358879607 -2.410596623 -1.817155185  0.037359441  0.500000000 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+ 0.500000000 -1.523625735  0.260601909 -3.944830238 -3.226269321 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+ 0.272329569  0.268131091  0.006164769 
+
+$value
+[1] 160.6637
+
+$counts
+function gradient 
+     164      164 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Bootstrap iteration  6 
+ [1] "1936" "1935" "1938" "1910" "1925" "1912" "1910" "1905"
+ [9] "1919" "1916" "1922" "1923" "1918" "1910" "1907" "1904"
+[17] "1911" "1923" "1919" "1925" "1914" "1919" "1923" "1911"
+[25] "1906"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+  0.80924089  -2.58741046  -1.86643481   0.03585601   0.50000000 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+  0.50000000  -1.40259535   0.29261531  -3.93850713  -3.21614798 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+  0.25829388   0.13408443   0.00000000 
+
+$value
+[1] 162.9072
+
+$counts
+function gradient 
+      54       54 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Bootstrap iteration  7 
+ [1] "1935" "1936" "1935" "1913" "1923" "1914" "1911" "1917"
+ [9] "1924" "1916" "1905" "1914" "1916" "1917" "1909" "1911"
+[17] "1915" "1907" "1916" "1917" "1924" "1919" "1904" "1911"
+[25] "1911"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+  0.81973171  -2.62559632  -1.95038459   0.04342202   0.50000000 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+  0.50000000  -1.40513098   0.28392069  -3.92501225  -3.26138941 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+  0.29341905   0.16754758   0.00000000 
+
+$value
+[1] 157.8504
+
+$counts
+function gradient 
+      52       52 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Bootstrap iteration  8 
+ [1] "1936" "1935" "1936" "1924" "1912" "1910" "1910" "1913"
+ [9] "1925" "1914" "1904" "1922" "1913" "1924" "1925" "1916"
+[17] "1914" "1914" "1923" "1910" "1923" "1912" "1912" "1908"
+[25] "1917"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+  0.75519774  -2.47954616  -1.87775190   0.03574163   0.50000000 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+  0.50000000  -1.37168771   0.27386067  -3.85073743  -3.29066285 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+  0.30000000   0.20748992   0.00000000 
+
+$value
+[1] 170.7126
+
+$counts
+function gradient 
+      99       99 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Bootstrap iteration  9 
+ [1] "1936" "1936" "1938" "1904" "1913" "1920" "1920" "1924"
+ [9] "1910" "1924" "1912" "1923" "1909" "1921" "1920" "1908"
+[17] "1923" "1906" "1917" "1904" "1905" "1907" "1913" "1904"
+[25] "1908"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+ 0.779032940 -2.489049709 -1.860014692  0.036884893  0.488952918 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+ 0.499730748 -1.379769007  0.300000000 -3.885819383 -3.238175666 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+ 0.299281260  0.164343359  0.001674227 
+
+$value
+[1] 157.8677
 
 $counts
 function gradient 
@@ -1999,24 +233,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  81 
- [1] "1935" "1935" "1935" "1919" "1904" "1924" "1909" "1920" "1909" "1907"
-[11] "1913" "1918" "1905" "1910" "1921" "1912" "1904" "1914" "1911" "1921"
-[21] "1917" "1911" "1911" "1910" "1923"
+Bootstrap iteration  10 
+ [1] "1935" "1935" "1938" "1924" "1916" "1921" "1913" "1909"
+ [9] "1910" "1912" "1919" "1920" "1924" "1916" "1924" "1911"
+[17] "1924" "1910" "1923" "1921" "1920" "1904" "1905" "1920"
+[25] "1905"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.78438392  -2.64067542  -1.86289142   0.03582821   0.50000000 
+  0.81720784  -2.64903729  -1.85916662   0.03602679   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.38411238   0.28150012  -4.04432745  -3.21925673 
+  0.50000000  -1.42381115   0.28839789  -4.05732566  -3.19708003 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.14839593   0.00000000 
+  0.25979383   0.12792267   0.00000000 
 
 $value
-[1] 154.3379
+[1] 133.9229
 
 $counts
 function gradient 
-      73       73 
+     133      133 
 
 $convergence
 [1] 0
@@ -2024,24 +259,27 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  82 
- [1] "1938" "1936" "1935" "1909" "1914" "1919" "1913" "1908" "1923" "1912"
-[11] "1906" "1905" "1906" "1904" "1911" "1906" "1909" "1911" "1918" "1920"
-[21] "1923" "1922" "1921" "1906" "1919"
+Bootstrap iteration  11 
+ [1] "1935" "1935" "1938" "1906" "1921" "1905" "1908" "1915"
+ [9] "1916" "1913" "1909" "1913" "1913" "1909" "1919" "1919"
+[17] "1906" "1907" "1906" "1906" "1919" "1905" "1918" "1906"
+[25] "1912"
 $par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.78895864  -2.57085667  -1.85166339   0.03588126   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.38125863   0.29015155  -3.95445735  -3.21095170 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.13325717   0.00000000 
+       int.f0        bLS.r1         wt.r1   air.temp.r1 
+ 0.7917026324 -2.6384833620 -1.8165111464  0.0379275647 
+   wind.wt.r1   wind.bLS.r1        int.r2  rain.rate.r2 
+ 0.4131237257  0.5000000000 -1.3964754305  0.2787786502 
+       bLS.r3         wt.r3    wind.wt.r3   wind.bLS.r3 
+-4.0820257878 -3.1791096731  0.2610288085  0.1320433511 
+  air.temp.r3 
+ 0.0006850826 
 
 $value
-[1] 162.5881
+[1] 147.5119
 
 $counts
 function gradient 
-     124      124 
+     106      106 
 
 $convergence
 [1] 0
@@ -2049,24 +287,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  83 
- [1] "1935" "1938" "1935" "1915" "1906" "1909" "1907" "1924" "1913" "1923"
-[11] "1912" "1918" "1913" "1921" "1914" "1921" "1905" "1924" "1908" "1908"
-[21] "1923" "1922" "1918" "1905" "1913"
+Bootstrap iteration  12 
+ [1] "1935" "1938" "1936" "1912" "1907" "1905" "1925" "1915"
+ [9] "1912" "1914" "1910" "1916" "1908" "1914" "1904" "1922"
+[17] "1915" "1905" "1924" "1920" "1915" "1906" "1921" "1918"
+[25] "1925"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.78157193  -2.63498433  -1.86720557   0.03500398   0.49975095 
+ 0.786720898 -2.544894879 -1.888988748  0.038067129  0.500000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.38938090   0.28937854  -4.04658710  -3.22017285 
+ 0.500000000 -1.387599366  0.289521625 -3.935283207 -3.246974443 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.29346726   0.12100949   0.00000000 
+ 0.300000000  0.127087091  0.007895058 
 
 $value
-[1] 145.8544
+[1] 152.5653
 
 $counts
 function gradient 
-     148      148 
+      72       72 
 
 $convergence
 [1] 0
@@ -2074,20 +313,155 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  84 
- [1] "1935" "1936" "1938" "1908" "1921" "1912" "1914" "1904" "1910" "1917"
-[11] "1911" "1906" "1920" "1916" "1919" "1904" "1908" "1920" "1911" "1922"
-[21] "1907" "1915" "1914" "1914" "1913"
+Bootstrap iteration  13 
+ [1] "1938" "1938" "1935" "1921" "1920" "1909" "1913" "1911"
+ [9] "1913" "1916" "1923" "1909" "1923" "1923" "1912" "1919"
+[17] "1911" "1910" "1913" "1920" "1921" "1911" "1922" "1913"
+[25] "1914"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.704758660 -2.565058481 -1.880840184  0.037440959  0.500000000 
+  0.84473369  -2.57555899  -1.87884091   0.03595107   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.383548415  0.285940990 -3.942947783 -3.248136033 
+  0.47964238  -1.44289838   0.30000000  -4.10453358  -3.22201505 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.158697342  0.008344126 
+  0.30000000   0.09955090   0.00000000 
 
 $value
-[1] 160.0898
+[1] 144.2353
+
+$counts
+function gradient 
+     116      116 
+
+$convergence
+[1] 52
+
+$message
+[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
+
+Bootstrap iteration  14 
+ [1] "1935" "1936" "1938" "1916" "1916" "1922" "1925" "1913"
+ [9] "1919" "1908" "1907" "1921" "1904" "1919" "1920" "1915"
+[17] "1924" "1905" "1921" "1915" "1918" "1922" "1924" "1909"
+[25] "1919"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+ 0.830598003 -2.596915900 -1.883691142  0.038440872  0.468931531 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+ 0.500000000 -1.440280740  0.293695877 -3.957684326 -3.192518372 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+ 0.238223723  0.121538828  0.003567183 
+
+$value
+[1] 145.6207
+
+$counts
+function gradient 
+      61       61 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Bootstrap iteration  15 
+ [1] "1936" "1938" "1938" "1906" "1917" "1904" "1904" "1919"
+ [9] "1914" "1907" "1915" "1916" "1913" "1913" "1910" "1921"
+[17] "1920" "1923" "1912" "1924" "1914" "1915" "1911" "1921"
+[25] "1908"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+ 0.587481333 -2.380296715 -1.881622653  0.040865807  0.500000000 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+ 0.455449954 -1.419967997  0.300000000 -3.996692504 -3.226101565 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+ 0.251378094  0.085397835  0.002234035 
+
+$value
+[1] 156.4376
+
+$counts
+function gradient 
+     156      156 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Bootstrap iteration  16 
+ [1] "1935" "1936" "1936" "1913" "1912" "1914" "1909" "1915"
+ [9] "1922" "1907" "1906" "1917" "1911" "1909" "1907" "1913"
+[17] "1919" "1919" "1923" "1913" "1909" "1922" "1907" "1912"
+[25] "1907"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+  0.75474401  -2.49710739  -1.87270235   0.03928763   0.49907851 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+  0.50000000  -1.40744161   0.27560671  -3.85233751  -3.21766745 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+  0.30000000   0.20404778   0.01563089 
+
+$value
+[1] 169.3833
+
+$counts
+function gradient 
+      68       68 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Bootstrap iteration  17 
+ [1] "1938" "1936" "1935" "1920" "1910" "1918" "1908" "1917"
+ [9] "1925" "1918" "1918" "1919" "1922" "1911" "1908" "1910"
+[17] "1923" "1919" "1919" "1912" "1914" "1914" "1922" "1913"
+[25] "1905"
+$par
+       int.f0        bLS.r1         wt.r1   air.temp.r1 
+ 0.8059229455 -2.4998573753 -1.8445686006  0.0378094076 
+   wind.wt.r1   wind.bLS.r1        int.r2  rain.rate.r2 
+ 0.5000000000  0.5000000000 -1.4369561774  0.2806517971 
+       bLS.r3         wt.r3    wind.wt.r3   wind.bLS.r3 
+-3.8773372221 -3.1884671985  0.2631231927  0.1255950010 
+  air.temp.r3 
+ 0.0001801499 
+
+$value
+[1] 146.4823
+
+$counts
+function gradient 
+      58       58 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+Bootstrap iteration  18 
+ [1] "1935" "1936" "1936" "1923" "1917" "1917" "1909" "1921"
+ [9] "1905" "1911" "1914" "1924" "1910" "1922" "1911" "1913"
+[17] "1908" "1920" "1909" "1911" "1923" "1909" "1918" "1920"
+[25] "1906"
+$par
+       int.f0        bLS.r1         wt.r1   air.temp.r1 
+ 7.656945e-01 -2.473490e+00 -1.872360e+00  3.619824e-02 
+   wind.wt.r1   wind.bLS.r1        int.r2  rain.rate.r2 
+ 5.000000e-01  5.000000e-01 -1.396113e+00  2.749680e-01 
+       bLS.r3         wt.r3    wind.wt.r3   wind.bLS.r3 
+-3.850472e+00 -3.227598e+00  2.659955e-01  2.110389e-01 
+  air.temp.r3 
+ 1.311299e-16 
+
+$value
+[1] 162.1603
 
 $counts
 function gradient 
@@ -2099,24 +473,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  85 
- [1] "1938" "1938" "1935" "1920" "1917" "1924" "1914" "1905" "1916" "1923"
-[11] "1907" "1906" "1913" "1923" "1904" "1923" "1922" "1910" "1910" "1910"
-[21] "1908" "1913" "1919" "1925" "1924"
+Bootstrap iteration  19 
+ [1] "1938" "1935" "1935" "1914" "1918" "1923" "1905" "1919"
+ [9] "1922" "1913" "1922" "1920" "1910" "1909" "1915" "1907"
+[17] "1924" "1922" "1905" "1907" "1925" "1914" "1925" "1904"
+[25] "1925"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-   0.7984980   -2.6273426   -1.8309682    0.0333907    0.4899172 
+ 0.817925009 -2.591705242 -1.823879827  0.037200159  0.500000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-   0.4995660   -1.3928859    0.2981216   -4.0769945   -3.2005430 
+ 0.500000000 -1.444194089  0.277917586 -4.076217856 -3.184526691 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-   0.2901868    0.1034820    0.0000000 
+ 0.283677671  0.151877813  0.007057471 
 
 $value
-[1] 151.3602
+[1] 135.6881
 
 $counts
 function gradient 
-      86       86 
+     118      118 
 
 $convergence
 [1] 0
@@ -2124,24 +499,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  86 
- [1] "1935" "1938" "1936" "1904" "1908" "1915" "1923" "1910" "1904" "1912"
-[11] "1918" "1925" "1912" "1923" "1915" "1913" "1906" "1912" "1914" "1910"
-[21] "1920" "1907" "1912" "1918" "1904"
+Bootstrap iteration  20 
+ [1] "1938" "1936" "1938" "1919" "1906" "1904" "1905" "1905"
+ [9] "1911" "1923" "1917" "1916" "1910" "1911" "1906" "1925"
+[17] "1919" "1925" "1904" "1915" "1921" "1924" "1917" "1911"
+[25] "1908"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.76497251  -2.57107358  -1.85535675   0.03647852   0.50000000 
+ 0.821556401 -2.458580471 -1.830489510  0.038117217  0.500000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.38414858   0.28907551  -3.94734664  -3.23080351 
+ 0.499996832 -1.448974286  0.300000000 -3.893652473 -3.113017020 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.13379684   0.00215985 
+ 0.244335970  0.077049497  0.007743722 
 
 $value
-[1] 163.407
+[1] 153.7945
 
 $counts
 function gradient 
-      85       85 
+     105      105 
 
 $convergence
 [1] 0
@@ -2149,24 +525,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  87 
- [1] "1935" "1938" "1935" "1908" "1920" "1911" "1920" "1907" "1922" "1919"
-[11] "1915" "1924" "1925" "1925" "1906" "1910" "1913" "1906" "1924" "1923"
-[21] "1922" "1907" "1911" "1923" "1920"
+Bootstrap iteration  21 
+ [1] "1935" "1936" "1938" "1914" "1907" "1916" "1911" "1918"
+ [9] "1907" "1916" "1906" "1910" "1904" "1909" "1916" "1920"
+[17] "1924" "1909" "1913" "1916" "1909" "1912" "1911" "1904"
+[25] "1919"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.80387457  -2.63657266  -1.84849026   0.03418112   0.50000000 
+  0.87305956  -2.58817256  -1.88795228   0.03812458   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.40539293   0.28280521  -4.06656574  -3.19248196 
+  0.50000000  -1.40666922   0.29293469  -3.94622019  -3.18970849 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.27513011   0.12983294   0.00000000 
+  0.29663956   0.13510931   0.01245104 
 
 $value
-[1] 141.8118
+[1] 165.8606
 
 $counts
 function gradient 
-      71       71 
+      91       91 
 
 $convergence
 [1] 0
@@ -2174,49 +551,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  88 
- [1] "1936" "1938" "1935" "1912" "1916" "1924" "1914" "1917" "1908" "1914"
-[11] "1908" "1925" "1904" "1925" "1905" "1907" "1909" "1908" "1922" "1915"
-[21] "1904" "1913" "1907" "1913" "1918"
+Bootstrap iteration  22 
+ [1] "1936" "1936" "1936" "1915" "1911" "1912" "1911" "1912"
+ [9] "1923" "1904" "1906" "1911" "1905" "1904" "1912" "1910"
+[17] "1916" "1923" "1917" "1919" "1910" "1907" "1916" "1915"
+[25] "1916"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.78028646  -2.56831906  -1.87067963   0.03588247   0.50000000 
+  0.74753135  -2.49820790  -1.91150847   0.04306314   0.49990295 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.37895790   0.28665951  -3.93018600  -3.23402973 
+  0.50000000  -1.41059382   0.27585380  -3.83446581  -3.23684681 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.14496406   0.01498037 
+  0.30000000   0.22795160   0.01431868 
 
 $value
-[1] 158.7791
+[1] 180.9052
 
 $counts
 function gradient 
-      82       82 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  89 
- [1] "1936" "1936" "1936" "1911" "1913" "1909" "1907" "1914" "1919" "1910"
-[11] "1911" "1908" "1917" "1917" "1923" "1910" "1912" "1923" "1924" "1915"
-[21] "1914" "1920" "1905" "1911" "1908"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.009049063 -2.156569551 -1.719389811  0.036597019  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.832762258  0.235866116 -3.787827418 -3.196148168 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.249885133  0.221213478  0.001794217 
-
-$value
-[1] 170.05
-
-$counts
-function gradient 
-     132      132 
+     115      115 
 
 $convergence
 [1] 0
@@ -2224,74 +577,51 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  90 
- [1] "1935" "1936" "1936" "1906" "1923" "1917" "1912" "1923" "1925" "1907"
-[11] "1910" "1922" "1911" "1909" "1905" "1921" "1925" "1910" "1906" "1906"
-[21] "1916" "1911" "1912" "1915" "1922"
+Bootstrap iteration  23 
+ [1] "1936" "1936" "1938" "1912" "1915" "1911" "1910" "1918"
+ [9] "1922" "1920" "1914" "1910" "1922" "1906" "1909" "1910"
+[17] "1907" "1913" "1920" "1919" "1911" "1924" "1906" "1915"
+[25] "1924"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.76254341  -2.49843958  -1.85855685   0.03710501   0.50000000 
+  0.13215754  -2.26760792  -1.75411026   0.04146537   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39676736   0.27137892  -3.85621500  -3.22324813 
+  0.48189259  -1.60034417   0.30000000  -3.95827488  -3.16029344 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.21651488   0.01009989 
+  0.20092559   0.21673562   0.01399496 
 
 $value
-[1] 176.0827
+[1] 153.0558
 
 $counts
 function gradient 
-     144      144 
+     123      123 
 
 $convergence
-[1] 52
+[1] 1
 
 $message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
+[1] "NEW_X"
 
-Bootstrap iteration  91 
- [1] "1936" "1938" "1935" "1921" "1913" "1922" "1921" "1919" "1918" "1918"
-[11] "1906" "1909" "1919" "1925" "1915" "1918" "1923" "1904" "1915" "1923"
-[21] "1913" "1909" "1922" "1911" "1925"
+Bootstrap iteration  24 
+ [1] "1936" "1935" "1936" "1909" "1912" "1904" "1923" "1917"
+ [9] "1922" "1908" "1905" "1904" "1923" "1907" "1914" "1908"
+[17] "1925" "1907" "1922" "1906" "1904" "1910" "1908" "1912"
+[25] "1920"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.68565958  -2.54734447  -1.87084950   0.03392798   0.50000000 
+  0.78479033  -2.49512046  -1.86596146   0.03648954   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.44302293   0.30000000  -3.99467804  -3.23097570 
+  0.50000000  -1.37265389   0.27653291  -3.85153068  -3.25700167 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.14604211   0.00000000 
+  0.30000000   0.20623404   0.01163266 
 
 $value
-[1] 154.47
+[1] 161.784
 
 $counts
 function gradient 
-     175      175 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  92 
- [1] "1936" "1936" "1936" "1913" "1913" "1910" "1914" "1920" "1911" "1924"
-[11] "1908" "1918" "1920" "1918" "1916" "1920" "1920" "1924" "1907" "1925"
-[21] "1905" "1915" "1912" "1906" "1922"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.000000000 -2.212890072 -1.712953848  0.035817163  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.494714710 -1.742425092  0.241244903 -3.837610755 -3.164670715 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.273828932  0.238781038  0.006430486 
-
-$value
-[1] 151.8569
-
-$counts
-function gradient 
-      92       92 
+      76       76 
 
 $convergence
 [1] 0
@@ -2299,24 +629,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  93 
- [1] "1936" "1938" "1936" "1911" "1920" "1924" "1925" "1905" "1924" "1908"
-[11] "1906" "1908" "1907" "1916" "1925" "1919" "1916" "1907" "1918" "1919"
-[21] "1913" "1919" "1925" "1908" "1924"
+Bootstrap iteration  25 
+ [1] "1935" "1935" "1936" "1925" "1921" "1907" "1913" "1918"
+ [9] "1925" "1911" "1904" "1914" "1908" "1914" "1918" "1918"
+[17] "1913" "1918" "1918" "1923" "1915" "1912" "1907" "1906"
+[25] "1910"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.79716914  -2.51481685  -1.85505259   0.03533303   0.49893955 
+  0.78726099  -2.57055234  -1.87319766   0.03580261   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.47698265   0.30000000  -3.84760793  -3.17285059 
+  0.50000000  -1.40339871   0.27917672  -3.90151964  -3.26079732 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.21231071   0.15831176   0.00000000 
+  0.30000000   0.16482391   0.00000000 
 
 $value
-[1] 157.7504
+[1] 152.5673
 
 $counts
 function gradient 
-      48       48 
+      56       56 
 
 $convergence
 [1] 0
@@ -2324,95 +655,21 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  94 
- [1] "1938" "1935" "1936" "1925" "1922" "1910" "1911" "1919" "1915" "1913"
-[11] "1911" "1923" "1921" "1923" "1909" "1910" "1905" "1924" "1920" "1915"
-[21] "1916" "1921" "1915" "1910" "1913"
+Bootstrap iteration  26 
+ [1] "1935" "1935" "1936" "1907" "1906" "1914" "1913" "1908"
+ [9] "1914" "1913" "1918" "1922" "1913" "1916" "1906" "1921"
+[17] "1913" "1911" "1915" "1913" "1910" "1910" "1909" "1920"
+[25] "1923"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.81162667  -2.56519460  -1.91067188   0.03330608   0.50000000 
+  0.78870123  -2.59164438  -1.89104632   0.03919159   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.39245251   0.29166675  -3.95945546  -3.22340528 
+  0.50000000  -1.38639627   0.27925671  -3.89739760  -3.29584393 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.27688448   0.13799227   0.00000000 
+  0.30000000   0.16651681   0.00254527 
 
 $value
-[1] 164.7527
-
-$counts
-function gradient 
-     104      104 
-
-$convergence
-[1] 52
-
-$message
-[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
-
-Bootstrap iteration  95 
- [1] "1938" "1935" "1936" "1911" "1915" "1917" "1924" "1922" "1910" "1912"
-[11] "1911" "1905" "1912" "1913" "1919" "1910" "1907" "1905" "1918" "1904"
-[21] "1910" "1920" "1914" "1907" "1907"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.756709472 -2.560235632 -1.861306512  0.037718404  0.500000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.378639812  0.287452303 -3.949977389 -3.204403499 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.295593872  0.141429274  0.007845833 
-
-$value
-[1] 158.8845
-
-$counts
-function gradient 
-     117      117 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  96 
- [1] "1936" "1935" "1935" "1918" "1912" "1917" "1911" "1917" "1920" "1920"
-[11] "1910" "1908" "1920" "1924" "1919" "1924" "1908" "1914" "1920" "1914"
-[21] "1907" "1925" "1921" "1920" "1918"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.44277177  -2.50653758  -1.81394075   0.03361896   0.50000000 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.50609862   0.17796525  -4.00498169  -3.12847042 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.15406022   0.22207324   0.00000000 
-
-$value
-[1] 146.5146
-
-$counts
-function gradient 
-     103      103 
-
-$convergence
-[1] 0
-
-$message
-[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
-
-Bootstrap iteration  97 
- [1] "1936" "1935" "1935" "1906" "1907" "1925" "1925" "1912" "1914" "1922"
-[11] "1912" "1913" "1919" "1915" "1916" "1925" "1916" "1918" "1907" "1911"
-[21] "1913" "1908" "1921" "1917" "1909"
-$par
-      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.801706279 -2.588394201 -1.903151744  0.036063866  0.497518391 
- wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.500000000 -1.406670343  0.277573535 -3.929704072 -3.277520778 
-  wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.293688793  0.164665428  0.002370465 
-
-$value
-[1] 166.9929
+[1] 162.2912
 
 $counts
 function gradient 
@@ -2424,24 +681,51 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  98 
- [1] "1935" "1936" "1935" "1922" "1922" "1921" "1909" "1911" "1910" "1915"
-[11] "1907" "1915" "1920" "1913" "1911" "1913" "1918" "1913" "1914" "1921"
-[21] "1923" "1915" "1925" "1905" "1904"
+Bootstrap iteration  27 
+ [1] "1935" "1935" "1936" "1916" "1913" "1905" "1918" "1918"
+ [9] "1911" "1906" "1905" "1909" "1917" "1918" "1922" "1912"
+[17] "1918" "1925" "1919" "1911" "1912" "1924" "1919" "1912"
+[25] "1905"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
-  0.80156383  -2.58829451  -1.91806846   0.03685474   0.50000000 
+ 0.792781091 -2.588826924 -1.875938358  0.038497812  0.495651807 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
-  0.50000000  -1.38130370   0.28023916  -3.93417378  -3.27985571 
+ 0.500000000 -1.405881517  0.280632065 -3.898085376 -3.195683994 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
-  0.30000000   0.17204741   0.00000000 
+ 0.241586968  0.164351448  0.000278773 
 
 $value
-[1] 158.6152
+[1] 143.182
 
 $counts
 function gradient 
-     113      113 
+      73       73 
+
+$convergence
+[1] 52
+
+$message
+[1] "ERROR: ABNORMAL_TERMINATION_IN_LNSRCH"
+
+Bootstrap iteration  28 
+ [1] "1935" "1938" "1938" "1907" "1910" "1921" "1914" "1925"
+ [9] "1904" "1914" "1909" "1924" "1913" "1921" "1906" "1906"
+[17] "1905" "1911" "1916" "1911" "1905" "1909" "1920" "1917"
+[25] "1910"
+$par
+      int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
+ 0.817333719 -2.616860470 -1.856388805  0.035604234  0.500000000 
+ wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
+ 0.483984457 -1.369987339  0.300000000 -4.081997344 -3.223849946 
+  wind.wt.r3  wind.bLS.r3  air.temp.r3 
+ 0.300000000  0.119876918  0.008704768 
+
+$value
+[1] 147.4066
+
+$counts
+function gradient 
+      53       53 
 
 $convergence
 [1] 0
@@ -2449,24 +733,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  99 
- [1] "1935" "1938" "1938" "1916" "1909" "1906" "1914" "1907" "1913" "1918"
-[11] "1906" "1907" "1909" "1918" "1925" "1910" "1905" "1923" "1920" "1916"
-[21] "1909" "1905" "1915" "1912" "1912"
+Bootstrap iteration  29 
+ [1] "1935" "1936" "1938" "1913" "1920" "1910" "1915" "1922"
+ [9] "1920" "1911" "1918" "1917" "1917" "1920" "1904" "1921"
+[17] "1921" "1923" "1913" "1913" "1924" "1912" "1922" "1921"
+[25] "1921"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.832211063 -2.625241840 -1.835002415  0.033378509  0.477972441 
+  0.80854864  -2.58693309  -1.90047025   0.03775812   0.48177762 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.494326404 -1.387312341  0.300000000 -4.071167783 -3.203514854 
+  0.50000000  -1.41062363   0.29374550  -3.96019012  -3.25388713 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.300000000  0.115725092  0.007081385 
+  0.26037492   0.14348423   0.00000000 
 
 $value
-[1] 155.1096
+[1] 138.397
 
 $counts
 function gradient 
-      98       98 
+      47       47 
 
 $convergence
 [1] 0
@@ -2474,24 +759,25 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-Bootstrap iteration  100 
- [1] "1938" "1938" "1936" "1909" "1914" "1912" "1922" "1917" "1915" "1904"
-[11] "1905" "1921" "1910" "1908" "1918" "1925" "1924" "1908" "1915" "1907"
-[21] "1907" "1911" "1904" "1923" "1919"
+Bootstrap iteration  30 
+ [1] "1935" "1935" "1938" "1913" "1908" "1905" "1921" "1915"
+ [9] "1916" "1914" "1922" "1909" "1921" "1913" "1912" "1906"
+[17] "1925" "1922" "1911" "1916" "1904" "1905" "1914" "1919"
+[25] "1908"
 $par
       int.f0       bLS.r1        wt.r1  air.temp.r1   wind.wt.r1 
- 0.756496998 -2.469315015 -1.864236228  0.037729251  0.500000000 
+  0.81978621  -2.61933494  -1.90160780   0.03922947   0.50000000 
  wind.bLS.r1       int.r2 rain.rate.r2       bLS.r3        wt.r3 
- 0.486821775 -1.398381734  0.300000000 -3.940874867 -3.214540510 
+  0.50000000  -1.37695857   0.27842715  -4.07668545  -3.26510716 
   wind.wt.r3  wind.bLS.r3  air.temp.r3 
- 0.299999679  0.091591802  0.004611114 
+  0.30000000   0.13925227   0.01037659 
 
 $value
-[1] 155.4502
+[1] 141.2611
 
 $counts
 function gradient 
-     119      119 
+      60       60 
 
 $convergence
 [1] 0
@@ -2499,4 +785,4 @@ $convergence
 $message
 [1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
 
-[1] "2022-11-14 06:23:51 EST"
+[1] "2022-12-19 17:49:56 EST"

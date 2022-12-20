@@ -19,7 +19,7 @@
 "wind.bLS.r1",NA,0.66,TRUE
 "wind.wt.r1",NA,0.59,TRUE
 "wt.r1",NA,-1.92,TRUE
-"int.r2",-1.8,-1.4,TRUE
+"int.r2",-1.8,-1.41,TRUE
 "rain.rate.r2",0.39,0.88,TRUE
 "air.temp.r3",NA,0,TRUE
 "app.mthd.bc.r3",0.56,NA,NA
@@ -30,5 +30,5 @@
 "int.r3",-3.23,NA,NA
 "man.ph.r3",0.24,0.24,FALSE
 "wind.bLS.r3",NA,0.16,TRUE
-"wind.wt.r3",NA,0.3,TRUE
+"wind.wt.r3",NA,0.29,TRUE
 "wt.r3",NA,-3.23,TRUE

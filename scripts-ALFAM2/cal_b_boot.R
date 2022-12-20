@@ -4,7 +4,7 @@ sink('../logs/calbboot.txt')
 sink()
 
 # Bootstrap
-n <- 100
+n <- 30
 modbboot <- list()
 
 pmid.bLS <- subset(pdat, meas.tech == 'bLS')$pmid

@@ -8,9 +8,7 @@ for(i in 1:length(modsa)) {
     d.pred <- rbind(d.pred, dd)
 }
 
-# Annoying cta/ct issue--should change this in alfam2()
-names(d.pred)[names(d.pred) == 'ct'] <- 'cta'
-names(d.pred)[-1:-2] <- paste0(names(d.pred)[-1:-2], '.preda')
+names(d.pred)[! names(d.pred) %in% c('pmid', 'cta')] <- paste0(names(d.pred)[! names(d.pred) %in% c('pmid', 'cta')], '.preda')
 idat$er <- idat$e.rel
 d.pred <- merge(idat, d.pred, by = c('pmid', 'cta'))
 
@@ -18,14 +16,12 @@ d.pred <- merge(idat, d.pred, by = c('pmid', 'cta'))
 d.predb <- modb$pred
 ##d.predb$par.set <- 'B - all'
 
-names(d.predb)[names(d.predb) == 'ct'] <- 'cta'
-names(d.predb)[-1:-2] <- paste0(names(d.predb)[-1:-2], '.predb')
+names(d.predb)[! names(d.predb) %in% c('pmid', 'cta')] <- paste0(names(d.predb)[! names(d.predb) %in% c('pmid', 'cta')], '.predb')
 d.pred <- merge(d.pred, d.predb, by = c('pmid', 'cta'))
+head(d.pred)
 
 # Add in predictions with par set 2
-names(d.pred2)[names(d.pred2) == 'ct'] <- 'cta'
-
-names(d.pred2)[-1:-2] <- paste0(names(d.pred2)[-1:-2], '.pred2')
+names(d.pred2)[! names(d.pred2) %in% c('pmid', 'cta')] <- paste0(names(d.pred2)[! names(d.pred2) %in% c('pmid', 'cta')], '.pred2')
 d.pred <- merge(d.pred, d.pred2, by = c('pmid', 'cta'))
 
 # Calculate emission rate residuals
@@ -33,6 +29,7 @@ d.pred$aerra <- d.pred$j.preda - d.pred$j.NH3
 d.pred$aerrb <- d.pred$j.predb - d.pred$j.NH3
 d.pred$aerr2 <- d.pred$j.pred2 - d.pred$j.NH3
 
+head(d.pred)
 d.pred[, ecrela := er.preda / max(er.preda), pmid]
 d.pred[, ecrelb := er.predb / max(er.predb), pmid]
 d.pred[, ecrel2 := er.pred2 / max(er.pred2), pmid]
