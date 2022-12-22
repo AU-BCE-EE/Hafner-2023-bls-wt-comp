@@ -8,6 +8,6 @@ library(knitr)
 library(rmarkdown)
 library(gridExtra)
 
-sink('../logs/versions-meas.txt')
+sink('../logs/R-versions-meas.txt')
   print(sessionInfo())
 sink()

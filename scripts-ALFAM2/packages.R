@@ -8,7 +8,7 @@ library(reshape2)
 library(knitr)
 library(gridExtra)
 
-sink('../logs/versions-ALFAM2.txt')
+sink('../logs/R-versions-ALFAM2.txt')
   print(sessionInfo())
 sink()
 
