@@ -13,5 +13,5 @@ ggplot(ds, aes(ct, pH, colour = covered)) +
   theme_bw() +
   theme(legend.position = 'top') +
   labs(x = 'Time after application (h)', y = 'Surface pH', colour = '') +
-  guides(fill = 'none')
+  guides(fill = 'none') + xlim(0, 20)
 ggsave2x('../plots-pH/40_surface_pH', height = 3, width = 7)
