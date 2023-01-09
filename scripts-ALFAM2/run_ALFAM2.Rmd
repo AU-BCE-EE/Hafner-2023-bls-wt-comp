@@ -3,7 +3,7 @@ title: 'Model call record'
 output: pdf_document
 classoption: landscape
 author: Sasha D. Hafner
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "`r format(Sys.time(), '%d %B, %Y %h:%m')`"
 ---
 
 Check package version.
@@ -31,7 +31,8 @@ Run model
 With set 2 parameters
 
 ```{r}
-d.pred2 <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid')
+system.time(d.pred2 <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid'))
+system.time(d.pred2f <- alfam2(as.data.frame(idatf), app.name = 'tan.app', time.name = 'cta', flatout = TRUE))
 ```
 
 

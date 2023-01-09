@@ -33,3 +33,10 @@ idat$air.temp.bLS <- (idat$meas.tech2 == 'micro met') * idat$air.temp
 
 # Add AER
 idat$aer <- 75 * idat$wind.2m
+
+# Create version of idat for using flatout option
+# Note there is no incorporation and no dummy variables here
+idatf <- idat
+idatf$`__add.row` <- FALSE
+idatf$`__f4` <- 1
+idatf$`__group` <- idatf$pmid

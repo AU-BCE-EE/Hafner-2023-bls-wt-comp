@@ -3,7 +3,7 @@ title: 'Model call record'
 output: pdf_document
 classoption: landscape
 author: Sasha D. Hafner
-date: "21 December, 2022"
+date: "06 January, 2023"
 ---
 
 Check package version.
@@ -14,7 +14,7 @@ packageVersion('ALFAM2')
 ```
 
 ```
-## [1] '2.10'
+## [1] '2.14.11'
 ```
 
 Parameter values.
@@ -54,7 +54,7 @@ With set 2 parameters
 
 
 ```r
-d.pred2 <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid')
+system.time(d.pred2 <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid'))
 ```
 
 ```
@@ -90,6 +90,20 @@ d.pred2 <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', 
 ##   rain.rate.r2
 ##   int.r3
 ##   man.ph.r3
+```
+
+```
+##    user  system elapsed 
+##    0.04    0.00    0.04
+```
+
+```r
+system.time(d.pred2f <- alfam2(as.data.frame(idatf), app.name = 'tan.app', time.name = 'cta', flatout = TRUE))
+```
+
+```
+##    user  system elapsed 
+##   0.018   0.000   0.018
 ```
 
 

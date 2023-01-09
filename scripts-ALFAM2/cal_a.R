@@ -63,12 +63,12 @@ upper <- c(int.f0       = 1,
  
 
 # Look for problem observations before calibration by running with all parameters
-pr <- alfam2(as.data.frame(idat), app.name = 'tan.app', time.name = 'cta', group = 'pmid', pars = c(pars.cal, fixed))
+pr <- alfam2(as.data.frame(idatf), app.name = 'tan.app', time.name = 'cta', group = 'pmid', pars = c(pars.cal, fixed))
 # Should be no NA in output
 which(is.na(pr$e))
 
-for (i in as.character(unique(idat$pmid))) {
-  dd <- as.data.frame(subset(idat, pmid == i))
+for (i in as.character(unique(idatf$pmid))) {
+  dd <- as.data.frame(subset(idatf, pmid == i))
 
   if (dd$meas.tech2[1] == 'wt') {
     pp <- pars.cal[!grepl('rain|wind.2m', names(pars.cal))]
@@ -85,7 +85,7 @@ for (i in as.character(unique(idat$pmid))) {
   modsa[[i]][['mod']] <- m <- optim(par = pp, fn = function(par) 
                                      resCalcOptim(p = par, dat = dd, to = 'j', time.name = 'cta',
                                                   fixed = fixed, app.name = 'tan.app', 
-                                                  group = 'pmid', method = 'TAE', weights = dd$bta >= 0),
+                                                  group = 'pmid', method = 'TAE', weights = dd$bta >= 0, flatout = TRUE),
                                    method = 'L-BFGS-B', lower = ll, upper = uu)
 
   Sys.time()

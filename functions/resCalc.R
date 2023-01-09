@@ -41,7 +41,7 @@ resCalc <- function(p, dat, weights = 1, app.name, group = NULL, to = 'j', time.
 }
 
 
-resCalcOptim <- function(p, dat, weights = 1, app.name, group = NULL, time.name = 'ct', to = 'j', fixed, method = 'TAE', time.incorp = NULL, parallel = FALSE){
+resCalcOptim <- function(p, dat, weights = 1, app.name, group = NULL, time.name = 'ct', to = 'j', fixed, method = 'TAE', time.incorp = NULL, flatout = FALSE){
 
   #cat(p, '\n')
 
@@ -56,7 +56,7 @@ resCalcOptim <- function(p, dat, weights = 1, app.name, group = NULL, time.name 
   if(any(is.na(obs[weights>0]))) stop('NA values in observations obs, not just where weights = 0.')
 
   pred <- alfam2(dat, app.name = app.name, time.name = time.name, 
-                    time.incorp = time.incorp, group = group, pars = p, parallel = parallel, warn = FALSE)[, to]
+                    time.incorp = time.incorp, group = group, pars = p, flatout = flatout, warn = FALSE)[, to]
   
   if(method == 'TAE') {
     res <- weights*(pred - obs) 

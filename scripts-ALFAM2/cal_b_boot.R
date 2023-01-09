@@ -80,7 +80,7 @@ for (i in 1:n) {
   j <- 0
   for (p in pmids) {
     j <- j + 1
-    ds <- as.data.frame(subset(idat, pmid == p))
+    ds <- as.data.frame(subset(idatf, pmid == p))
     ds$key <- j
     dd <- rbind(dd, ds)
   }
@@ -88,7 +88,7 @@ for (i in 1:n) {
   modbboot[[i]][['mod']] <- m <- optim(par = pars.cal, fn = function(par) 
                                      resCalcOptim(p = par, dat = dd, to = 'j', time.name = 'cta',
                                                   fixed = fixed, app.name = 'tan.app', 
-                                                  group = 'key', method = 'TAE', weights = dd$bta >= 0 & !grepl('i', dd$flag.int)),
+                                                  group = 'key', method = 'TAE', weights = dd$bta >= 0 & !grepl('i', dd$flag.int), flatout = TRUE),
                                    method = 'L-BFGS-B', lower = lower, upper = upper)
 
   parsboot <- rbind(parsboot, t(as.data.frame(c(i = i, m$par))))
