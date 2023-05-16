@@ -4,7 +4,7 @@ rm(list = ls())
 
 # Set release tag for download
 ghpath <- 'https://github.com/sashahafner/ALFAM2-data/raw/'
-rtag <- 'v2.16'
+rtag <- 'v2.21'
 
 # Alternative below to get particular commit (if not yet in release)
 #ghpath <- 'https://github.com/sashahafner/ALFAM2-data/raw/bf608a10d324444627acf35f0aadeaced5f008c9/'
