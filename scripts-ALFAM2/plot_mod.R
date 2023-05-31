@@ -152,7 +152,7 @@ ggplot(dw, aes(bta, value, group = pmid)) +
   labs(x = 'Elapsed time (h)', y = expression('Error in NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
        colour = expression(atop('Wind tunnel AER'~(min^'-1'),' ')), lty = ' ') +
   theme(legend.position = 'top')
-ggsave2x('../plots-ALFAM2/60_error_comp_zoom', height = 4, width = 7)
+ggsave2x('../plots-ALFAM2/62_error_comp_zoom', height = 4, width = 7)
 
 
 # Residuals par set 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

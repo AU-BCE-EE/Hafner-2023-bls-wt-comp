@@ -1,9 +1,21 @@
 # Hafner-2022-bls-wt-comp
 Data and analysis on wind tunnel and bLS measurement of ammonia volatilation from field-applied slurry, associated with research paper currently in progress.
 
+# In progress
+This a work in progress.
+The paper has not yet been published.
+
 # Maintainer
 Sasha D. Hafner.
 Contact information here: <https://au.dk/sasha.hafner@bce>.
+
+# Published paper
+The contents of this repo are presented in the following paper:
+
+...
+
+
+
 
 # Directory structure
 
@@ -25,7 +37,7 @@ Logs of R package versions, parameter values, and more to try to ensure reproduc
 
 ## `output`
 Output summaries and similar files.
-See section below on links to paper to located sources of paper components.
+See section below on links to paper to locate sources of paper components.
 
 ## `plots-ALFAM2`
 Plots produced by scripts in `scripts-ALFAM2`, on application of ALFAM2 model to emission trials.
@@ -53,29 +65,31 @@ Copy of latest workspace created by running `scripts-ALFAM2/main.R`.
 Saved simply because it can be convenient to avoid running lengthy model optimization, especially bootstrap analysis that can take hours.
 
 # Links to published paper
-This section give the sources of tables, figures, etc. in the paper.
+This section give the sources of tables, figures, and some statistical results presented in the paper.
 
-| Paper component |  Repo source                             |  Repo scripts             |
-|-----------------|-----------------                         |---------------            |
-|    Figure 2     | `plots-meas/01_flux_wind_meas.pdf`       | `scripts-meas/plot_big.R` |
-|    Figure 3     | `plots-meas/30_emis_vs_AER.pdf`          | `scripts-meas/plot.R`     |
-|    Figure 4     | `plots-ALFAM2/92_cum_emis_comp.pdf`      | `scripts-ALFAM2/plot.R`   |
-|    Figure 5     | `plots-ALFAM2/54_flux_comp_sel_zoom.pdf` | `scripts-ALFAM2/plot.R`   |
-|    Figure S4    | `plots-ALFAM2/60_erro_comp_zoom.pdf`     | `scripts-ALFAM2/plot.R`   |
-|    Figure S5    | `plots-ALFAM2/53_flux_comp_sel.pdf`      | `scripts-ALFAM2/plot.R`   |
-|    Figure S6    | `plots-ALFAM2/80_r1.pdf`                 | `scripts-ALFAM2/plot.R`   |
-|    Figure S7    | `plots-ALFAM2/81_r3.pdf`                 | `scripts-ALFAM2/plot.R`   |
-|    Figure S8    | `plots-meas/40_late_flux.pdf`            | `scripts-meas/plot.R`     |
-|    Table S1     | ALFAM2 package v2.9 `alfam2pars02`       |                           |
-|Table S2 par. vals. | `output/parsb.csv`                    | `scripts-ALFAM2/export.R`  `scripts-ALFAM2/cal_b.R`|
-|Table S2 std. err.  | `output/bootsumm.csv`                 | `scripts-ALFAM2/export.R` `scripts-ALFAM2/cal_b_boot.R` |
+| Paper component          |  Repo source                             |  Repo scripts             |
+|-----------------         |-----------------                         |---------------            |
+|    Figure 3              | `plots-meas/01_flux_wind_meas.pdf`       | `scripts-meas/plot_big.R` |
+|    Figure 4              | `plots-meas/30_emis_vs_AER.pdf`          | `scripts-meas/plot.R`     |
+|    Figure 5              | `plots-ALFAM2/92_cum_emis_comp.pdf`      | `scripts-ALFAM2/plot.R`   |
+|    Figure 6              | `plots-ALFAM2/54_flux_comp_sel_zoom.pdf` | `scripts-ALFAM2/plot.R`   |
+|    Figure S2             | `plots-pH/40_surface_pH.pdf`             | `scripts-pH/plot.R`       |
+|    Figure S3             | `plots-ALFAM2/60_error_comp.pdf`         | `scripts-ALFAM2/plot.R`   |
+|    Figure S4             | `plots-ALFAM2/53_flux_comp_sel.pdf`      | `scripts-ALFAM2/plot.R`   |
+|    Figure S5             | `plots-ALFAM2/80_r1.pdf`                 | `scripts-ALFAM2/plot.R`   |
+|    Figure S6             | `plots-ALFAM2/81_r3.pdf`                 | `scripts-ALFAM2/plot.R`   |
+|    Figure S7             | `plots-meas/40_late_flux.pdf`            | `scripts-meas/plot.R`     |
+|Table S1 set X par. vals. | `output/parsb.csv`                       | `scripts-ALFAM2/export.R`  `scripts-ALFAM2/cal_b.R`|
+|Table S1 set X std. err.  | `output/bootsumm.csv`                    | `scripts-ALFAM2/export.R` `scripts-ALFAM2/cal_b_boot.R` |
 
+
+Table S1 set 2 part comes from the `alfam2pars02` object in v2.0 of the ALFAM2 package (here: <https://github.com/sashahafner/ALFAM2/releases/tag/v2.0>.  
 Note that parameter set X (in manuscript) is called set b in the scripts.
 Set a in the scripts is not mentioned in the manuscript.
 
-Section 3.1 stats "Wind tunnel air exchange rate (AER) had a clear effect on measured emission, with a similar response in the two trials where it varied widely (p = 1·10-5 for AER effect, p = 0.99 for interaction based on an F test from a regression model)." come from results from `aov(m2)` in `output/stats.pdf`, which is created by `scripts-meas/stats.Rmd`.
+Section 3.1 stats "Wind tunnel air exchange rate (AER) had a clear effect on measured emission, with a similar response in the two trials where it varied widely (p = 1·10-5 for AER effect, p = 0.99 for interaction based on an F test from a regression model)." come from results from `summary(m1)` or `drop1(m1, test = 'F')` (for main AER effect) and similar for `m2` (for interation) in `output/stats.pdf`, which is created by `scripts-meas/stats.Rmd`.
 
-Section 2.3.2 info on gap filling is from `output/emis_summ.csv`, which comes from scripts `scripts-meas/summary.R` and `scripts-meas/export.R`.
+Section 2.3.2 info on gap filling ("...with filtered data removed...") is from `gapeffect` column in `output/emis_summ.csv`, which is generated by scripts `scripts-meas/summary.R` and `scripts-meas/export.R`.
 
 Plot keys (pmid) in sections 2.3.1 and 2.3.2 come from `output/pmid_summ.csv`, which is just a column subset of `pdat` created in `scripts-meas/summary.R` and exported in `scripts-meas/export.R`.
-pmid info is also in `output/emis_summ.csv` and `output/int_summ.csv` from `scripts-meas/export.R`.
+More detailed information on pmid (linking to trials and conditions) is also in `output/emis_summ.csv` and `output/int_summ.csv` from `scripts-meas/export.R`.
