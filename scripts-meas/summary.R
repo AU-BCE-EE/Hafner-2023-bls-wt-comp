@@ -8,6 +8,8 @@ isumm <- idat[, list(cta = max(cta),
                      wind.2m.min = min(wind.2m), 
                      wind.2m.max = max(wind.2m), 
                      rain.cum = max(rain.cum), 
+                     rain.cum.168 = max(rain.cum * (cta <= 168)), 
+                     rain.cum.48 = max(rain.cum * (cta <= 24)), 
                      rain.cum.48 = max(rain.cum * (cta <= 48)), 
                      j.NH3.mean = mean(j.NH3),
                      j.NH3.min = min(j.NH3),
@@ -44,4 +46,4 @@ esumm <- rounddf(as.data.frame(esumm), 3, func = signif)
 psumm <- pdat[, c('submitter', 'file', 'pmid', 'pid', 'meas.tech', 'trial.nm', 'app.date')]
 
 # Select some cols from pdat to export
-plotsumm <- pdat[, .(pmid, pid, submitter, file, proj, exper, meas.tech, meas.tech2, air.temp.24, air.temp.168, wind.2m.24, wind.2m.168, rain.12, rain.24, rain.168, rain.tot)] 
+plotsumm <- pdat[, .(pmid, pid, submitter, file, proj, exper, app.date, meas.tech, meas.tech2, air.temp.24, air.temp.168, wind.2m.24, wind.2m.168, rain.12, rain.24, rain.48, rain.168, rain.tot)] 
