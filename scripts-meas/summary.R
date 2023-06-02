@@ -42,3 +42,13 @@ esumm <- rounddf(as.data.frame(esumm), 3, func = signif)
 
 # Get plot keys for checking data externally
 psumm <- pdat[, c('submitter', 'file', 'pmid', 'pid', 'meas.tech', 'trial.nm', 'app.date')]
+
+# Select some cols from pdat to export
+plotsumm <- pdat[, .(pmid, pid, submitter, file, proj, exper, meas.tech, meas.tech2, air.temp.24, air.temp.168, wind.2m.24, wind.2m.168, rain.168, rain.tot)] 
+names(pdat)
+dim(pdat)
+
+sum(idat$rain.tot)
+sum(idat$rain.rate.168)
+
+length(pdat$rain.tot)
