@@ -1,0 +1,2 @@
+"Name"	"Lattitude"	"Longitude"	"Elevation"	"x"	"y"	"ele"	"optional"
+"Wind_1b"	52.20344374	10.63513548	135.1468	611739.602729361	5784926.26111035	135.1468	TRUE

@@ -1,0 +1,7 @@
+The following data files are too big for GitHub.
+WTbLS_CRDS_bg_1st.mat
+WTbLS_CRDS_bg_2nd.mat
+WTbLS_CRDS_bg_4th.mat
+WTbLS_CRDS_field_1st.mat
+WTbLS_CRDS_field_2nd.mat
+WTbLS_CRDS_field_4th.mat

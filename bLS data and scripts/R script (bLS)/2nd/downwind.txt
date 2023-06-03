@@ -1,0 +1,2 @@
+"id"	"Comment"	"x"	"y"	"optional"
+"99"	"wt meas"	534553.970699886	6261142.96181419	TRUE
