@@ -22,9 +22,9 @@ These packages are listed in multiple `packages.R` in `script-*` directories.
 Versions of R and packages can be found in two `logs/R-versions-*.txt` files.
 The ALFAM2 R package is from <github.com/sashahafner/ALFAM2> (and installation details can be found there), but all others are available on CRAN.
 
-Scripts for calculation of emission data from raw bLS and wind tunnel measurements are included, but data files are too large and are not. 
+Scripts for calculation of emission data from raw bLS and wind tunnel measurements are included, but data files are too large and are not included. 
 However all resulting emission measurements can be found in `data-emission`.
-These bLS data processing files include some Matlab scripts.
+These bLS data processing files include some MATLAB scripts.
 
 # Directory structure
 
@@ -63,7 +63,9 @@ Scripts on application of ALFAM2 model to emission trials.
 The script `main.R` calls all others.
 
 ## `scripts-bLS`
-Matlab and R scripts for processing raw bLS data to calculate measured ammonia emission.
+MATLAB and R scripts for processing bLS data to calculate measured ammonia emission.
+The bLS model is run in R with bLSmodelR.r package (https://github.com/ChHaeni/bLSmodelR).
+Processing is conducted in MATLAB. 
 Data files are too large to include but scripts are still included here for partial reproducibility.
 
 ## `scripts-meas`
