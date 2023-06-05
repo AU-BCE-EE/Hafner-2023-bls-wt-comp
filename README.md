@@ -19,6 +19,8 @@ The contents of this repo are presented in the following paper:
 This repo contains (nearly) all the data and data processing scripts needed to produce the results presented in the paper listed above.
 The scripts are meant to run in R (<https://www.r-project.org/>) and require several add-on packages.
 These packages are listed in multiple `packages.R` in `script-*` directories.
+Versions of R and packages can be found in two `logs/R-versions-*.txt` files.
+The ALFAM2 R package is from <github.com/sashahafner/ALFAM2> (and installation details can be found there), but all others are available on CRAN.
 
 # Directory structure
 
