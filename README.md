@@ -15,18 +15,23 @@ The contents of this repo are presented in the following paper:
 ...
 
 
-# Repository overview
+# Overview
 This repo contains (nearly) all the data and data processing scripts needed to produce the results presented in the paper listed above.
-The scripts are meant to run in R (<https://www.r-project.org/>) and require several add-on packages.
+The scripts run in R (<https://www.r-project.org/>) and require several add-on packages.
 These packages are listed in multiple `packages.R` in `script-*` directories.
 Versions of R and packages can be found in two `logs/R-versions-*.txt` files.
 The ALFAM2 R package is from <github.com/sashahafner/ALFAM2> (and installation details can be found there), but all others are available on CRAN.
+
+Scripts for calculation of emission data from raw bLS and wind tunnel measurements are included, but data files are too large and are not. 
+However all resulting emission measurements can be found in `data-emission`.
+These bLS data processing files include some Matlab scripts.
 
 # Directory structure
 
 ## `data-emission`
 Measurement data in `data` subdirectory.
-These are downloaded from a specific release (based on tag) from ALFAM2-data repo on GitHub.
+These are downloaded from a specific release (based on tag) from ALFAM2-data repo on GitHub (<github.com/sashahafner/ALFAM2-data/>).
+(Version is given in `data-emission/scripts/main.R` and `data-emission/logs/data_version.txt`, which was downloaded from the ALFAM2-data repo.)
 See `data-emission/scripts` for R scripts for downloading data.
 `main.R` calls the others to do the complete dataload, subsetting, and save.
 
@@ -57,6 +62,10 @@ Plots of surface pH, produced by scripts in `scripts-pH`.
 Scripts on application of ALFAM2 model to emission trials.
 The script `main.R` calls all others.
 
+## `scripts-bLS`
+Matlab and R scripts for processing raw bLS data to calculate measured ammonia emission.
+Data files are too large to include but scripts are still included here for partial reproducibility.
+
 ## `scripts-meas`
 Scripts for working with emission measurements and producing plots.
 The script `main.R` calls all others.
@@ -65,9 +74,12 @@ The script `main.R` calls all others.
 Scripts for producing surface pH plots.
 The script `main.R` calls all others.
 
-## `Workspace-ALFAM2`
+## `scripts-wt`
+...
+
+## `workspace-ALFAM2`
 Copy of latest workspace created by running `scripts-ALFAM2/main.R`.
-Saved simply because it can be convenient to avoid running lengthy model optimization, especially bootstrap analysis that can take hours.
+Saved simply because it can be convenient to avoid running time-consuming model optimization, especially bootstrap analysis that can take hours.
 
 # Links to published paper
 This section give the sources of tables, figures, and some statistical results presented in the paper.
