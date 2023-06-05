@@ -2,7 +2,7 @@
 Data and analysis on wind tunnel and bLS measurement of ammonia volatilation from field-applied slurry, associated with research paper currently in progress.
 
 # In progress
-This a work in progress.
+This is a work in progress.
 The paper has not yet been published.
 
 # Maintainer
