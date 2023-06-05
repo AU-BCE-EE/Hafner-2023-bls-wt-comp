@@ -15,7 +15,10 @@ The contents of this repo are presented in the following paper:
 ...
 
 
-
+# Repository overview
+This repo contains (nearly) all the data and data processing scripts needed to produce the results presented in the paper listed above.
+The scripts are meant to run in R (<https://www.r-project.org/>) and require several add-on packages.
+These packages are listed in multiple `packages.R` in `script-*` directories.
 
 # Directory structure
 
