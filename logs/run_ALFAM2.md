@@ -3,7 +3,7 @@ title: 'Model call record'
 output: pdf_document
 classoption: landscape
 author: Sasha D. Hafner
-date: "16 May, 2023 May:05"
+date: "05 June, 2023 Jun:06"
 ---
 
 Check package version.
@@ -14,7 +14,7 @@ packageVersion('ALFAM2')
 ```
 
 ```
-## [1] '2.22'
+## [1] '3.0'
 ```
 
 Parameter values.
@@ -103,7 +103,7 @@ system.time(d.pred2f <- alfam2(as.data.frame(idatf), app.name = 'tan.app', time.
 
 ```
 ##    user  system elapsed 
-##   0.019   0.000   0.018
+##   0.018   0.000   0.019
 ```
 
 
