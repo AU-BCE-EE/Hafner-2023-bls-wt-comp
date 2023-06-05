@@ -1,2 +1,0 @@
-"Name"	"Lattitude"	"Longitude"	"Elevation"	"x"	"y"	"ele"	"optional"
-"Wind_1c"	52.20344423	10.63514697	135.1412	611740.386634761	5784926.3333163	135.1412	TRUE

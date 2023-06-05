@@ -1,2 +1,0 @@
-"id"	"Comment"	"x"	"y"	"optional"
-"7"	"vt measurement point"	534558.211391757	6261082.4924015	TRUE
