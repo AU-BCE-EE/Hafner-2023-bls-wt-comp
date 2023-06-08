@@ -100,7 +100,7 @@ ggplot(isumm, aes(aer, e.rel.final, colour = app.date, shape = app.date)) +
   scale_color_brewer(palette = 'Set1') + 
   labs(x = expression('Air exchange rate'~('min'^'-1')), y = expression('168 h emission'~('frac. applied TAN')), colour = '', shape = '') +
   theme_bw() +
-  theme(legend.position = 'top', legend.text = element_text(size = 10))
+  theme(legend.position = 'top', legend.text = element_text(size = 8))
 ggsave2x('../plots-meas/30_emis_vs_AER', height = 3.5, width = 3.6)
 
 # Late time flux plot to think about r3 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
