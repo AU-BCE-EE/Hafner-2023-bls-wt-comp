@@ -24,6 +24,7 @@ The ALFAM2 R package is from <github.com/sashahafner/ALFAM2> (and installation d
 
 Scripts for calculation of emission data from raw bLS and wind tunnel measurements are included, but data files are too large and are not included. 
 However all resulting emission measurements can be found in `data-emission`.
+These data in `data-emission` are from the ALFAM2 database, and were used for all plots and analyses presented in the paper.
 These bLS data processing files include some MATLAB scripts.
 
 # Directory structure
