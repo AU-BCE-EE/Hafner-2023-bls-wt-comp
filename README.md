@@ -80,7 +80,7 @@ The script `main.R` calls all others.
 ## `scripts-WT`
 R scripts for processing WT data to calculate measured ammonia emission. 
 Data files are too large to include but scripts are still included here for partial reproducibility.
-The script 'main.R' calls all others. 
+The script `main.R` calls all others. 
 
 ## `workspace-ALFAM2`
 Copy of latest workspace created by running `scripts-ALFAM2/main.R`.
