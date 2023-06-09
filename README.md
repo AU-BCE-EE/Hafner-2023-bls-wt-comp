@@ -20,7 +20,7 @@ This repo contains (nearly) all the data and data processing scripts needed to p
 The scripts run in R (<https://www.r-project.org/>) and require several add-on packages.
 These packages are listed in multiple `packages.R` in `script-*` directories.
 Versions of R and packages can be found in two `logs/R-versions-*.txt` files.
-The ALFAM2 R package is from <github.com/sashahafner/ALFAM2> (and installation details can be found there), but all others are available on CRAN.
+The ALFAM2 R package is from <https://github.com/sashahafner/ALFAM2> (and installation details can be found there), but all others are available on CRAN.
 
 Scripts for calculation of emission data from raw bLS and wind tunnel measurements are included, but data files are too large and are not included. 
 However all resulting emission measurements can be found in `data-emission`.
