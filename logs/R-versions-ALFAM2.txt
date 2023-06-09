@@ -19,7 +19,7 @@ attached base packages:
 
 other attached packages:
 [1] gridExtra_2.3     knitr_1.39        reshape2_1.4.4    viridisLite_0.4.0
-[5] lubridate_1.9.2   ggplot2_3.4.0     data.table_1.14.8 ALFAM2_3.0       
+[5] lubridate_1.9.2   ggplot2_3.4.0     data.table_1.14.8 ALFAM2_3.5       
 [9] nvimcom_0.9-82   
 
 loaded via a namespace (and not attached):
