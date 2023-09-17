@@ -84,6 +84,7 @@ ggsave2x('../plots-ALFAM2/54_flux_comp_sel_zoom', height = 5, width = 7)
 
 ddw <- dw[dw$variable != 'j.pred2', ]
 ddb <- db[db$variable != 'j.pred2', ]
+ddb$meas.tech <- 'Micromet. (bLS)'
 ggplot(ddw, aes(bta, value, group = pmid)) +
   geom_step(aes(colour = aer), lwd = 0.5, alpha = 0.8) +
   geom_step(data = ddb, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
@@ -92,7 +93,7 @@ ggplot(ddw, aes(bta, value, group = pmid)) +
   #scale_colour_viridis_c(option = 'H') +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression('NH'[3]~'flux'~('kg N h'^'-1'~ha^'-1')), 
-       colour = expression(atop('Wind tunnel AER'~(min^'-1'),' ')), lty = ' ') +
+       colour = expression(atop('Wind tunnel air exchange rate'~(L~L^'-1'~min^'-1'),' ')), lty = ' ') +
   theme(legend.position = 'top')
 ggsave2x('../plots-ALFAM2/57_flux_comp_sel_zoom', height = 3.3, width = 7)
 
