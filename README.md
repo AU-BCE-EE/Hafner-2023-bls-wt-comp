@@ -95,12 +95,12 @@ This section give the sources of tables, figures, and some statistical results p
 |    Figure 4              | `plots-meas/30_emis_vs_AER.pdf`          | `scripts-meas/plot.R`     |
 |    Figure 5              | `plots-ALFAM2/92_cum_emis_comp.pdf`      | `scripts-ALFAM2/plot.R`   |
 |    Figure 6              | `plots-ALFAM2/54_flux_comp_sel_zoom.pdf` | `scripts-ALFAM2/plot.R`   |
-|    Figure S2             | `plots-pH/40_surface_pH.pdf`             | `scripts-pH/plot.R`       |
-|    Figure S3             | `plots-ALFAM2/60_error_comp.pdf`         | `scripts-ALFAM2/plot.R`   |
-|    Figure S4             | `plots-ALFAM2/53_flux_comp_sel.pdf`      | `scripts-ALFAM2/plot.R`   |
-|    Figure S5             | `plots-ALFAM2/80_r1.pdf`                 | `scripts-ALFAM2/plot.R`   |
-|    Figure S6             | `plots-ALFAM2/81_r3.pdf`                 | `scripts-ALFAM2/plot.R`   |
-|    Figure S7             | `plots-meas/40_late_flux.pdf`            | `scripts-meas/plot.R`     |
+|    Figure S3             | `plots-pH/40_surface_pH.pdf`             | `scripts-pH/plot.R`       |
+|    Figure S4             | `plots-ALFAM2/60_error_comp.pdf`         | `scripts-ALFAM2/plot.R`   |
+|    Figure S5             | `plots-ALFAM2/53_flux_comp_sel.pdf`      | `scripts-ALFAM2/plot.R`   |
+|    Figure S6             | `plots-ALFAM2/80_r1.pdf`                 | `scripts-ALFAM2/plot.R`   |
+|    Figure S7             | `plots-ALFAM2/81_r3.pdf`                 | `scripts-ALFAM2/plot.R`   |
+|    Figure S8             | `plots-meas/40_late_flux.pdf`            | `scripts-meas/plot.R`     |
 |Table S1 set X par. vals. | `output/parsb.csv`                       | `scripts-ALFAM2/export.R`  `scripts-ALFAM2/cal_b.R`|
 |Table S1 set X std. err.  | `output/bootsumm.csv`                    | `scripts-ALFAM2/export.R` `scripts-ALFAM2/cal_b_boot.R` |
 
