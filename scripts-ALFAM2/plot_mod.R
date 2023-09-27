@@ -256,7 +256,7 @@ ggplot(dw, aes(er.predb, e.rel, group = pmid, shape = app.date)) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm'), legend.position = 'top') +
   guides(size = 'none') +
-  labs(x = 'ALFAM2 par. set E', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(min^'-1')), size = '')
+  labs(x = 'ALFAM2 par. set E', y = 'Measured', shape = 'Trial', colour = expression('Wind tunnel'~(min^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/90_cum_emis_comp', height = 4.2, width = 4.0, scale = 1.1)
 
 
@@ -276,7 +276,7 @@ ggplot(dw, aes(er.pred2, e.rel, group = pmid, shape = app.date)) +
   guides(shape = guide_legend(override.aes = list(colour = 'black', size = 2))) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
-  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Date', colour = expression('Wind tunnel'~(min^'-1')), size = '')
+  labs(x = 'ALFAM2 par. set 2', y = 'Measured', shape = 'Trial', colour = expression('Wind tunnel'~(min^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/91_cum_emis_comp_ps2', height = 2.5, width = 4.0, scale = 1.1)
 
 # 168 h cumulative emission meas and ALFAM2 (par. set E and par set 2) ~~~~~~~~~~~~~~~~~
@@ -300,7 +300,7 @@ ggplot(dw, aes(value, e.rel, group = pmid, shape = app.date)) +
   theme_bw() +
   theme(legend.text = element_text(size=9), legend.title = element_text(size=9), legend.key.height = unit(0.3, 'cm')) +
   labs(x = expression('ALFAM2'~NH[3]~'loss (frac. applied TAN)'), y = expression('Measured'~NH[3]~'loss'), 
-       shape = 'Date', colour = expression('AER'~(min^'-1')), size = '')
+       shape = 'Trial', colour = expression('AER'~(min^'-1')), size = '')
 ggsave2x('../plots-ALFAM2/92_cum_emis_comp', height = 2.5, width = 6.0, scale = 1.1)
 
 
