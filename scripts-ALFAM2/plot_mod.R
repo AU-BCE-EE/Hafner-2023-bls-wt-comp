@@ -233,6 +233,7 @@ ggplot(dw, aes(bta, 1E3 * r3.predb, group = pmid)) +
   geom_step(data = db, aes(lty = meas.tech), lwd = 0.5, alpha = 0.8, colour = 'red') +
   facet_wrap(~ app.date) +
   coord_cartesian(xlim = c(0, 168)) +
+  ylim(0, NA) +
   theme_bw() +
   labs(x = 'Elapsed time (h)', y = expression(1000%.%italic('r')[3]~('h'^'-1')),
      colour = expression(atop('Wind tunnel AER'~(min^'-1'),' ')), lty = ' ') +
