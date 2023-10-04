@@ -10,10 +10,11 @@ Sasha D. Hafner.
 Contact information here: <https://au.dk/sasha.hafner@bce>.
 
 # Published paper
-The contents of this repo are presented in the following paper:
+The contents of this repo are presented in the following paper, which has been submitted to Agricultural and Forest Meteorology:
 
-...
+Hafner, S.D., Kamp, J.N., Pedersen, J. Experimental and model-based comparison of wind tunnel and inverse dispersion model measurement of ammonia emission from field-applied animal slurry.
 
+For publication details, check the latest release from this repo (paper perhaps to be finalized in November 2023).
 
 # Overview
 This repo contains (nearly) all the data and data processing scripts needed to produce the results presented in the paper listed above.
@@ -101,12 +102,12 @@ This section give the sources of tables, figures, and some statistical results p
 |    Figure S6             | `plots-ALFAM2/80_r1.pdf`                 | `scripts-ALFAM2/plot.R`   |
 |    Figure S7             | `plots-ALFAM2/81_r3.pdf`                 | `scripts-ALFAM2/plot.R`   |
 |    Figure S8             | `plots-meas/40_late_flux.pdf`            | `scripts-meas/plot.R`     |
-|Table S1 set X par. vals. | `output/parsb.csv`                       | `scripts-ALFAM2/export.R`  `scripts-ALFAM2/cal_b.R`|
-|Table S1 set X std. err.  | `output/bootsumm.csv`                    | `scripts-ALFAM2/export.R` `scripts-ALFAM2/cal_b_boot.R` |
+|Table S1 set E par. vals. | `output/parsb.csv`                       | `scripts-ALFAM2/export.R`  `scripts-ALFAM2/cal_b.R`|
+|Table S1 set E std. err.  | `output/bootsumm.csv`                    | `scripts-ALFAM2/export.R` `scripts-ALFAM2/cal_b_boot.R` |
 
 
 Table S1 set 2 part comes from the `alfam2pars02` object in v2.0 of the ALFAM2 package (here: <https://github.com/sashahafner/ALFAM2/releases/tag/v2.0>. 
-Note that parameter set X (in manuscript) is called set b in the scripts.
+Note that parameter set E (in manuscript) is called set b in the scripts.
 Set a in the scripts is not mentioned in the manuscript.
 
 Section 3.1 states "Wind tunnel air exchange rate (AER) had a clear effect on measured emission, with a similar response in the two trials where it varied widely (p = 1·10-5 for AER effect, p = 0.99 for interaction based on an F test from a regression model)." come from results from `summary(m1)` or `drop1(m1, test = 'F')` (for main AER effect) and similar for `m2` (for interation) in `output/stats.pdf`, which is created by `scripts-meas/stats.Rmd`.
