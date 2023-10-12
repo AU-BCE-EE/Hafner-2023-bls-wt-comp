@@ -95,7 +95,8 @@ ggsave('../plots-meas/21_flux_vs_temp.png', height = 6, width = 8)
 
 # Emission versus AER
 ggplot(isumm, aes(aer, e.rel.final, colour = app.date, shape = app.date)) +
-  geom_hline(data = subset(isumm, meas.tech == 'bLS'), aes(yintercept = e.rel.final, colour = app.date), lty = 2) +
+  geom_hline(data = subset(isumm, meas.tech == 'bLS'), aes(yintercept = e.rel.final, colour = app.date), lty = 2, show.legend = FALSE) +
+  geom_label(data = subset(isumm, meas.tech == 'bLS'), x = 44, aes(y = e.rel.final, label = paste('bLS', app.date)), size = 2.3, show.legend = FALSE) +
   geom_point(cex = 2) +
   scale_color_brewer(palette = 'Set1') + 
   labs(x = expression('Air exchange rate'~('min'^'-1')), y = expression('168 h emission'~('frac. applied TAN')), colour = '', shape = '') +
