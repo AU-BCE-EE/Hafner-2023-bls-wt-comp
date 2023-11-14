@@ -1,20 +1,14 @@
-# Hafner-2022-bls-wt-comp
-Data and analysis on wind tunnel and bLS measurement of ammonia volatilation from field-applied slurry, associated with research paper currently in progress.
-
-# In progress
-This is a work in progress.
-The paper has not yet been published.
+# Hafner-2023-bls-wt-comp
+Data and analysis on wind tunnel and bLS measurement of ammonia volatilation from field-applied slurry, associated with research paper [published in Agricultural and Forest Meteorology](https://doi.org/10.1016/j.agrformet.2023.109790).
 
 # Maintainer
 Sasha D. Hafner.
 Contact information here: <https://au.dk/sasha.hafner@bce>.
 
 # Published paper
-The contents of this repo are presented in the following paper, which has been submitted to Agricultural and Forest Meteorology:
+The contents of this repo are presented in the following paper, which is open-access:
 
-Hafner, S.D., Kamp, J.N., Pedersen, J. Experimental and model-based comparison of wind tunnel and inverse dispersion model measurement of ammonia emission from field-applied animal slurry.
-
-For publication details, check the latest release from this repo (paper perhaps to be finalized in November 2023).
+Hafner, S.D., Kamp, J.N., Pedersen, J. Experimental and model-based comparison of wind tunnel and inverse dispersion model measurement of ammonia emission from field-applied animal slurry. Agricultural and Forest Meteorology 344: 109790. <https://doi.org/10.1016/j.agrformet.2023.109790>
 
 # Overview
 This repo contains (nearly) all the data and data processing scripts needed to produce the results presented in the paper listed above.
