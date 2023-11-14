@@ -1,5 +1,5 @@
 # Hafner-2023-bls-wt-comp
-Data and analysis on wind tunnel and bLS measurement of ammonia volatilation from field-applied slurry, associated with research paper [published in Agricultural and Forest Meteorology](https://doi.org/10.1016/j.agrformet.2023.109790).
+Data and analysis on wind tunnel and bLS measurement of ammonia volatilation from field-applied slurry, associated with [research paper published in Agricultural and Forest Meteorology](https://doi.org/10.1016/j.agrformet.2023.109790).
 
 # Maintainer
 Sasha D. Hafner.
