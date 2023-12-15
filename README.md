@@ -8,7 +8,7 @@ Contact information here: <https://au.dk/sasha.hafner@bce>.
 # Published paper
 The contents of this repo are presented in the following paper, which is open-access:
 
-Hafner, S.D., Kamp, J.N., Pedersen, J. Experimental and model-based comparison of wind tunnel and inverse dispersion model measurement of ammonia emission from field-applied animal slurry. Agricultural and Forest Meteorology 344: 109790. <https://doi.org/10.1016/j.agrformet.2023.109790>
+Hafner, S.D., Kamp, J.N., Pedersen, J. 2024. Experimental and model-based comparison of wind tunnel and inverse dispersion model measurement of ammonia emission from field-applied animal slurry. Agricultural and Forest Meteorology 344: 109790. <https://doi.org/10.1016/j.agrformet.2023.109790>
 
 # Overview
 This repo contains (nearly) all the data and data processing scripts needed to produce the results presented in the paper listed above.
