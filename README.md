@@ -3,7 +3,7 @@ Data and analysis on wind tunnel and bLS measurement of ammonia volatilation fro
 
 # Maintainer
 Sasha D. Hafner.
-Contact information here: <https://au.dk/sasha.hafner@bce>.
+Contact information here: <https://au.dk/sasha.hafner@bce.au.dk>.
 
 # Published paper
 The contents of this repo are presented in the following paper, which is open-access:
